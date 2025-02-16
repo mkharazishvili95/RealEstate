@@ -1,0 +1,64 @@
+﻿<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>სახელი</th>
+                <th>გვარი</th>
+                <th>PIN</th>
+                <th>მომხმარებელი</th>
+                <th>ელფოსტა</th>
+                <th>მობილური</th>
+                <th>ბალანსი</th>
+                <th>დაბლოკილი</th>
+                <th>დაბლოკვის თარიღი</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>@row.FirstName</td>
+                    <td>@row.LastName</td>
+                    <td>@row.PIN</td>
+                    <td>@row.UserName</td>
+                    <td>@row.Email</td>
+                    <td>@row.PhoneNumber</td>
+                    <td>@row.Balance?.ToString("C")</td>
+                    <td>@(row.IsBlocked == true ? "კი" : "არა")</td>
+                    <td>@row.BlockDate?.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary" style="margin-left: 50px;">უკან დაბრუნება</a>
+
+<style>
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .table-container {
+        max-width: 1200px;
+        margin: auto;
+        overflow-x: auto;
+    }
+
+</style>

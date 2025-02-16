@@ -7,4 +7,18 @@
     <RootNamespace>RealEstate_Manage</RootNamespace>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\RealEstate\RealEstate.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\Agency\" />
+	  <Folder Include="Views\Apartment\" />
+	  <Folder Include="Views\User\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
 </Project>
