@@ -1,14 +1,14 @@
 ﻿using RealEstate.Application.Models;
 using RealEstate.Common.Enums.Agency;
+using RealEstate.Common.Models;
 
 namespace RealEstate.Application.Feature.Manage.Agency.List
 {
     public class GetAgencyListForManageResponse : ResponseBaseModel
     {
         public List<GetAgencyListForManageItemsResponse> AgencyListForManage { get; set; } = new();
-        public int? PageSize { get; set; } = 20;
-        public int? Page { get; set; } = 1;
-        public int? Skip => (Page!.Value - 1) * PageSize!.Value;
+        public Pagination? Pagination { get; set; }
+        public int TotalCount { get; set; }
     }
     public class GetAgencyListForManageItemsResponse
     {

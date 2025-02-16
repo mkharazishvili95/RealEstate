@@ -85,8 +85,8 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
 
             return new GetAgencyListForManageResponse
             {
-                Page = page,
-                PageSize = pageSize,
+                TotalCount = agencies.Count,
+                Pagination = new Common.Models.Pagination { Page = page, PageSize = pageSize },
                 AgencyListForManage = agencies,
                 StatusCode = 200,
                 Success = true

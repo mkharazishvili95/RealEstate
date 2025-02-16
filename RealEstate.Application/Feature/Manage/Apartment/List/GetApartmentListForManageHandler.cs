@@ -87,8 +87,8 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
 
             return new GetApartmentListForManageResponse
             {
-                Page = page,
-                PageSize = pageSize,
+                TotalCount = apartments.Count,
+                Pagination = new Common.Models.Pagination { Page = page, PageSize = pageSize },
                 ApartmentListForManage = apartments,
                 StatusCode = 200,
                 Success = true

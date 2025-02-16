@@ -82,8 +82,8 @@ namespace RealEstate.Application.Feature.Manage.User.List
 
             return new GetUserListForManageResponse
             {
-                Page = page,
-                PageSize = pageSize,
+                TotalCount = users.Count,
+                Pagination = new Common.Models.Pagination { Page = page, PageSize = pageSize },
                 UserListForManage = users,
                 StatusCode = 200,
                 Success = true

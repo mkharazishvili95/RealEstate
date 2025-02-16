@@ -578,21 +578,12 @@
             },
             "nullable": true
           },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
           },
-          "page": {
+          "totalCount": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "skip": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true,
-            "readOnly": true
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -775,21 +766,12 @@
             },
             "nullable": true
           },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
           },
-          "page": {
+          "totalCount": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "skip": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true,
-            "readOnly": true
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -947,6 +929,19 @@
             },
             "nullable": true
           },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
           "pageSize": {
             "type": "integer",
             "format": "int32",
@@ -960,7 +955,6 @@
           "skip": {
             "type": "integer",
             "format": "int32",
-            "nullable": true,
             "readOnly": true
           }
         },
