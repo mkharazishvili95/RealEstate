@@ -50,6 +50,12 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
             if (request.DeleteDateTo.HasValue)
                 query = query.Where(a => a.DeleteDate <= request.DeleteDateTo);
 
+            if (request.CreateDateFrom.HasValue)
+                query = query.Where(u => u.CreateDate >= request.CreateDateFrom);
+
+            if (request.CreateDateTo.HasValue)
+                query = query.Where(u => u.CreateDate <= request.CreateDateTo);
+
             var agenciesWithUsers = from agency in query
                                     join user in _db.Users on agency.UserId equals user.UserId
                                     select new
@@ -79,7 +85,8 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
                 UpdateDate = a.Agency.UpdateDate,
                 DeleteDate = a.Agency.DeleteDate,
                 UserId = a.Agency.UserId,
-                UserPin = a.User.PIN
+                UserPin = a.User.PIN,
+                CreateDate = a.Agency.CreateDate
             })
             .ToListAsync(cancellationToken);
 

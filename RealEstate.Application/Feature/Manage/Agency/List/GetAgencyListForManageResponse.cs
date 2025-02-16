@@ -24,5 +24,6 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
         public DateTime? DeleteDate { get; set; }
         public string? UserId { get; set; }
         public string? UserPin { get; set; }
+        public DateTime? CreateDate { get; set; }
     }
 }

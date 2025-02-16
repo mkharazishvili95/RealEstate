@@ -826,6 +826,11 @@
           },
           "gender": {
             "$ref": "#/components/schemas/Gender"
+          },
+          "registerDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -900,6 +905,19 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "registerDateFrom": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "registerDateTo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order"
           }
         },
         "additionalProperties": false
@@ -938,6 +956,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "Order": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "Pagination": {
         "type": "object",

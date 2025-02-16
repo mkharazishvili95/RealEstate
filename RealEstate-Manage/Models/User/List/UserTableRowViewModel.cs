@@ -17,5 +17,6 @@ namespace RealEstate.Models.User.List
         public bool? IsBlocked { get; set; } = false;
         public DateTime? BlockDate { get; set; }
         public Gender? Gender { get; set; }
+        public DateTime? RegisterDate { get; set; }
     }
 }

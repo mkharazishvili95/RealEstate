@@ -122,6 +122,9 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<int>("AgencyType")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeleteDate")
                         .HasColumnType("datetime2");
 
@@ -241,7 +244,7 @@ namespace RealEstate.Infrastructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("Symbol")
                         .IsRequired()
@@ -297,6 +300,9 @@ namespace RealEstate.Infrastructure.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RegisterDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");

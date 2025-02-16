@@ -20,5 +20,15 @@ namespace RealEstate.Application.Feature.Manage.User.List
         public Gender? Gender { get; set; }
         public int? PageSize { get; set; } = 20;
         public int? Page { get; set; } = 1;
+        public DateTime? RegisterDateFrom { get; set; }
+        public DateTime? RegisterDateTo { get; set; }
+        public Order? Order { get; set; }
+    }
+    public enum Order
+    {
+        RegisterDateAsc,
+        RegisterDateDesc,
+        BalanceAsc,
+        BalanceDesc
     }
 }

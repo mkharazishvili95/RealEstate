@@ -50,35 +50,50 @@ namespace RealEstate.Application.Feature.Manage.User.List
                 query = query.Where(u => u.Balance >= request.BalanceFrom);
 
             if (request.BalanceTo.HasValue)
-                query = query.Where(u => u.Balance >= request.BalanceTo);
+                query = query.Where(u => u.Balance <= request.BalanceTo);
 
             if (request.Gender.HasValue)
                 query = query.Where(u => (int)u.Gender == (int)request.Gender);
+
+            if (request.RegisterDateFrom.HasValue)
+                query = query.Where(u => u.RegisterDate >= request.BlockDateFrom);
+
+            if (request.RegisterDateTo.HasValue)
+                query = query.Where(u => u.RegisterDate <= request.RegisterDateTo);
+
+            query = request.Order switch
+            {
+                Order.RegisterDateAsc => query.OrderBy(u => u.RegisterDate),
+                Order.RegisterDateDesc => query.OrderByDescending(u => u.RegisterDate),
+                Order.BalanceAsc => query.OrderBy(u => u.Balance),
+                Order.BalanceDesc => query.OrderByDescending(u => u.Balance),
+                _ => query.OrderBy(u => u.UserId)
+            };
 
             int page = request.Page ?? 1;
             int pageSize = request.PageSize ?? 20;
             int skip = (page - 1) * pageSize;
 
             var users = await query
-                .OrderBy(u => u.UserId)
-                .Skip(skip)
-                .Take(pageSize)
-                .Select(u => new GetUserListForManageItemsResponse
-                {
-                    UserId = u.UserId,
-                    FirstName = u.FirstName,
-                    LastName = u.LastName,
-                    PIN = u.PIN,
-                    UserName = u.UserName,
-                    Email = u.Email,
-                    PhoneNumber = u.PhoneNumber,
-                    Balance = u.Balance,
-                    IsBlocked = u.IsBlocked,
-                    BlockDate = u.BlockDate,
-                    Gender = u.Gender,
-                    Type = u.Type
-                })
-                .ToListAsync(cancellationToken);
+            .Skip(skip)
+            .Take(pageSize)
+            .Select(u => new GetUserListForManageItemsResponse
+            {
+                UserId = u.UserId,
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                PIN = u.PIN,
+                UserName = u.UserName,
+                Email = u.Email,
+                PhoneNumber = u.PhoneNumber,
+                Balance = u.Balance,
+                IsBlocked = u.IsBlocked,
+                BlockDate = u.BlockDate,
+                Gender = u.Gender,
+                Type = u.Type,
+                RegisterDate = u.RegisterDate
+            })
+            .ToListAsync(cancellationToken);
 
             return new GetUserListForManageResponse
             {

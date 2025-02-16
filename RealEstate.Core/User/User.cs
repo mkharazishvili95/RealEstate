@@ -18,5 +18,6 @@ namespace RealEstate.Core.User
         public DateTime? BlockDate { get; set; } = DateTime.Now;
         public string? BlockReason { get; set; }
         public Gender? Gender { get; set; }
+        public DateTime? RegisterDate { get; set; }
     }
 }

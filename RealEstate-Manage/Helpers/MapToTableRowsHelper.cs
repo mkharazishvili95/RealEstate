@@ -20,7 +20,8 @@ namespace RealEstate_Manage.Helpers
                 Balance = user.Balance ?? null,
                 IsBlocked = user.IsBlocked,
                 BlockDate = user.BlockDate ?? null,
-                Gender = user.Gender ?? null
+                Gender = user.Gender ?? null,
+                RegisterDate = user.RegisterDate ?? null
             }).ToList();
         }
     }

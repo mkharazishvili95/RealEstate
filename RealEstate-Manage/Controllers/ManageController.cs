@@ -33,7 +33,10 @@ namespace RealEstate.MVC.Controllers
                 IsBlocked = filter.IsBlocked,
                 BlockDateFrom = filter.BlockDateFrom,
                 BlockDateTo = filter.BlockDateTo,
-                Gender = filter.Gender,
+                Gender = filter.Gender, 
+                RegisterDateFrom = filter.RegisterDateFrom,
+                RegisterDateTo = filter.RegisterDateTo,
+                Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
                 PageSize = filter.PageSize,
                 Page = filter.Page
             };

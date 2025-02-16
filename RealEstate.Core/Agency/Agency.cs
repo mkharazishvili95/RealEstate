@@ -20,5 +20,6 @@ namespace RealEstate.Core.Agency
         public string? Email { get; set; }
         public string? Link { get; set; }
         public string? PhoneNumber { get; set; }
+        public DateTime? CreateDate { get; set; }
     }
 }

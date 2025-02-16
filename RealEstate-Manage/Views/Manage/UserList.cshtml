@@ -11,6 +11,8 @@
                 <th>ბალანსი</th>
                 <th>დაბლოკილი</th>
                 <th>დაბლოკვის თარიღი</th>
+                <th>რეგისტრაციის თარიღი</th>
+
             </tr>
         </thead>
         <tbody>
@@ -26,6 +28,7 @@
                     <td>@row.Balance?.ToString("C")</td>
                     <td>@(row.IsBlocked == true ? "კი" : "არა")</td>
                     <td>@row.BlockDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@row.RegisterDate</td>
                 </tr>
             }
         </tbody>
@@ -35,7 +38,7 @@
 
 <style>
     table {
-        width: 100%;
+        width: 100%; 
         margin: 20px 0;
         border-collapse: collapse;
     }
@@ -56,9 +59,12 @@
     }
 
     .table-container {
-        max-width: 1200px;
+        width: 120%;
         margin: auto;
-        overflow-x: auto;
+        overflow-x: auto; 
     }
 
+    .btn-primary {
+        margin-left: 50px;
+    }
 </style>
