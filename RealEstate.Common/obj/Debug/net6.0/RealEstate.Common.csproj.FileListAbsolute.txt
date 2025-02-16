@@ -9,3 +9,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEsta
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\refint\RealEstate.Common.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\ref\RealEstate.Common.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.sourcelink.json

@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Core.Address.Enum
+﻿namespace RealEstate.Common.Enums.Address
 {
     public enum CityType
     {

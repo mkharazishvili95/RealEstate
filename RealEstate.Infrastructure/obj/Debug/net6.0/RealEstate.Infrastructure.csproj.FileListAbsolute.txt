@@ -15,3 +15,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\refint\RealEstate.Infrastructure.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\ref\RealEstate.Infrastructure.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.sourcelink.json

@@ -1,4 +1,4 @@
-﻿using RealEstate.Core.Apartment.Enum;
+﻿using RealEstate.Common.Enums.Apartment;
 
 namespace RealEstate.Core.Apartment
 {

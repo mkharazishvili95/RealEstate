@@ -1,4 +1,4 @@
-﻿using RealEstate.Core.User.Enum;
+﻿using RealEstate.Common.Enums.User;
 
 namespace RealEstate.Core.User
 {

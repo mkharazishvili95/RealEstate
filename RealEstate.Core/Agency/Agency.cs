@@ -1,4 +1,4 @@
-﻿using RealEstate.Core.Agency.Enum;
+﻿using RealEstate.Common.Enums.Agency;
 
 namespace RealEstate.Core.Agency
 {

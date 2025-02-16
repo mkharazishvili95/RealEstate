@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Core.Agency.Enum
+﻿namespace RealEstate.Common.Enums.Agency
 {
     public enum AgencyType
     {

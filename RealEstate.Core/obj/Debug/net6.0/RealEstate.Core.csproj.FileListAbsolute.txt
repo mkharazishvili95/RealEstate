@@ -13,3 +13,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Core\obj\Debug\net6.0\RealEstate
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Core\obj\Debug\net6.0\refint\RealEstate.Core.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Core\obj\Debug\net6.0\RealEstate.Core.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Core\obj\Debug\net6.0\ref\RealEstate.Core.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Core\obj\Debug\net6.0\RealEstate.Core.sourcelink.json

@@ -1,4 +1,4 @@
-﻿using RealEstate.Core.Address.Enum;
+﻿using RealEstate.Common.Enums.Address;
 
 namespace RealEstate.Core.Address
 {

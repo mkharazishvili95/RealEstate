@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Core.Apartment.Enum
+﻿namespace RealEstate.Common.Enums.Apartment
 {
     public enum ApartmentState
     {

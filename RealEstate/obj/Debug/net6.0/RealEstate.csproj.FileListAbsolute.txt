@@ -42,3 +42,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\refint\RealEsta
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.genruntimeconfig.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\ref\RealEstate.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.sourcelink.json

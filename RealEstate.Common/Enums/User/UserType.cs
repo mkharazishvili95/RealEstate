@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Core.User.Enum
+﻿namespace RealEstate.Common.Enums.User
 {
     public enum UserType
     {
