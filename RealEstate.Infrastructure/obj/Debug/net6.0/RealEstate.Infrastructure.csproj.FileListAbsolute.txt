@@ -1,4 +1,5 @@
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Infrastructure.deps.json
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Infrastructure.runtimeconfig.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Infrastructure.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Infrastructure.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Common.dll
@@ -10,9 +11,10 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.AssemblyInfo.cs
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.sourcelink.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEsta.54FC12BD.Up2Date
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\refint\RealEstate.Infrastructure.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.genruntimeconfig.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\ref\RealEstate.Infrastructure.dll
-C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.sourcelink.json

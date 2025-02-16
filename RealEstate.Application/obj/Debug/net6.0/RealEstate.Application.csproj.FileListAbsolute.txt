@@ -12,9 +12,9 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\Rea
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.AssemblyInfoInputs.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.AssemblyInfo.cs
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.sourcelink.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEsta.ABD55878.Up2Date
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\refint\RealEstate.Application.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\ref\RealEstate.Application.dll
-C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.sourcelink.json
