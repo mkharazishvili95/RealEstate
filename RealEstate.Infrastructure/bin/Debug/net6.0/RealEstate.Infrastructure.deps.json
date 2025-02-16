@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RealEstate.Infrastructure/1.0.0": {
+        "dependencies": {
+          "RealEstate.Common": "1.0.0",
+          "RealEstate.Core": "1.0.0"
+        },
+        "runtime": {
+          "RealEstate.Infrastructure.dll": {}
+        }
+      },
+      "RealEstate.Common/1.0.0": {
+        "runtime": {
+          "RealEstate.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RealEstate.Core/1.0.0": {
+        "dependencies": {
+          "RealEstate.Common": "1.0.0"
+        },
+        "runtime": {
+          "RealEstate.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RealEstate.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RealEstate.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RealEstate.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

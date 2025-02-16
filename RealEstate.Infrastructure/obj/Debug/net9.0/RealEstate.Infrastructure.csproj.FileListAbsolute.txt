@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Infrastructure.deps.json
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Infrastructure.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Infrastructure.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Common.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Core.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Common.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net9.0\RealEstate.Core.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.AssemblyInfo.cs
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEsta.54FC12BD.Up2Date
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\refint\RealEstate.Infrastructure.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\RealEstate.Infrastructure.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net9.0\ref\RealEstate.Infrastructure.dll
