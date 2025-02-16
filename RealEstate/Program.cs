@@ -1,4 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using RealEstate.Application.Feature.Manage.Agency.List;
+using RealEstate.Application.Feature.Manage.Apartment.List;
+using RealEstate.Application.Feature.Manage.User.List;
+using RealEstate.Application.Services;
 using RealEstate.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +14,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetUserListForManageHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetApartmentListForManageHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAgencyListForManageHandler).Assembly));
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddTransient<IManageService, ManageService>();
+builder.Services.AddTransient<IIdentityService, IdentityService>();
+builder.Services.AddTransient<IAgencyService, AgencyService>();
 
 var app = builder.Build();
 

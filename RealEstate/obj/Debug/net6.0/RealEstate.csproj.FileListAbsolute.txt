@@ -82,3 +82,5 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.genruntimeconfig.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\ref\RealEstate.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\MediatR.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\MediatR.Contracts.dll
