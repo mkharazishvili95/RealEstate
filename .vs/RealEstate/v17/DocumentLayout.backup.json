@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\list\\agencytablerowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\agency\\list\\agencytablerowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\list\\agencyfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\agency\\list\\agencyfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -15,20 +27,8 @@
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\list\\agencyfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\agency\\list\\agencyfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\apartment\\list\\apartmentfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\apartment\\list\\apartmentfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\list\\agencytablerowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\agency\\list\\agencytablerowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\desktop\\re\\realestate\\realestate-manage\\models\\user\\list\\usertablerowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -313,11 +313,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AgencyList.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
@@ -325,20 +325,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T18:42:40.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApartmentFilterRowModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
-              "RelativeToolTip": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:09:09.385Z"
+              "WhenOpened": "2025-02-17T18:42:40.035Z"
             },
             {
               "$type": "Document",
@@ -366,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AgencyTableRowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyTableRowViewModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\List\\AgencyTableRowViewModel.cs",
@@ -374,23 +361,25 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\Agency\\List\\AgencyTableRowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:29.073Z"
+              "WhenOpened": "2025-02-16T18:08:29.073Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ApartmentList.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
               "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
               "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T20:45:38.694Z"
+              "WhenOpened": "2025-02-16T20:45:38.694Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "UserList.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
@@ -402,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ManageController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\ManageController.cs",
@@ -410,8 +399,31 @@
               "RelativeToolTip": "RealEstate-Manage\\Controllers\\ManageController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAYwEAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:57:00.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:57:00.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgencyFilterRowModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
+              "RelativeToolTip": "RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T18:08:16.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApartmentFilterRowModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
+              "RelativeToolTip": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T18:09:09.385Z"
             },
             {
               "$type": "Document",
@@ -436,18 +448,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T16:27:40.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgencyFilterRowModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
-              "RelativeToolTip": "RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:16.28Z"
             },
             {
               "$type": "Document",

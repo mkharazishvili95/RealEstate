@@ -8,10 +8,9 @@
                 <th>მეილი</th>
                 <th>საიდენტიფიკაციო კოდი</th>
                 <th>PIN</th>
-                <th>ნომერი</th>
+                <th>მობილური</th>
                 <th>წაშლილი</th>
                 <th>დადასტურებული</th>
-                <th>რეგისტრაციის თარიღი</th>
                 <th>შექმნის თარიღი</th>
                 <th>განახლების თარიღი</th>
                 <th>წაშლის თარიღი</th>
@@ -31,9 +30,8 @@
                     <td>@row.PhoneNumber</td>
                     <td>@(row.IsDeleted == true ? "კი" : "არა")</td>
                     <td>@(row.IsApproved == true ? "კი" : "არა")</td>
-                    <td>@row.RegisterDate?.ToString("yyyy-MM-dd")</td>
                     <td>@row.CreateDate?.ToString("yyyy-MM-dd")</td>
-                    <td>@row.Updatedate?.ToString("yyyy-MM-dd")</td>
+                    <td>@row.UpdateDate?.ToString("yyyy-MM-dd")</td>
                     <td>@row.DeleteDate?.ToString("yyyy-MM-dd")</td>
                 </tr>
             }

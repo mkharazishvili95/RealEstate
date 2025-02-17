@@ -1,7 +1,9 @@
 ﻿using RealEstate.Application.Feature.Manage.Agency.List;
+using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Models.Agency.List;
+using RealEstate_Manage.Models.Apartment.List;
 
 namespace RealEstate_Manage.Helpers
 {
@@ -26,24 +28,43 @@ namespace RealEstate_Manage.Helpers
                 RegisterDate = user.RegisterDate ?? null
             }).ToList();
         }
-        public List<AgencyTableRowViewModel> MapToTableRowsForAgency(List<GetAgencyListForManageItemsResponse> apiResponse)
+        public List<AgencyTableRowViewModel> MapToTableRowsForAgencies(List<GetAgencyListForManageItemsResponse> apiResponse)
         {
             return apiResponse.Select(agency => new AgencyTableRowViewModel
             {
-                 IdentificationNumber = agency.IdentificationNumber ?? null,
-                 PhoneNumber = agency.PhoneNumber ?? null,
-                 Name = agency.Name ?? null,
-                 AgencyId = agency.AgencyId,
-                 AgencyType = agency.AgencyType ?? null,
-                 CreateDate = agency.CreateDate ?? null,
-                 DeleteDate = agency.DeleteDate ?? null,
-                 Email = agency.Email ?? null,
-                 IsApproved = agency.IsApproved ?? null,
-                 IsDeleted = agency.IsDeleted ?? null,
-                 UpdateDate = agency.UpdateDate ?? null,
-                 UserId = agency.UserId ?? null,
-                 UserPin = agency.UserPin ?? null
+                IdentificationNumber = agency.IdentificationNumber ?? null,
+                PhoneNumber = agency.PhoneNumber ?? null,
+                Name = agency.Name ?? null,
+                AgencyId = agency.AgencyId,
+                AgencyType = agency.AgencyType ?? null,
+                CreateDate = agency.CreateDate ?? null,
+                DeleteDate = agency.DeleteDate ?? null,
+                Email = agency.Email ?? null,
+                IsApproved = agency.IsApproved ?? null,
+                IsDeleted = agency.IsDeleted ?? null,
+                UpdateDate = agency.UpdateDate ?? null,
+                UserId = agency.UserId ?? null,
+                UserPin = agency.UserPin ?? null
 
+            }).ToList();
+
+        }
+            public List<ApartmentTableRowViewModel> MapToTableRowsForApartments(List<GetApartmentListForManageItemsResponse> apiResponse)
+        {
+            return apiResponse.Select(agency => new ApartmentTableRowViewModel
+            {
+                 UserPin = agency.UserPin ?? null,
+                 Title = agency.Title ?? null,
+                 Status = agency.Status ?? null,
+                 AgencyId = agency.AgencyId ?? null,
+                 ApartmentId = agency.ApartmentId ?? null,
+                 CreateDate = agency.CreateDate ?? null,
+                 CurrencyId = agency.CurrencyId ?? null,
+                 DeleteDate = agency.DeleteDate ?? null,
+                 Price = agency.Price ?? null,
+                 UnitPrice = agency.UnitPrice ?? null,
+                 UpdateDate = agency.UpdateDate ?? null
+    
             }).ToList();
         }
     }

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Manage.Agency.List;
+using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency.List;
+using RealEstate_Manage.Models.Apartment.List;
 
 namespace RealEstate.MVC.Controllers
 {
@@ -79,7 +81,42 @@ namespace RealEstate.MVC.Controllers
             var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
-            var tableRows = mapper.MapToTableRowsForAgency(apiResponse.AgencyListForManage).ToList();
+            var tableRows = mapper.MapToTableRowsForAgencies(apiResponse.AgencyListForManage).ToList();
+            return View(tableRows);
+
+        }
+
+        public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
+        {
+            var apiRequest = new GetApartmentListForManageRequest
+            {
+                 AgencyId = filter.AgencyId,    
+                 ApartmentId = filter.ApartmentId,
+                 CreateDateFrom = filter.CreateDateFrom,
+                 CreateDateTo = filter.CreateDateTo,
+                 CurrencyId = filter.CurrencyId,
+                 DeleteDateFrom = filter.DeleteDateFrom,
+                 DeleteDateTo = filter.DeleteDateTo,
+                 PriceFrom = filter.PriceFrom,
+                 PriceTo = filter.PriceTo,
+                 Status = filter.Status,
+                 Title = filter.Title,
+                 UnitPriceFrom = filter.UnitPriceFrom,
+                 UnitPriceTo = filter.UnitPriceTo,
+                 UserId = filter.UserId,
+                 UserPin = filter.UserPin,
+                UpdateDateFrom = filter.UpdateDateFrom,
+                UpdateDateTo = filter.UpdateDateTo,
+                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
+                PageSize = filter.PageSize,
+                Page = filter.Page
+            };
+
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/get-apartment-list-for-manage", apiRequest);
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetApartmentListForManageResponse>();
+
+            var mapper = new MapToTableRowsHelper();
+            var tableRows = mapper.MapToTableRowsForApartments(apiResponse.ApartmentListForManage).ToList();
             return View(tableRows);
 
         }
