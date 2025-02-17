@@ -61,14 +61,14 @@ namespace RealEstate.Application.Feature.Manage.User.List
             if (request.RegisterDateTo.HasValue)
                 query = query.Where(u => u.RegisterDate <= request.RegisterDateTo);
 
-            query = request.Order switch
-            {
-                Order.RegisterDateAsc => query.OrderBy(u => u.RegisterDate),
-                Order.RegisterDateDesc => query.OrderByDescending(u => u.RegisterDate),
-                Order.BalanceAsc => query.OrderBy(u => u.Balance),
-                Order.BalanceDesc => query.OrderByDescending(u => u.Balance),
-                _ => query.OrderBy(u => u.UserId)
-            };
+            //query = request.Order switch
+            //{
+            //    Order.RegisterDateAsc => query.OrderBy(u => u.RegisterDate),
+            //    Order.RegisterDateDesc => query.OrderByDescending(u => u.RegisterDate),
+            //    Order.BalanceAsc => query.OrderBy(u => u.Balance),
+            //    Order.BalanceDesc => query.OrderByDescending(u => u.Balance),
+            //    _ => query.OrderBy(u => u.UserId)
+            //};
 
             int page = request.Page ?? 1;
             int pageSize = request.PageSize ?? 20;

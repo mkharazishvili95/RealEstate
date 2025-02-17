@@ -481,6 +481,11 @@
           "userPin": {
             "type": "string",
             "nullable": true
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -548,6 +553,16 @@
           "page": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "createDateFrom": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createDateTo": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
@@ -915,9 +930,6 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "order": {
-            "$ref": "#/components/schemas/Order"
           }
         },
         "additionalProperties": false
@@ -956,16 +968,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "Order": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
       },
       "Pagination": {
         "type": "object",

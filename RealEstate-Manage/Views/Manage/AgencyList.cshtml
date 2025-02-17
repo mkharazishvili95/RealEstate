@@ -1,0 +1,76 @@
+﻿<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>სააგენტოს ID</th>
+                <th>სახელი</th>
+                <th>ტიპი</th>
+                <th>მეილი</th>
+                <th>საიდენტიფიკაციო კოდი</th>
+                <th>PIN</th>
+                <th>ნომერი</th>
+                <th>წაშლილი</th>
+                <th>დადასტურებული</th>
+                <th>რეგისტრაციის თარიღი</th>
+                <th>შექმნის თარიღი</th>
+                <th>განახლების თარიღი</th>
+                <th>წაშლის თარიღი</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>@row.AgencyId</td>
+                    <td>@row.Name</td>
+                    <td>@row.AgencyType</td>
+                    <td>@row.Email</td>
+                    <td>@row.IdentificationNumber</td>
+                    <td>@row.UserPin</td>
+                    <td>@row.PhoneNumber</td>
+                    <td>@(row.IsDeleted == true ? "კი" : "არა")</td>
+                    <td>@(row.IsApproved == true ? "კი" : "არა")</td>
+                    <td>@row.RegisterDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@row.CreateDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@row.Updatedate?.ToString("yyyy-MM-dd")</td>
+                    <td>@row.DeleteDate?.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary" style="margin-left: 50px;">უკან დაბრუნება</a>
+
+<style>
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .table-container {
+        width: 120%;
+        margin: auto;
+        overflow-x: auto;
+    }
+
+    .btn-primary {
+        margin-left: 50px;
+    }
+</style>

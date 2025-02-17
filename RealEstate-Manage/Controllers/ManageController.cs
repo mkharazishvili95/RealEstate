@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Helpers;
+using RealEstate_Manage.Models.Agency.List;
 
 namespace RealEstate.MVC.Controllers
 {
@@ -36,7 +38,7 @@ namespace RealEstate.MVC.Controllers
                 Gender = filter.Gender, 
                 RegisterDateFrom = filter.RegisterDateFrom,
                 RegisterDateTo = filter.RegisterDateTo,
-                Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
+                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
                 PageSize = filter.PageSize,
                 Page = filter.Page
             };
@@ -45,7 +47,39 @@ namespace RealEstate.MVC.Controllers
             var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
-            var tableRows = mapper.MapToTableRows(apiResponse.UserListForManage).ToList();
+            var tableRows = mapper.MapToTableRowsForUsers(apiResponse.UserListForManage).ToList();
+            return View(tableRows);
+
+        }
+
+        public async Task<IActionResult> AgencyList(AgencyFilterRowModel filter)
+        {
+            var apiRequest = new GetAgencyListForManageRequest
+            {
+                 AgencyId = filter.AgencyId,
+                 AgencyType = filter.AgencyType,
+                 CreateDateFrom = filter.CreateDateFrom,
+                 CreateDateTo = filter.CreateDateTo,
+                 DeleteDateFrom = filter.DeleteDateFrom,
+                 DeleteDateTo = filter.DeleteDateTo,
+                 Email = filter.Email,
+                 IdentificationNumber = filter.IdentificationNumber,
+                 IsApproved = filter.IsApproved,
+                 IsDeleted = filter.IsDeleted,
+                 Name = filter.Name,
+                 PhoneNumber = filter.PhoneNumber,
+                 UpdateDateFrom = filter.UpdateDateFrom,
+                 UpdateDateTo = filter.UpdateDateTo,
+                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
+                PageSize = filter.PageSize,
+                Page = filter.Page
+            };
+
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/get-agency-list-for-manage", apiRequest);
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
+
+            var mapper = new MapToTableRowsHelper();
+            var tableRows = mapper.MapToTableRowsForAgency(apiResponse.AgencyListForManage).ToList();
             return View(tableRows);
 
         }
