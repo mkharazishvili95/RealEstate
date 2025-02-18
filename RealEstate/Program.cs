@@ -4,6 +4,7 @@ using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Services;
 using RealEstate.Infrastructure.Data;
+using RealEstate.Infrastructure.Queries.Apartment;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddTransient<IManageService, ManageService>();
 builder.Services.AddTransient<IIdentityService, IdentityService>();
 builder.Services.AddTransient<IAgencyService, AgencyService>();
+builder.Services.AddTransient<IApartmentQueries, ApartmentQueries>();
 
 var app = builder.Build();
 
