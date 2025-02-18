@@ -1,8 +1,9 @@
-﻿using RealEstate.Common.Enums.Agency;
+﻿using RealEstate.Application.Models.Paging;
+using RealEstate.Common.Enums.Agency;
 
 namespace RealEstate.Application.Feature.Manage.Agency.List
 {
-    public class GetAgencyListForManageRequest : IRequest<GetAgencyListForManageResponse>
+    public class GetAgencyListForManageRequest : GridBaseRequestModel, IRequest<GetAgencyListForManageResponse>
     {
         public int? AgencyId { get; set; }
         public AgencyType? AgencyType { get; set; }

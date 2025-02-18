@@ -493,6 +493,12 @@
       "GetAgencyListForManageRequest": {
         "type": "object",
         "properties": {
+          "paging": {
+            "$ref": "#/components/schemas/PagingModel"
+          },
+          "sorting": {
+            "$ref": "#/components/schemas/SortingModel"
+          },
           "agencyId": {
             "type": "integer",
             "format": "int32",
@@ -592,9 +598,6 @@
               "$ref": "#/components/schemas/GetAgencyListForManageItemsResponse"
             },
             "nullable": true
-          },
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
           },
           "totalCount": {
             "type": "integer",
@@ -986,6 +989,34 @@
             "type": "integer",
             "format": "int32",
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagingModel": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SortingModel": {
+        "type": "object",
+        "properties": {
+          "sortBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortDir": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
