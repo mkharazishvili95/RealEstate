@@ -1,8 +1,9 @@
-﻿using RealEstate.Common.Enums.User;
+﻿using RealEstate.Application.Models.Paging;
+using RealEstate.Common.Enums.User;
 
 namespace RealEstate.Application.Feature.Manage.User.List
 {
-    public class GetUserListForManageRequest : IRequest<GetUserListForManageResponse>
+    public class GetUserListForManageRequest : GridBaseRequestModel, IRequest<GetUserListForManageResponse>
     {
         public string? UserId { get; set; }
         public string? FirstName { get; set; }

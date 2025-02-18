@@ -7,7 +7,7 @@ namespace RealEstate.Application.Feature.Manage.User.List
     public class GetUserListForManageResponse : ResponseBaseModel
     {
         public List<GetUserListForManageItemsResponse> UserListForManage { get; set; } = new();
-        public Pagination? Pagination { get; set; }
+        //public Pagination? Pagination { get; set; }
         public int TotalCount { get; set; }
     }
     public class GetUserListForManageItemsResponse

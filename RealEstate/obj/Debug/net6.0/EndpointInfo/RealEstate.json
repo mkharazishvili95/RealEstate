@@ -856,6 +856,12 @@
       "GetUserListForManageRequest": {
         "type": "object",
         "properties": {
+          "paging": {
+            "$ref": "#/components/schemas/PagingModel"
+          },
+          "sorting": {
+            "$ref": "#/components/schemas/SortingModel"
+          },
           "userId": {
             "type": "string",
             "nullable": true
@@ -961,9 +967,6 @@
               "$ref": "#/components/schemas/GetUserListForManageItemsResponse"
             },
             "nullable": true
-          },
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
           },
           "totalCount": {
             "type": "integer",
