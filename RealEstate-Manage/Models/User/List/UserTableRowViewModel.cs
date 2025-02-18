@@ -14,7 +14,7 @@ namespace RealEstate.Models.User.List
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public decimal? Balance { get; set; }
-        public bool? IsBlocked { get; set; } = false;
+        public bool? IsBlocked { get; set; }
         public DateTime? BlockDate { get; set; }
         public Gender? Gender { get; set; }
         public DateTime? RegisterDate { get; set; }

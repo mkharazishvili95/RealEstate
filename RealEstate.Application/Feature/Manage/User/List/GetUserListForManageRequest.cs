@@ -15,7 +15,7 @@ namespace RealEstate.Application.Feature.Manage.User.List
         public string? PhoneNumber { get; set; }
         public decimal? BalanceFrom { get; set; }
         public decimal? BalanceTo { get; set; }
-        public bool? IsBlocked { get; set; } = false;
+        public bool? IsBlocked { get; set; }
         public DateTime? BlockDateFrom { get; set; }
         public DateTime? BlockDateTo { get; set; }
         public Gender? Gender { get; set; }
