@@ -666,6 +666,12 @@
       "GetApartmentListForManageRequest": {
         "type": "object",
         "properties": {
+          "paging": {
+            "$ref": "#/components/schemas/PagingModel"
+          },
+          "sorting": {
+            "$ref": "#/components/schemas/SortingModel"
+          },
           "apartmentId": {
             "type": "integer",
             "format": "int32",
@@ -783,9 +789,6 @@
               "$ref": "#/components/schemas/GetApartmentListForManageItemsResponse"
             },
             "nullable": true
-          },
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
           },
           "totalCount": {
             "type": "integer",
@@ -971,27 +974,6 @@
           "totalCount": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Pagination": {
-        "type": "object",
-        "properties": {
-          "pageSize": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "page": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "skip": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false

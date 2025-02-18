@@ -1,8 +1,9 @@
-﻿using RealEstate.Common.Enums.Apartment;
+﻿using RealEstate.Application.Models.Paging;
+using RealEstate.Common.Enums.Apartment;
 
 namespace RealEstate.Application.Feature.Manage.Apartment.List
 {
-    public class GetApartmentListForManageRequest : IRequest<GetApartmentListForManageResponse>
+    public class GetApartmentListForManageRequest : GridBaseRequestModel, IRequest<GetApartmentListForManageResponse>
     {
         public int? ApartmentId { get; set; }
         public string? Title { get; set; }

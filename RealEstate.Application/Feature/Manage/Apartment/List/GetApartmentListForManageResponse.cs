@@ -7,7 +7,7 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
     public class GetApartmentListForManageResponse : ResponseBaseModel
     {
         public List<GetApartmentListForManageItemsResponse> ApartmentListForManage { get; set; } = new();
-        public Pagination? Pagination { get; set; }
+        //public Pagination? Pagination { get; set; }
         public int TotalCount { get; set; }
 
     }
