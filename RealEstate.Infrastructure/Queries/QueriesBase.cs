@@ -1,69 +1,66 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Npgsql;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace RealEstate.Infrastructure.Queries
 {
     public abstract class QueriesBase
     {
-        string connectionString { get; set; }
+        private readonly string _connectionString;
+
         public QueriesBase(IConfiguration configuration)
         {
-            connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
-        public async Task<TResponse?> Get<TResponse>(string commandText, Func<NpgsqlDataReader, TResponse> selector) where TResponse : new()
+
+        public async Task<TResponse?> Get<TResponse>(string commandText, Func<SqlDataReader, TResponse> selector) where TResponse : new()
         {
-            var response = new TResponse();
-            using (var connection = new NpgsqlConnection(connectionString))
+            TResponse? response = default;
+
+            using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
 
-                using (NpgsqlCommand command = connection.CreateCommand())
+                using (var command = new SqlCommand(commandText, connection))
                 {
-                    command.CommandText = commandText;
-                    using var reader = await command.ExecuteReaderAsync();
-                    if (reader.HasRows)
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response = selector(reader);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return response;
+        }
+
+        public async Task<List<TResponse>> GetMany<TResponse>(string commandText, Func<SqlDataReader, TResponse> selector)
+        {
+            var responses = new List<TResponse>();
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                await connection.OpenAsync();
+
+                using (var command = new SqlCommand(commandText, connection))
+                {
+                    using (var reader = await command.ExecuteReaderAsync())
                     {
                         while (await reader.ReadAsync())
                         {
-                            response = await reader.Select(selector);
+                            var value = selector(reader);
+                            responses.Add(value);
                         }
-                        return response;
                     }
                 }
-                await connection.CloseAsync();
             }
-            return default;
-        }
 
-        public async Task<List<TResponse>> GetMany<TResponse>(string commandText, Func<NpgsqlDataReader, TResponse> selector)
-        {
-            var response = new List<TResponse>();
-            using (var connection = new NpgsqlConnection(connectionString))
-            {
-                await connection.OpenAsync();
-
-                using (NpgsqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = commandText;
-                    using var reader = await command.ExecuteReaderAsync();
-                    if (reader.HasRows)
-                        while (await reader.ReadAsync())
-                        {
-                            var value = await reader.Select(selector);
-                            response.Add(value);
-                        }
-                }
-                await connection.CloseAsync();
-            }
-            return response;
-        }
-    }
-
-    public static class QuerieHelpler
-    {
-        public static async Task<T> Select<T>(this NpgsqlDataReader reader, Func<NpgsqlDataReader, T> selector)
-        {
-            return selector.Invoke(reader);
+            return responses;
         }
     }
 }

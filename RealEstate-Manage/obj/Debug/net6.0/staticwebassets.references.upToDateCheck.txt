@@ -79,3 +79,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
