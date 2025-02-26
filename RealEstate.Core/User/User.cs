@@ -19,5 +19,7 @@ namespace RealEstate.Core.User
         public string? BlockReason { get; set; }
         public Gender? Gender { get; set; }
         public DateTime? RegisterDate { get; set; }
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiry { get; set; }
     }
 }

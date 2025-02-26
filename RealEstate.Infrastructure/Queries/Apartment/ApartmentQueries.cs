@@ -46,11 +46,6 @@ namespace RealEstate.Infrastructure.Queries.Apartment
             });
         }
 
-        public Task<GetFavoriteApartmentsModel> GetFavoriteApartments()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<GetFiltredApartmentsModel> GetFiltredApartments()
         {
             throw new NotImplementedException();

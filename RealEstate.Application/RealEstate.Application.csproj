@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="BCrypt" Version="1.0.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
   </ItemGroup>
@@ -8,10 +10,6 @@
   <ItemGroup>
     <ProjectReference Include="..\RealEstate.Common\RealEstate.Common.csproj" />
     <ProjectReference Include="..\RealEstate.Infrastructure\RealEstate.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Feature\Apartment\" />
   </ItemGroup>
 
   <PropertyGroup>

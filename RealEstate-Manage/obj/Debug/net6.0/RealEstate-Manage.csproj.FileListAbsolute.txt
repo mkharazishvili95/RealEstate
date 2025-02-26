@@ -98,3 +98,5 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\Microsof
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\Npgsql.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\BCrypt.Net-Next.dll

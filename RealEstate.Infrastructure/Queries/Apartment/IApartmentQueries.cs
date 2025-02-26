@@ -7,6 +7,5 @@ namespace RealEstate.Infrastructure.Queries.Apartment
         Task<GetApartmentDetailsModel> GetApartment(int apartmentId);
         Task<GetFiltredApartmentsModel> GetFiltredApartments();
         Task<GetNewApartmentsModel> GetNewApartments();
-        Task<GetFavoriteApartmentsModel> GetFavoriteApartments();
     }
 }

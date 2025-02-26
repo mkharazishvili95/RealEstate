@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.Apartment.FavoriteApartment;
 
 namespace RealEstate.Controllers
 {
@@ -12,5 +13,8 @@ namespace RealEstate.Controllers
         {
             _mediator = mediator;
         }
+
+        [HttpGet("favorite-apartments")]
+        public async Task<FavoriteApartmentsResponse> GetFavoriteApartments(FavoriteApartmenstRequest request) => await _mediator.Send(request);
     }
 }
