@@ -27,8 +27,10 @@ builder.Services.AddTransient<IManageService, ManageService>();
 builder.Services.AddTransient<IIdentityService, IdentityService>();
 builder.Services.AddTransient<IAgencyService, AgencyService>();
 builder.Services.AddTransient<IApartmentQueries, ApartmentQueries>();
-builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+builder.Services.AddSingleton<IJwtTokenService, JwtTokenService>();
+
 
 var app = builder.Build();
 

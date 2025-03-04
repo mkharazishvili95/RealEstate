@@ -19,7 +19,14 @@ namespace RealEstate.Application.Services
 
         public string GenerateAccessToken(User user)
         {
+            if (user == null)
+                throw new ArgumentNullException(nameof(user), "User cannot be null");
+
+            if (string.IsNullOrEmpty(user.UserId))
+                throw new ArgumentException("User ID is required to generate token.");
+
             var key = Encoding.UTF8.GetBytes(_configuration["JwtSettings:Secret"]);
+
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserId),

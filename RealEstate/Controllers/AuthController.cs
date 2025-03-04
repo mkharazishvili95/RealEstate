@@ -32,7 +32,7 @@ namespace RealEstate.API.Controllers
 
             return Ok(new { message = "User registered successfully" });
         }
-
+        [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLoginModel model)
         {

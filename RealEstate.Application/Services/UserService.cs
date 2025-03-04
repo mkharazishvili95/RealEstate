@@ -17,11 +17,20 @@ namespace RealEstate.Application.Services
         public User? Authenticate(string email, string password)
         {
             var user = _context.Users.FirstOrDefault(u => u.Email == email);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.Password))
+
+            if (user == null)
+            {
                 return null;
+            }
+
+            if (!BCrypt.Net.BCrypt.Verify(password, user.Password))
+            {
+                return null;
+            }
 
             return user;
         }
+
 
         public bool EmailExists(string email)
         {
