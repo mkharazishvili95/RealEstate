@@ -35,7 +35,7 @@ namespace RealEstate.API.Controllers
             if (!success)
                 return Conflict(new { message = errorMessage });
 
-            return Ok(new { message = "User  registered successfully" });
+            return Ok(new { message = "User registered successfully" });
         }
 
         [AllowAnonymous]

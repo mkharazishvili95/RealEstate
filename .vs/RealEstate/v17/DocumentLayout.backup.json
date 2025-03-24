@@ -461,8 +461,7 @@
               "RelativeToolTip": "RealEstate.Application\\Validation\\UserRegistrationValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:56:25.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T18:56:25.277Z"
             },
             {
               "$type": "Document",
@@ -472,7 +471,7 @@
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\Controllers\\AuthController.cs",
               "RelativeToolTip": "RealEstate\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T19:19:28.358Z",
               "EditorCaption": ""
@@ -487,8 +486,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Auth\\UserRegisterModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:34:10.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:34:10.516Z"
             },
             {
               "$type": "Document",
@@ -500,8 +498,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Migrations\\20250216205236_AddedCreateDate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T20:52:36.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T20:52:36.576Z"
             },
             {
               "$type": "Document",
@@ -513,8 +510,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:23:49.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:23:49.294Z"
             },
             {
               "$type": "Document",
@@ -526,8 +522,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:24:04.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:24:04.25Z"
             },
             {
               "$type": "Document",
@@ -539,8 +534,7 @@
               "RelativeToolTip": "RealEstate\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T15:00:50.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T15:00:50.105Z"
             },
             {
               "$type": "Document",
@@ -552,8 +546,7 @@
               "RelativeToolTip": "RealEstate.Core\\User\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:51:39.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:51:39.035Z"
             },
             {
               "$type": "Document",
@@ -565,8 +558,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IJwtTokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:15:43.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:15:43.44Z"
             },
             {
               "$type": "Document",
@@ -578,8 +570,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Migrations\\20250216202225_AddedRegisterDateIntoUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T20:22:25.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T20:22:25.147Z"
             },
             {
               "$type": "Document",
@@ -591,8 +582,7 @@
               "RelativeToolTip": "RealEstate\\RealEstate.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T13:32:51.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:32:51.563Z"
             },
             {
               "$type": "Document",
@@ -604,8 +594,7 @@
               "RelativeToolTip": "RealEstate-Manage\\RealEstate-Manage.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T17:57:19.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:57:19.044Z"
             },
             {
               "$type": "Document",
@@ -617,8 +606,7 @@
               "RelativeToolTip": "RealEstate\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:20:54.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:20:54.743Z"
             },
             {
               "$type": "Document",
@@ -630,8 +618,7 @@
               "RelativeToolTip": "RealEstate\\Controllers\\ManageController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwCMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:14:26.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:14:26.659Z"
             },
             {
               "$type": "Document",
@@ -643,8 +630,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Auth\\UserLoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:20:53.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:20:53.669Z"
             },
             {
               "$type": "Document",
@@ -656,8 +642,7 @@
               "RelativeToolTip": "RealEstate.Application\\RealEstate.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T13:29:43.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:29:43.761Z"
             },
             {
               "$type": "Document",
@@ -669,8 +654,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\JwtTokenService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAUwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:16:00.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:16:00.895Z"
             },
             {
               "$type": "Document",
@@ -682,8 +666,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IIdentityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:18:39.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:18:39.735Z"
             },
             {
               "$type": "Document",
@@ -695,8 +678,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IdentityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:18:56.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:18:56.947Z"
             },
             {
               "$type": "Document",
@@ -708,8 +690,7 @@
               "RelativeToolTip": "RealEstate-Manage\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T19:53:11.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:53:11.973Z"
             },
             {
               "$type": "Document",
@@ -721,8 +702,7 @@
               "RelativeToolTip": "RealEstate\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T19:53:12.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:53:12.818Z"
             },
             {
               "$type": "Document",
@@ -734,8 +714,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\JwtSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:00:44.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T20:00:44.973Z"
             },
             {
               "$type": "Document",
@@ -747,8 +726,7 @@
               "RelativeToolTip": "RealEstate\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-16T15:01:21.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T15:01:21.31Z"
             },
             {
               "$type": "Document",
@@ -760,8 +738,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\User\\UserType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:35:48.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:35:48.238Z"
             },
             {
               "$type": "Document",
@@ -773,8 +750,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Migrations\\20250226202231_AddeRefrshTokenIntoUse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T20:22:31.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T20:22:31.512Z"
             },
             {
               "$type": "Document",
@@ -786,8 +762,7 @@
               "RelativeToolTip": "RealEstate.Application\\Helpers\\Grid.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:26:00.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T17:26:00.763Z"
             },
             {
               "$type": "Document",
@@ -799,8 +774,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IManageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:21:07.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:21:07.1Z"
             },
             {
               "$type": "Document",
@@ -812,8 +786,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:20.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:20.511Z"
             },
             {
               "$type": "Document",
@@ -825,8 +798,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetFavoriteApartmentsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:36:06.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:36:06.415Z"
             },
             {
               "$type": "Document",
@@ -838,8 +810,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:27:46.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:27:46.578Z"
             },
             {
               "$type": "Document",
@@ -851,8 +822,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmenstRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:04.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:04.587Z"
             },
             {
               "$type": "Document",
@@ -864,8 +834,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:13.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:13.051Z"
             },
             {
               "$type": "Document",
@@ -877,8 +846,7 @@
               "RelativeToolTip": "RealEstate.Core\\Apartment\\Apartment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:47:24.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:47:24.487Z"
             },
             {
               "$type": "Document",
@@ -890,8 +858,7 @@
               "RelativeToolTip": "RealEstate\\Controllers\\ApartmentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:22:45.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:22:45.878Z"
             },
             {
               "$type": "Document",
@@ -903,8 +870,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Apartment\\ApartmentQueries.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:25:44.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:25:44.266Z"
             },
             {
               "$type": "Document",
@@ -916,8 +882,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\QueriesBase.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:30:56.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:30:56.455Z"
             },
             {
               "$type": "Document",
@@ -929,8 +894,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Apartment\\IApartmentQueries.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:25:33.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:25:33.976Z"
             },
             {
               "$type": "Document",
@@ -942,8 +906,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAcwBcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:35:07.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:35:07.448Z"
             },
             {
               "$type": "Document",
@@ -955,8 +918,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetApartmentDetailsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:34:41.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:34:41.404Z"
             },
             {
               "$type": "Document",
@@ -968,8 +930,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetFiltredApartmentsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:35:28.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:35:28.541Z"
             },
             {
               "$type": "Document",
@@ -981,8 +942,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyApartmentsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:37:09.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:37:09.841Z"
             },
             {
               "$type": "Document",
@@ -994,8 +954,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyDetailsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:38:04.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:38:04.431Z"
             },
             {
               "$type": "Document",
@@ -1007,8 +966,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyListModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:37:26.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:37:26.205Z"
             },
             {
               "$type": "Document",
@@ -1020,8 +978,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\User\\List\\UserTableRowViewModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAD4vxAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:44.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:08:44.521Z"
             },
             {
               "$type": "Document",
@@ -1033,8 +990,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:31:01.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:31:01.147Z"
             },
             {
               "$type": "Document",
@@ -1046,8 +1002,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:30:54.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:30:54.694Z"
             },
             {
               "$type": "Document",
@@ -1059,8 +1014,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\User\\List\\UserFilterRowModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:55.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:08:55.043Z"
             },
             {
               "$type": "Document",
@@ -1072,8 +1026,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T18:42:40.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:42:40.035Z"
             },
             {
               "$type": "Document",
@@ -1085,8 +1038,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAIBpwA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T18:35:53.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:35:53.728Z"
             },
             {
               "$type": "Document",
@@ -1098,8 +1050,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:30:48.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:30:48.116Z"
             },
             {
               "$type": "Document",
@@ -1111,8 +1062,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:29:37.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:29:37.737Z"
             },
             {
               "$type": "Document",
@@ -1124,8 +1074,7 @@
               "RelativeToolTip": "RealEstate-Manage\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
               "ViewState": "AgIAAP4AAAAAAAAAAAAlwBUBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-18T19:49:55.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T19:49:55.563Z"
             },
             {
               "$type": "Document",
@@ -1137,8 +1086,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:27:40.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:27:40.058Z"
             },
             {
               "$type": "Document",
@@ -1150,8 +1098,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:29:27.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:29:27.576Z"
             },
             {
               "$type": "Document",
@@ -1163,8 +1110,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Controllers\\ManageController.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAAwGcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:57:00.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:57:00.791Z"
             },
             {
               "$type": "Document",
@@ -1176,8 +1122,7 @@
               "RelativeToolTip": "RealEstate.Application\\Helpers\\GetUserListHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:58:57.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T17:58:57.902Z"
             },
             {
               "$type": "Document",
@@ -1189,8 +1134,7 @@
               "RelativeToolTip": "RealEstate.Application\\Helpers\\GetAgencyListHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:22:35.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T17:22:35.728Z"
             },
             {
               "$type": "Document",
@@ -1202,8 +1146,7 @@
               "RelativeToolTip": "RealEstate.Application\\Helpers\\GetApartmentListHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:08:42.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:08:42.155Z"
             },
             {
               "$type": "Document",
@@ -1215,8 +1158,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:29:44.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:29:44.872Z"
             },
             {
               "$type": "Document",
@@ -1228,8 +1170,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:27:33.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:27:33.077Z"
             },
             {
               "$type": "Document",
@@ -1241,8 +1182,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T20:45:38.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T20:45:38.694Z"
             },
             {
               "$type": "Document",
@@ -1254,8 +1194,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Paging\\GridBaseResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:27:00.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T17:27:00.628Z"
             },
             {
               "$type": "Document",
@@ -1267,8 +1206,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Paging\\GridBaseRequestModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:27:31.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T17:27:31.249Z"
             },
             {
               "$type": "Document",
@@ -1280,8 +1218,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\Agency\\List\\AgencyFilterRowModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:16.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:08:16.28Z"
             },
             {
               "$type": "Document",
@@ -1293,8 +1230,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\Agency\\List\\AgencyTableRowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:08:29.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:08:29.073Z"
             },
             {
               "$type": "Document",
@@ -1306,8 +1242,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentFilterRowModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:09:09.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:09:09.385Z"
             },
             {
               "$type": "Document",
@@ -1319,8 +1254,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Helpers\\MapToTableRowsHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:13:03.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:13:03.12Z"
             },
             {
               "$type": "Document",
@@ -1332,8 +1266,7 @@
               "RelativeToolTip": "RealEstate.Core\\Agency\\Agency.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:44:36.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:44:36.867Z"
             },
             {
               "$type": "Document",
@@ -1345,8 +1278,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentTableRowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:09:22.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:09:22.85Z"
             },
             {
               "$type": "Document",
@@ -1358,8 +1290,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T17:10:18.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:10:18.766Z"
             },
             {
               "$type": "Document",
@@ -1371,8 +1302,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:18:19.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:18:19.496Z"
             },
             {
               "$type": "Document",
@@ -1384,8 +1314,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\User\\Gender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:35:38.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:35:38.178Z"
             },
             {
               "$type": "Document",
@@ -1397,8 +1326,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:12:02.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:12:02.914Z"
             },
             {
               "$type": "Document",
@@ -1410,8 +1338,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T13:30:57.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:30:57.263Z"
             },
             {
               "$type": "Document",
@@ -1423,8 +1350,7 @@
               "RelativeToolTip": "RealEstate.Common\\Models\\Pagination.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:31:08.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:31:08.343Z"
             },
             {
               "$type": "Document",
@@ -1436,8 +1362,7 @@
               "RelativeToolTip": "RealEstate.Application\\GlobalUsing.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:16:51.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:16:51.661Z"
             },
             {
               "$type": "Document",
@@ -1449,8 +1374,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAwDAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T17:08:31.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:08:31.965Z"
             },
             {
               "$type": "Document",
@@ -1462,8 +1386,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Shared\\_Layout.cshtml.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-16T17:10:14.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:10:14.091Z"
             },
             {
               "$type": "Document",
@@ -1475,8 +1398,7 @@
               "RelativeToolTip": "RealEstate.Core\\Currency\\Currency.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:49:48.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:49:48.211Z"
             },
             {
               "$type": "Document",
@@ -1488,8 +1410,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\ManageService.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAIwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:21:20.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:21:20.347Z"
             },
             {
               "$type": "Document",
@@ -1501,8 +1422,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\AgencyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:26:08.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:26:08.654Z"
             },
             {
               "$type": "Document",
@@ -1514,8 +1434,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IAgencyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:25:46.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:25:46.619Z"
             },
             {
               "$type": "Document",
@@ -1527,8 +1446,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\User\\UserUnBlockResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:24:48.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:24:48.173Z"
             },
             {
               "$type": "Document",
@@ -1540,8 +1458,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\User\\UserBlockResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:24:25.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:24:25.197Z"
             },
             {
               "$type": "Document",
@@ -1553,8 +1470,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\User\\TopUpBalanceResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:23:58.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:23:58.948Z"
             },
             {
               "$type": "Document",
@@ -1566,8 +1482,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Agency\\AgencyRestoreResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:23:11.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:23:11.019Z"
             },
             {
               "$type": "Document",
@@ -1579,8 +1494,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:22:30.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:22:30.525Z"
             },
             {
               "$type": "Document",
@@ -1592,8 +1506,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Migrations\\20250216152252_initD.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T15:22:52.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T15:22:52.205Z"
             },
             {
               "$type": "Document",
@@ -1605,8 +1518,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\ResponseBaseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:56:10.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:56:10.311Z"
             },
             {
               "$type": "Document",
@@ -1618,8 +1530,7 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAxwBAAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:55:36.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:55:36.9Z"
             },
             {
               "$type": "Document",
@@ -1631,8 +1542,7 @@
               "RelativeToolTip": "RealEstate.Application\\Models\\RequestBaseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:55:48.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:55:48.283Z"
             },
             {
               "$type": "Document",
@@ -1644,8 +1554,7 @@
               "RelativeToolTip": "RealEstate.Core\\Address\\Street.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:42:20.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:42:20.96Z"
             },
             {
               "$type": "Document",
@@ -1657,8 +1566,7 @@
               "RelativeToolTip": "RealEstate.Core\\RealEstate.Core.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T15:20:55.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T15:20:55.616Z"
             },
             {
               "$type": "Document",
@@ -1670,8 +1578,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAJYTAAAAAAAAAAAswKoTAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-02-16T15:04:07.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T15:04:07.833Z"
             },
             {
               "$type": "Document",
@@ -1683,8 +1590,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Apartment\\BuildingStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:34:40.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:34:40.809Z"
             },
             {
               "$type": "Document",
@@ -1696,8 +1602,7 @@
               "RelativeToolTip": "RealEstate.Common\\RealEstate.Common.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T13:29:44.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:29:44.384Z"
             },
             {
               "$type": "Document",
@@ -1709,8 +1614,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Apartment\\ApartmentType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:34:36.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:34:36.932Z"
             },
             {
               "$type": "Document",
@@ -1722,8 +1626,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Apartment\\ApartmentStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:33:58.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:33:58.456Z"
             },
             {
               "$type": "Document",
@@ -1735,8 +1638,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Apartment\\ApartmentState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:33:32.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:33:32.658Z"
             },
             {
               "$type": "Document",
@@ -1748,8 +1650,7 @@
               "RelativeToolTip": "RealEstate.Core\\Address\\City.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:41:09.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:41:09.782Z"
             },
             {
               "$type": "Document",
@@ -1761,8 +1662,7 @@
               "RelativeToolTip": "RealEstate.Common\\Models\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:30:37.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:30:37.758Z"
             },
             {
               "$type": "Document",
@@ -1774,8 +1674,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Apartment\\ApartmentDealType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:34:06.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:34:06.868Z"
             },
             {
               "$type": "Document",
@@ -1787,8 +1686,7 @@
               "RelativeToolTip": "RealEstate.Core\\User\\UserFavoriteApartment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:54:13.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:54:13.928Z"
             },
             {
               "$type": "Document",
@@ -1800,8 +1698,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Address\\CityType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:39:18.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:39:18.1Z"
             },
             {
               "$type": "Document",
@@ -1813,8 +1710,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\RealEstateFile\\ImageType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:38:21.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:38:21.307Z"
             },
             {
               "$type": "Document",
@@ -1826,8 +1722,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Currency\\CurrencyType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:37:29.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:37:29.915Z"
             },
             {
               "$type": "Document",
@@ -1839,8 +1734,7 @@
               "RelativeToolTip": "RealEstate.Common\\Enums\\Agency\\AgencyType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:36:43.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:36:43.333Z"
             },
             {
               "$type": "Document",
@@ -1852,8 +1746,7 @@
               "RelativeToolTip": "RealEstate.Common\\Extensions\\IEnumerableExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:29:55.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:29:55.873Z"
             },
             {
               "$type": "Document",
@@ -1865,8 +1758,7 @@
               "RelativeToolTip": "RealEstate.Core\\Address\\Subdistrict.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:42:45.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:42:45.424Z"
             },
             {
               "$type": "Document",
@@ -1878,8 +1770,7 @@
               "RelativeToolTip": "RealEstate.Core\\Address\\District.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:41:50.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T13:41:50.421Z"
             }
           ]
         }
