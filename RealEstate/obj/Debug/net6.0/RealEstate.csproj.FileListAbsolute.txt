@@ -95,3 +95,6 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\Microsoft.Bcl.A
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\Microsoft.Bcl.Memory.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -7,7 +7,8 @@ namespace RealEstate.Application.Services
     {
         User? Authenticate(string email, string password);
         void Update(User user);
-        bool Register(UserRegisterModel user);
+        (bool Success, string ErrorMessage) Register(UserRegisterModel model);
         bool EmailExists(string email);
+        bool PhoneNumberExists(string phoneNumber);
     }
 }

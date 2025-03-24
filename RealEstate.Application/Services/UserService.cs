@@ -34,13 +34,21 @@ namespace RealEstate.Application.Services
 
         public bool EmailExists(string email)
         {
-            return _context.Users.Any(u => u.Email == email);
+            return _context.Users.Any(u => u.Email.ToUpper() == email.ToUpper());
         }
 
-        public bool Register(UserRegisterModel model)
+        public bool PhoneNumberExists(string phoneNumber)
+        {
+            return _context.Users.Any(u => u.PhoneNumber == phoneNumber);
+        }
+
+        public (bool Success, string ErrorMessage) Register(UserRegisterModel model)
         {
             if (EmailExists(model.Email))
-                return false;
+                return (false, "Email already exists.");
+
+            if (PhoneNumberExists(model.PhoneNumber))
+                return (false, "Phone number already exists.");
 
             var user = new User
             {
@@ -63,7 +71,7 @@ namespace RealEstate.Application.Services
 
             _context.Users.Add(user);
             _context.SaveChanges();
-            return true;
+            return (true, null);
         }
 
         public void Update(User user)

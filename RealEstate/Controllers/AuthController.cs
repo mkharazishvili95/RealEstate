@@ -23,22 +23,28 @@ namespace RealEstate.API.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] UserRegisterModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            var validator = new UserRegistrationValidator(_userService);
+            var validationResult = validator.Validate(model);
 
-            var success = _userService.Register(model);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+
+            var (success, errorMessage) = _userService.Register(model);
             if (!success)
-                return Conflict(new { message = "Email already exists" });
+                return Conflict(new { message = errorMessage });
 
-            return Ok(new { message = "User registered successfully" });
+            return Ok(new { message = "User  registered successfully" });
         }
+
         [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLoginModel model)
         {
             var user = _userService.Authenticate(model.Email, model.Password);
             if (user == null)
-                return Unauthorized();
+                return Unauthorized("Incorrect email or password.");
 
             var accessToken = _jwtTokenService.GenerateAccessToken(user);
             var refreshToken = _jwtTokenService.GenerateRefreshToken();

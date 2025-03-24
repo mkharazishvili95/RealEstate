@@ -1458,34 +1458,29 @@
       },
       "UserRegisterModel": {
         "required": [
-          "confirmPassword",
-          "email",
-          "firstName",
-          "lastName",
-          "password"
+          "confirmPassword"
         ],
         "type": "object",
         "properties": {
           "firstName": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "lastName": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "userName": {
             "type": "string",
             "nullable": true
           },
           "email": {
-            "minLength": 1,
             "type": "string",
-            "format": "email"
+            "nullable": true
           },
           "password": {
-            "minLength": 6,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "confirmPassword": {
             "minLength": 1,

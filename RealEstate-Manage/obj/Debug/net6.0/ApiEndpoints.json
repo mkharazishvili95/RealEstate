@@ -1,5 +1,83 @@
 [
   {
+    "ContainingType": "RealEstate.Controllers.ApartmentController",
+    "Method": "GetApartmentDetails",
+    "RelativePath": "api/Apartment/apartment-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apartmentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Infrastructure.Queries.Models.Apartment.GetApartmentDetailsModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ApartmentController",
+    "Method": "GetNewApartments",
+    "RelativePath": "api/Apartment/new-apartments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Infrastructure.Queries.Models.Apartment.GetNewApartmentsModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RealEstate.Application.Models.Auth.UserLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealEstate.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RealEstate.Application.Models.Auth.UserRegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "BlockUser",
     "RelativePath": "api/Manage/block-user",
@@ -208,6 +286,32 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Models.User.UserUnBlockResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.UserController",
+    "Method": "GetFavoriteApartments",
+    "RelativePath": "api/User/favorite-apartments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Apartment.FavoriteApartment.FavoriteApartmenstRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Apartment.FavoriteApartment.FavoriteApartmentsResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
