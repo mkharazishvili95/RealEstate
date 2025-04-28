@@ -20,8 +20,6 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
                 (string.IsNullOrEmpty(request.UserPin) || apartment.User.PIN.Contains(request.UserPin)) &&
                 (!request.PriceFrom.HasValue || apartment.Price >= request.PriceFrom) &&
                 (!request.PriceTo.HasValue || apartment.Price <= request.PriceTo) &&
-                (!request.UnitPriceFrom.HasValue || apartment.UnitPrice >= request.UnitPriceFrom) &&
-                (!request.UnitPriceTo.HasValue || apartment.UnitPrice <= request.UnitPriceTo) &&
                 (!request.CurrencyId.HasValue || apartment.CurrencyId == request.CurrencyId) &&
                 (!request.AgencyId.HasValue || apartment.AgencyId == request.AgencyId);
         }

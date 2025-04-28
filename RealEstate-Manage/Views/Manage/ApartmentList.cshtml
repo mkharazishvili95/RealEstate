@@ -1,72 +1,157 @@
-﻿<div class="table-container">
-    <table>
-        <thead>
+﻿@model RealEstate_Manage.Models.Apartment.List.ApartmentListViewModel
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+@{
+    ViewData["Title"] = "Apartment List";
+}
+
+<h2>უძრავი ქონება</h2>
+
+<form asp-action="ApartmentList" method="get" class="container-fluid">
+
+    
+    <table class="table table-bordered table-striped w-100">
+
+        <thead class="thead-dark">
             <tr>
-                <th>უძრავი ქონების ID</th>
-                <th>სახელი</th>
-                <th>სტატუსი</th>
+                <th>ID</th>
+                <th>სათაური</th>
                 <th>PIN</th>
                 <th>ფასი</th>
-                <th>კვადრატულის ფასი</th>
-                <th>ვალუტა</th>
+                <th>ვალუტის ID</th>
                 <th>სააგენტოს ID</th>
                 <th>შექმნის თარიღი</th>
                 <th>განახლების თარიღი</th>
                 <th>წაშლის თარიღი</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="number" name="ApartmentId" value="@Model.Filter.ApartmentId" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="text" name="Title" value="@Model.Filter.Title" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="text" name="UserPin" value="@Model.Filter.UserPin" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="number" name="PriceFrom" placeholder="დან" value="@Model.Filter.PriceFrom" class="form-control form-control-sm mb-1" />
+                    <input type="number" name="PriceTo" placeholder="მდე" value="@Model.Filter.PriceTo" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="number" name="CurrencyId" value="@Model.Filter.CurrencyId" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="number" name="AgencyId" value="@Model.Filter.AgencyId" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="date" name="CreateDateFrom" placeholder="From" value="@Model.Filter.CreateDateFrom?.ToString("yyyy-MM-dd")" class="form-control form-control-sm mb-1" />
+                    <input type="date" name="CreateDateTo" placeholder="To" value="@Model.Filter.CreateDateTo?.ToString("yyyy-MM-dd")" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="date" name="UpdateDateFrom" placeholder="From" value="@Model.Filter.UpdateDateFrom?.ToString("yyyy-MM-dd")" class="form-control form-control-sm mb-1" />
+                    <input type="date" name="UpdateDateTo" placeholder="To" value="@Model.Filter.UpdateDateTo?.ToString("yyyy-MM-dd")" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <input type="date" name="DeleteDateFrom" placeholder="From" value="@Model.Filter.DeleteDateFrom?.ToString("yyyy-MM-dd")" class="form-control form-control-sm mb-1" />
+                    <input type="date" name="DeleteDateTo" placeholder="To" value="@Model.Filter.DeleteDateTo?.ToString("yyyy-MM-dd")" class="form-control form-control-sm" />
+                </th>
+                <th></th>
+                <th>
+                    <div class="d-flex justify-content-end mb-4">
+                        <button type="submit" class="btn btn-primary btn-sm">ძიება</button>
+                        <a href="@Url.Action("ApartmentList", "Manage")" class="btn btn-secondary btn-sm ms-2">გასუფთავება</a>
+                    </div>
+                </th>
 
             </tr>
         </thead>
         <tbody>
-            @foreach (var row in Model)
+            @if (Model.Apartments != null && Model.Apartments.Any())
+            {
+                foreach (var apartment in Model.Apartments)
+                {
+                    <tr>
+                        <td>@apartment.ApartmentId</td>
+                        <td>@apartment.Title</td>
+                        <td>@apartment.UserPin</td>
+                        <td>@apartment.Price</td>
+                        <td>@apartment.CurrencyId</td>
+                        <td>@apartment.AgencyId</td>
+                        <td>@apartment.CreateDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@apartment.UpdateDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@apartment.DeleteDate?.ToString("yyyy-MM-dd")</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                }
+            }
+            else
             {
                 <tr>
-                    <td>@row.ApartmentId</td>
-                    <td>@row.Title</td>
-                    <td>@row.Status</td>
-                    <td>@row.UserPin</td>
-                    <td>@row.Price</td>
-                    <td>@row.UnitPrice</td>
-                    <td>@row.CurrencyId</td>
-                    <td>@row.AgencyId</td>
-                    <td>@row.CreateDate?.ToString("yyyy-MM-dd")</td>
-                    <td>@row.UpdateDate?.ToString("yyyy-MM-dd")</td>
-                    <td>@row.DeleteDate?.ToString("yyyy-MM-dd")</td>
+                    <td colspan="10" class="text-center">No apartments found.</td>
                 </tr>
             }
         </tbody>
     </table>
+
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <label>Page Size:</label>
+            <input type="number" name="PageSize" value="@Model.Filter.PageSize" class="form-control form-control-sm d-inline w-auto" />
+        </div>
+        <div>
+            <label>Page:</label>
+            <input type="number" name="Page" value="@Model.Filter.Page" class="form-control form-control-sm d-inline w-auto" />
+        </div>
+    </div>
+
+</form>
+
+<div class="d-flex justify-content-between">
+    @if (Model.Filter.Page > 1)
+    {
+        <a class="btn btn-secondary" asp-action="ApartmentList" asp-route-Page="@(Model.Filter.Page - 1)" asp-route-PageSize="@Model.Filter.PageSize">Previous</a>
+    }
+
+    <span>Page @Model.Filter.Page</span>
+
+    @if (Model.Apartments != null && Model.Apartments.Any())
+    {
+        <a class="btn btn-secondary" asp-action="ApartmentList" asp-route-Page="@(Model.Filter.Page + 1)" asp-route-PageSize="@Model.Filter.PageSize">Next</a>
+    }
 </div>
-<a href="@Url.Action("Index", "Home")" class="btn btn-primary" style="margin-left: 50px;">უკან დაბრუნება</a>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="@Url.Action("Index", "Home")" class="btn btn-info btn-lg">
+        ← უკან დაბრუნება
+    </a>
+</div>
 
 <style>
-    table {
+    /* table {
         width: 100%;
-        margin: 20px 0;
-        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+    }
+ */
+    table {
+        min-width: 100%;
     }
 
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border: 1px solid #ddd;
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
 
-    th {
-        background-color: #f2f2f2;
-        color: #333;
+    .container-fluid {
+        padding: 0;
     }
 
-    tr:hover {
-        background-color: #f5f5f5;
-    }
-
-    .table-container {
-        width: 120%;
-        margin: auto;
-        overflow-x: auto;
-    }
-
-    .btn-primary {
-        margin-left: 50px;
+    .container {
+        max-width: 90% !important;
+        padding: 0;
     }
 </style>

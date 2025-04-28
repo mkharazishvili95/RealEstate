@@ -1,4 +1,5 @@
-﻿using RealEstate.Application.Models.Agency;
+﻿using Microsoft.EntityFrameworkCore;
+using RealEstate.Application.Models.Agency;
 using RealEstate.Application.Models.User;
 using RealEstate.Infrastructure.Data;
 

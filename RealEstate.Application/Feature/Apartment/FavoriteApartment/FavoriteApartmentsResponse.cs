@@ -21,7 +21,6 @@ namespace RealEstate.Application.Feature.Apartment.FavoriteApartment
         public DateTime? DeleteDate { get; set; }
         public string? UserId { get; set; }
         public decimal? Price { get; set; }
-        public decimal? UnitPrice { get; set; }
         public int? CurrencyId { get; set; }
         public int? AgencyId { get; set; }
         public string? AgencyName { get; set; }

@@ -29,10 +29,6 @@ namespace RealEstate.Infrastructure.Data
                 .Property(a => a.Price)
                 .HasColumnType("decimal(18,2)");
 
-            modelBuilder.Entity<Apartment>()
-                .Property(a => a.UnitPrice)
-                .HasColumnType("decimal(18,2)");
-
             modelBuilder.Entity<Currency>()
                 .Property(c => c.Rate)
                 .HasColumnType("decimal(18,4)");

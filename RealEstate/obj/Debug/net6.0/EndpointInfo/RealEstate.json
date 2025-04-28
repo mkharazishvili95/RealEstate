@@ -892,11 +892,6 @@
             "format": "double",
             "nullable": true
           },
-          "unitPrice": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
           "currencyId": {
             "type": "integer",
             "format": "int32",
@@ -948,11 +943,6 @@
             "nullable": true
           },
           "price": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unitPrice": {
             "type": "number",
             "format": "double",
             "nullable": true
@@ -1035,16 +1025,6 @@
             "nullable": true
           },
           "priceTo": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unitPriceFrom": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unitPriceTo": {
             "type": "number",
             "format": "double",
             "nullable": true
@@ -1147,11 +1127,6 @@
             "nullable": true
           },
           "price": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unitPrice": {
             "type": "number",
             "format": "double",
             "nullable": true

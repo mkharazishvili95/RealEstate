@@ -12,7 +12,6 @@ namespace RealEstate_Manage.Models.Apartment.List
         public DateTime? DeleteDate { get; set; }
         public string? UserPin { get; set; }
         public decimal? Price { get; set; }
-        public decimal? UnitPrice { get; set; }
         public int? CurrencyId { get; set; }
         public int? AgencyId { get; set; }
     }

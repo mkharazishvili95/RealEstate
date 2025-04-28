@@ -17,8 +17,6 @@ namespace RealEstate_Manage.Models.Apartment.List
         public string? UserPin { get; set; }
         public decimal? PriceFrom { get; set; }
         public decimal? PriceTo { get; set; }
-        public decimal? UnitPriceFrom { get; set; }
-        public decimal? UnitPriceTo { get; set; }
         public int? CurrencyId { get; set; }
         public int? AgencyId { get; set; }
         public int? PageSize { get; set; } = 20;

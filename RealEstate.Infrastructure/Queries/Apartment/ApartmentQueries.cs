@@ -22,7 +22,6 @@ namespace RealEstate.Infrastructure.Queries.Apartment
                     DeleteDate,
                     UserId,
                     Price,
-                    UnitPrice,
                     CurrencyId,
                     AgencyId
                     FROM Apartments
@@ -40,7 +39,6 @@ namespace RealEstate.Infrastructure.Queries.Apartment
                 DeleteDate = reader.IsDBNull(reader.GetOrdinal("DeleteDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DeleteDate")),
                 UserId = reader.IsDBNull(reader.GetOrdinal("UserId")) ? null : reader.GetString(reader.GetOrdinal("UserId")),
                 Price = reader.IsDBNull(reader.GetOrdinal("Price")) ? null : reader.GetDecimal(reader.GetOrdinal("Price")),
-                UnitPrice = reader.IsDBNull(reader.GetOrdinal("UnitPrice")) ? null : reader.GetDecimal(reader.GetOrdinal("UnitPrice")),
                 CurrencyId = reader.IsDBNull(reader.GetOrdinal("CurrencyId")) ? null : reader.GetInt32(reader.GetOrdinal("CurrencyId")),
                 AgencyId = reader.IsDBNull(reader.GetOrdinal("AgencyId")) ? null : reader.GetInt32(reader.GetOrdinal("AgencyId"))
             });
@@ -54,22 +52,21 @@ namespace RealEstate.Infrastructure.Queries.Apartment
         public async Task<GetNewApartmentsModel> GetNewApartments()
         {
             var query = @"
-        SELECT DISTINCT TOP 10
-        ApartmentId,
-        Title,
-        Description,
-        Status,
-        CreateDate,
-        EndDate,
-        UpdateDate,
-        DeleteDate,
-        UserId,
-        Price,
-        UnitPrice,
-        CurrencyId,
-        AgencyId
-    FROM Apartments
-    ORDER BY CreateDate DESC ";
+                SELECT DISTINCT TOP 10
+                ApartmentId,
+                Title,
+                Description,
+                Status,
+                CreateDate,
+                EndDate,
+                UpdateDate,
+                DeleteDate,
+                UserId,
+                Price,
+                CurrencyId,
+                AgencyId
+            FROM Apartments
+            ORDER BY CreateDate DESC ";
 
             var apartments = await GetMany(query, reader => new GetNewApartmentsItemModel
             {
@@ -83,7 +80,6 @@ namespace RealEstate.Infrastructure.Queries.Apartment
                 DeleteDate = reader.IsDBNull(reader.GetOrdinal("DeleteDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DeleteDate")),
                 UserId = reader.IsDBNull(reader.GetOrdinal("UserId")) ? null : reader.GetString(reader.GetOrdinal("UserId")),
                 Price = reader.IsDBNull(reader.GetOrdinal("Price")) ? null : reader.GetDecimal(reader.GetOrdinal("Price")),
-                UnitPrice = reader.IsDBNull(reader.GetOrdinal("UnitPrice")) ? null : reader.GetDecimal(reader.GetOrdinal("UnitPrice")),
                 CurrencyId = reader.IsDBNull(reader.GetOrdinal("CurrencyId")) ? null : reader.GetInt32(reader.GetOrdinal("CurrencyId")),
                 AgencyId = reader.IsDBNull(reader.GetOrdinal("AgencyId")) ? null : reader.GetInt32(reader.GetOrdinal("AgencyId"))
             });

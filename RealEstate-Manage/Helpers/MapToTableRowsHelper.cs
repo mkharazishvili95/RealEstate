@@ -62,7 +62,6 @@ namespace RealEstate_Manage.Helpers
                  CurrencyId = agency.CurrencyId ?? null,
                  DeleteDate = agency.DeleteDate ?? null,
                  Price = agency.Price ?? null,
-                 UnitPrice = agency.UnitPrice ?? null,
                  UpdateDate = agency.UpdateDate ?? null
     
             }).ToList();

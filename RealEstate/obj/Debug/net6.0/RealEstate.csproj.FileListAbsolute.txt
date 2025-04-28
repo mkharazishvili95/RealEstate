@@ -62,7 +62,6 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.Gene
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.AssemblyInfoInputs.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.AssemblyInfo.cs
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.sourcelink.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\scopedcss\bundle\RealEstate.styles.css
@@ -98,3 +97,4 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\Microsoft.Ident
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\RealEstate.MvcApplicationPartsAssemblyInfo.cs

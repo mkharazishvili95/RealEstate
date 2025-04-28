@@ -27,9 +27,8 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
                     CreateDate = a.CreateDate,
                     UpdateDate = a.UpdateDate,
                     DeleteDate = a.DeleteDate,
-                    UserPin = a.User != null ? a.User.PIN : null,
+                    UserPin = a.User != null  && a.User.UserId != null ? a.User.PIN : null,
                     Price = a.Price,
-                    UnitPrice = a.UnitPrice,
                     CurrencyId = a.CurrencyId,
                     AgencyId = a.AgencyId
                 });

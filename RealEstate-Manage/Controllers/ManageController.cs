@@ -90,24 +90,21 @@ namespace RealEstate.MVC.Controllers
         {
             var apiRequest = new GetApartmentListForManageRequest
             {
-                 AgencyId = filter.AgencyId,    
-                 ApartmentId = filter.ApartmentId,
-                 CreateDateFrom = filter.CreateDateFrom,
-                 CreateDateTo = filter.CreateDateTo,
-                 CurrencyId = filter.CurrencyId,
-                 DeleteDateFrom = filter.DeleteDateFrom,
-                 DeleteDateTo = filter.DeleteDateTo,
-                 PriceFrom = filter.PriceFrom,
-                 PriceTo = filter.PriceTo,
-                 Status = filter.Status,
-                 Title = filter.Title,
-                 UnitPriceFrom = filter.UnitPriceFrom,
-                 UnitPriceTo = filter.UnitPriceTo,
-                 UserId = filter.UserId,
-                 UserPin = filter.UserPin,
+                AgencyId = filter.AgencyId,
+                ApartmentId = filter.ApartmentId,
+                CreateDateFrom = filter.CreateDateFrom,
+                CreateDateTo = filter.CreateDateTo,
+                CurrencyId = filter.CurrencyId,
+                DeleteDateFrom = filter.DeleteDateFrom,
+                DeleteDateTo = filter.DeleteDateTo,
+                PriceFrom = filter.PriceFrom,
+                PriceTo = filter.PriceTo,
+                Status = filter.Status,
+                Title = filter.Title,
+                UserId = filter.UserId,
+                UserPin = filter.UserPin,
                 UpdateDateFrom = filter.UpdateDateFrom,
                 UpdateDateTo = filter.UpdateDateTo,
-                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
                 PageSize = filter.PageSize,
                 Page = filter.Page
             };
@@ -117,8 +114,14 @@ namespace RealEstate.MVC.Controllers
 
             var mapper = new MapToTableRowsHelper();
             var tableRows = mapper.MapToTableRowsForApartments(apiResponse.ApartmentListForManage).ToList();
-            return View(tableRows);
 
+            var viewModel = new ApartmentListViewModel
+            {
+                Filter = filter,
+                Apartments = tableRows
+            };
+
+            return View(viewModel);
         }
     }
 }
