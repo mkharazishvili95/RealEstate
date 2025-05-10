@@ -21,13 +21,13 @@ namespace RealEstate.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("get-user-list-for-manage")]
+        [HttpPost("users")]
         public async Task<GetUserListForManageResponse> GetUserListForManage([FromBody] GetUserListForManageRequest request) => await _mediator.Send(request);
 
-        [HttpPost("get-agency-list-for-manage")]
+        [HttpPost("agencies")]
         public async Task<GetAgencyListForManageResponse> GetAgencyListForManage([FromBody] GetAgencyListForManageRequest request) => await _mediator.Send(request);
 
-        [HttpPost("get-apartment-list-for-manage")]
+        [HttpPost("apartments")]
         public async Task<GetApartmentListForManageResponse> GetApartmentListForManage([FromBody] GetApartmentListForManageRequest request) => await _mediator.Send(request);
 
         [HttpPut("block-user")]

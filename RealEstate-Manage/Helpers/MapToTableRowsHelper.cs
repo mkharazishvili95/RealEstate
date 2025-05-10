@@ -60,6 +60,7 @@ namespace RealEstate_Manage.Helpers
                  ApartmentId = agency.ApartmentId ?? null,
                  CreateDate = agency.CreateDate ?? null,
                  CurrencyId = agency.CurrencyId ?? null,
+                 Currency = agency.CurrencyId.HasValue && agency.CurrencyId == 1 ? "ლარი" : agency.CurrencyId.HasValue ? "დოლარი" : null,
                  DeleteDate = agency.DeleteDate ?? null,
                  Price = agency.Price ?? null,
                  UpdateDate = agency.UpdateDate ?? null

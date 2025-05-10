@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 @{
-    ViewData["Title"] = "Apartment List";
+    ViewData["Title"] = "უძრავი ქონების სია";
 }
 
 <h2>უძრავი ქონება</h2>
@@ -16,9 +16,9 @@
             <tr>
                 <th>ID</th>
                 <th>სათაური</th>
-                <th>PIN</th>
+                <th>ავტორის PIN</th>
                 <th>ფასი</th>
-                <th>ვალუტის ID</th>
+                <th>ვალუტა</th>
                 <th>სააგენტოს ID</th>
                 <th>შექმნის თარიღი</th>
                 <th>განახლების თარიღი</th>
@@ -40,7 +40,8 @@
                     <input type="number" name="PriceTo" placeholder="მდე" value="@Model.Filter.PriceTo" class="form-control form-control-sm" />
                 </th>
                 <th>
-                    <input type="number" name="CurrencyId" value="@Model.Filter.CurrencyId" class="form-control form-control-sm" />
+                    @Html.DropDownList("CurrencyId", (List<SelectListItem>)ViewBag.Currencies,
+                             new { @class = "form-control form-control-sm" })
                 </th>
                 <th>
                     <input type="number" name="AgencyId" value="@Model.Filter.AgencyId" class="form-control form-control-sm" />
@@ -77,7 +78,7 @@
                         <td>@apartment.Title</td>
                         <td>@apartment.UserPin</td>
                         <td>@apartment.Price</td>
-                        <td>@apartment.CurrencyId</td>
+                        <td>@apartment.Currency</td>
                         <td>@apartment.AgencyId</td>
                         <td>@apartment.CreateDate?.ToString("yyyy-MM-dd")</td>
                         <td>@apartment.UpdateDate?.ToString("yyyy-MM-dd")</td>
@@ -96,46 +97,34 @@
         </tbody>
     </table>
 
-    <div class="d-flex justify-content-between mb-3">
-        <div>
-            <label>Page Size:</label>
-            <input type="number" name="PageSize" value="@Model.Filter.PageSize" class="form-control form-control-sm d-inline w-auto" />
-        </div>
-        <div>
-            <label>Page:</label>
-            <input type="number" name="Page" value="@Model.Filter.Page" class="form-control form-control-sm d-inline w-auto" />
-        </div>
+    <div class="d-flex justify-content-center mt-4">
+        @if (Model.Page > 1)
+        {
+            <a class="btn btn-secondary mx-1" asp-action="ApartmentList"
+               asp-route-Page="@(Model.Page - 1)" asp-route-PageSize="@Model.PageSize">უკან</a>
+        }
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a class="btn @(i == Model.Page ? "btn-primary" : "btn-outline-primary") mx-1"
+               asp-action="ApartmentList" asp-route-Page="@i" asp-route-PageSize="@Model.PageSize">@i</a>
+        }
+
+        @if (Model.Page < Model.TotalPages)
+        {
+            <a class="btn btn-secondary mx-1" asp-action="ApartmentList"
+               asp-route-Page="@(Model.Page + 1)" asp-route-PageSize="@Model.PageSize">წინ</a>
+        }
     </div>
+
 
 </form>
 
-<div class="d-flex justify-content-between">
-    @if (Model.Filter.Page > 1)
-    {
-        <a class="btn btn-secondary" asp-action="ApartmentList" asp-route-Page="@(Model.Filter.Page - 1)" asp-route-PageSize="@Model.Filter.PageSize">Previous</a>
-    }
-
-    <span>Page @Model.Filter.Page</span>
-
-    @if (Model.Apartments != null && Model.Apartments.Any())
-    {
-        <a class="btn btn-secondary" asp-action="ApartmentList" asp-route-Page="@(Model.Filter.Page + 1)" asp-route-PageSize="@Model.Filter.PageSize">Next</a>
-    }
-</div>
-
 <div class="d-flex justify-content-center mt-4">
-    <a href="@Url.Action("Index", "Home")" class="btn btn-info btn-lg">
-        ← უკან დაბრუნება
-    </a>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary" style="margin-left: 50px;"> ← უკან დაბრუნება</a>
 </div>
 
 <style>
-    /* table {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
- */
     table {
         min-width: 100%;
     }

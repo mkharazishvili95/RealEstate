@@ -79,6 +79,58 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "GetAgencyListForManage",
+    "RelativePath": "api/Manage/agencies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Agency.List.GetAgencyListForManageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Agency.List.GetAgencyListForManageResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "GetApartmentListForManage",
+    "RelativePath": "api/Manage/apartments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.List.GetApartmentListForManageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.List.GetApartmentListForManageResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "BlockUser",
     "RelativePath": "api/Manage/block-user",
     "HttpMethod": "PUT",
@@ -125,84 +177,6 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Models.Agency.AgencyDeleteResponseModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.ManageController",
-    "Method": "GetAgencyListForManage",
-    "RelativePath": "api/Manage/get-agency-list-for-manage",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RealEstate.Application.Feature.Manage.Agency.List.GetAgencyListForManageRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RealEstate.Application.Feature.Manage.Agency.List.GetAgencyListForManageResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.ManageController",
-    "Method": "GetApartmentListForManage",
-    "RelativePath": "api/Manage/get-apartment-list-for-manage",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.List.GetApartmentListForManageRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.List.GetApartmentListForManageResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.ManageController",
-    "Method": "GetUserListForManage",
-    "RelativePath": "api/Manage/get-user-list-for-manage",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RealEstate.Application.Feature.Manage.User.List.GetUserListForManageRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RealEstate.Application.Feature.Manage.User.List.GetUserListForManageResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -286,6 +260,32 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Models.User.UserUnBlockResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "GetUserListForManage",
+    "RelativePath": "api/Manage/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.User.List.GetUserListForManageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.User.List.GetUserListForManageResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

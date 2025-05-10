@@ -135,7 +135,7 @@
         }
       }
     },
-    "/api/Manage/get-user-list-for-manage": {
+    "/api/Manage/users": {
       "post": {
         "tags": [
           "Manage"
@@ -183,7 +183,7 @@
         }
       }
     },
-    "/api/Manage/get-agency-list-for-manage": {
+    "/api/Manage/agencies": {
       "post": {
         "tags": [
           "Manage"
@@ -231,7 +231,7 @@
         }
       }
     },
-    "/api/Manage/get-apartment-list-for-manage": {
+    "/api/Manage/apartments": {
       "post": {
         "tags": [
           "Manage"

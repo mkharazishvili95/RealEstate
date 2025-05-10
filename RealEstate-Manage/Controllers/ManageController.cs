@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
@@ -45,7 +46,7 @@ namespace RealEstate.MVC.Controllers
                 Page = filter.Page
             };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/get-user-list-for-manage", apiRequest);
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/users", apiRequest);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
@@ -77,7 +78,7 @@ namespace RealEstate.MVC.Controllers
                 Page = filter.Page
             };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/get-agency-list-for-manage", apiRequest);
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/agencies", apiRequest);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
@@ -88,6 +89,8 @@ namespace RealEstate.MVC.Controllers
 
         public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
         {
+            SetCurrencySelectList();
+
             var apiRequest = new GetApartmentListForManageRequest
             {
                 AgencyId = filter.AgencyId,
@@ -105,23 +108,40 @@ namespace RealEstate.MVC.Controllers
                 UserPin = filter.UserPin,
                 UpdateDateFrom = filter.UpdateDateFrom,
                 UpdateDateTo = filter.UpdateDateTo,
-                PageSize = filter.PageSize,
-                Page = filter.Page
+                PageSize = filter.PageSize ?? 20,
+                Page = filter.Page ?? 1
             };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/get-apartment-list-for-manage", apiRequest);
+            var response = await _httpClient.PostAsJsonAsync(
+                "https://localhost:7010/api/Manage/apartments", apiRequest);
+
             var apiResponse = await response.Content.ReadFromJsonAsync<GetApartmentListForManageResponse>();
 
-            var mapper = new MapToTableRowsHelper();
-            var tableRows = mapper.MapToTableRowsForApartments(apiResponse.ApartmentListForManage).ToList();
+            var tableRows = new List<ApartmentTableRowViewModel>();
 
-            var viewModel = new ApartmentListViewModel
+            if (apiResponse?.ApartmentListForManage != null)
+            {
+                tableRows = new MapToTableRowsHelper()
+                    .MapToTableRowsForApartments(apiResponse.ApartmentListForManage)
+                    .ToList();
+            }
+
+            return View(new ApartmentListViewModel
             {
                 Filter = filter,
-                Apartments = tableRows
-            };
+                Apartments = tableRows,
+                TotalCount = apiResponse.TotalCount
+            });
+        }
 
-            return View(viewModel);
+        private void SetCurrencySelectList()
+        {
+            ViewBag.Currencies = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "", Text = "აირჩიეთ ვალუტა" },
+                new SelectListItem { Value = "1", Text = "ლარი" },
+                new SelectListItem { Value = "2", Text = "დოლარი" }
+            };
         }
     }
 }

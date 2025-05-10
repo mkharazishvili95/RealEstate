@@ -27,23 +27,27 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
                     CreateDate = a.CreateDate,
                     UpdateDate = a.UpdateDate,
                     DeleteDate = a.DeleteDate,
-                    UserPin = a.User != null  && a.User.UserId != null ? a.User.PIN : null,
+                    UserPin = a.User != null && a.User.UserId != null ? a.User.PIN : null,
                     Price = a.Price,
                     CurrencyId = a.CurrencyId,
                     AgencyId = a.AgencyId
                 });
 
-            var paginatedResult = await apartments.ToPaginatedListAsync(request);
-            paginatedResult.StatusCode = StatusCodes.Status200OK;
-            paginatedResult.Success = true;
+            var totalCount = await apartments.CountAsync(cancellationToken);
+
+            var paginatedResult = await apartments
+                .Skip((request.Page.Value - 1) * request.PageSize.Value)
+                .Take(request.PageSize.Value)
+                .ToListAsync(cancellationToken);
 
             return new GetApartmentListForManageResponse
             {
-                ApartmentListForManage = paginatedResult.Items,
+                ApartmentListForManage = paginatedResult,
                 Success = true,
                 StatusCode = StatusCodes.Status200OK,
-                TotalCount = paginatedResult.Items.Count()
+                TotalCount = totalCount
             };
+
         }
     }
 }

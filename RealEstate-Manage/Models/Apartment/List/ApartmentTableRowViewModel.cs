@@ -13,6 +13,7 @@ namespace RealEstate_Manage.Models.Apartment.List
         public string? UserPin { get; set; }
         public decimal? Price { get; set; }
         public int? CurrencyId { get; set; }
+        public string? Currency { get; set; }
         public int? AgencyId { get; set; }
     }
 }

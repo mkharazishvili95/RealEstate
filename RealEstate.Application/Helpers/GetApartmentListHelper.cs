@@ -10,8 +10,8 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
                 (!request.ApartmentId.HasValue || apartment.ApartmentId == request.ApartmentId) &&
                 (string.IsNullOrEmpty(request.Title) || apartment.Title.ToUpper().Contains(request.Title.ToUpper())) &&
                 (!request.Status.HasValue || apartment.Status == request.Status) &&
-                (!request.CreateDateFrom.HasValue || apartment.CreateDate >= request.CreateDateFrom) &&
-                (!request.CreateDateTo.HasValue || apartment.CreateDate <= request.CreateDateTo) &&
+                (!request.CreateDateFrom.HasValue || apartment.CreateDate.Date >= request.CreateDateFrom.Value.Date) &&
+                (!request.CreateDateTo.HasValue || apartment.CreateDate.Date <= request.CreateDateTo.Value.Date) &&
                 (!request.UpdateDateFrom.HasValue || apartment.UpdateDate >= request.UpdateDateFrom) &&
                 (!request.UpdateDateTo.HasValue || apartment.UpdateDate <= request.UpdateDateTo) &&
                 (!request.DeleteDateFrom.HasValue || apartment.DeleteDate >= request.DeleteDateFrom) &&
