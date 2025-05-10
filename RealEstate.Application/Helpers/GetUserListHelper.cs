@@ -13,6 +13,7 @@ namespace RealEstate.Application.Feature.Manage.User.List
                 (string.IsNullOrEmpty(request.LastName) || user.LastName.ToUpper().Contains(request.LastName.ToUpper())) &&
                 (string.IsNullOrEmpty(request.UserName) || user.UserName.ToUpper().Contains(request.UserName.ToUpper())) &&
                 (string.IsNullOrEmpty(request.Email) || user.Email.ToUpper().Contains(request.Email.ToUpper())) &&
+                (string.IsNullOrEmpty(request.PhoneNumber) || user.PhoneNumber.Contains(request.PhoneNumber)) &&
                 (!request.Type.HasValue || user.Type == request.Type) &&
                 (!request.IsBlocked.HasValue || user.IsBlocked == request.IsBlocked) &&
                 (!request.BlockDateFrom.HasValue || user.BlockDate >= request.BlockDateFrom) &&

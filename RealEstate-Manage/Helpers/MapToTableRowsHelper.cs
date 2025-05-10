@@ -22,7 +22,7 @@ namespace RealEstate_Manage.Helpers
                 Email = user.Email ?? null,
                 PhoneNumber = user.PhoneNumber ?? null,
                 Balance = user.Balance ?? null,
-                IsBlocked = user.IsBlocked,
+                IsBlocked = (bool)user.IsBlocked,
                 BlockDate = user.BlockDate ?? null,
                 Gender = user.Gender ?? null,
                 RegisterDate = user.RegisterDate ?? null

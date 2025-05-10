@@ -1,6 +1,7 @@
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\bin\Debug\net6.0\RealEstate.Common.deps.json
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\bin\Debug\net6.0\RealEstate.Common.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\bin\Debug\net6.0\RealEstate.Common.pdb
+C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.csproj.AssemblyReference.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.AssemblyInfoInputs.cache
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.AssemblyInfo.cs
@@ -10,4 +11,3 @@ C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEsta
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\refint\RealEstate.Common.dll
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.pdb
 C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\ref\RealEstate.Common.dll
-C:\Users\admin\Desktop\RE\RealEstate\RealEstate.Common\obj\Debug\net6.0\RealEstate.Common.csproj.AssemblyReference.cache

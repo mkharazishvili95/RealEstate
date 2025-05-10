@@ -1,70 +1,129 @@
-﻿<div class="table-container">
-    <table>
-        <thead>
+﻿@model RealEstate_Manage.Models.User.List.UserListViewModel
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+@{
+    ViewData["Title"] = "მომხმარებელთა სია";
+}
+
+<h2>მომხმარებლები</h2>
+
+<form asp-action="UserList" method="get" class="container-fluid">
+    <table class="table table-bordered table-striped w-100">
+        <thead class="thead-dark">
             <tr>
                 <th>სახელი</th>
                 <th>გვარი</th>
                 <th>PIN</th>
-                <th>მომხმარებელი</th>
+                <th>Username</th>
                 <th>ელფოსტა</th>
                 <th>მობილური</th>
                 <th>ბალანსი</th>
                 <th>დაბლოკილი</th>
-                <th>დაბლოკვის თარიღი</th>
                 <th>რეგისტრაციის თარიღი</th>
-
+                <th></th>
+            </tr>
+            <tr>
+                <th><input type="text" name="FirstName" value="@Model.Filter.FirstName" class="form-control form-control-sm" /></th>
+                <th><input type="text" name="LastName" value="@Model.Filter.LastName" class="form-control form-control-sm" /></th>
+                <th><input type="text" name="PIN" value="@Model.Filter.PIN" class="form-control form-control-sm" /></th>
+                <th><input type="text" name="UserName" value="@Model.Filter.UserName" class="form-control form-control-sm" /></th>
+                <th><input type="text" name="Email" value="@Model.Filter.Email" class="form-control form-control-sm" /></th>
+                <th><input type="text" name="PhoneNumber" value="@Model.Filter.PhoneNumber" class="form-control form-control-sm" /></th>
+                <th>
+                    <input type="number" name="BalanceFrom" placeholder="დან" value="@Model.Filter.BalanceFrom" class="form-control form-control-sm mb-1" />
+                    <input type="number" name="BalanceTo" placeholder="მდე" value="@Model.Filter.BalanceTo" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    @Html.DropDownList("IsBlocked", new List<SelectListItem>
+                    {
+                    new SelectListItem { Text = "ყველა", Value = "" },
+                    new SelectListItem { Text = "კი", Value = "true" },
+                    new SelectListItem { Text = "არა", Value = "false" }
+                    }, new { @class = "form-control form-control-sm" })
+                </th>
+                <th>
+                    <input type="date" name="RegisterDateFrom" value="@Model.Filter.RegisterDateFrom?.ToString("yyyy-MM-dd")" class="form-control form-control-sm mb-1" />
+                    <input type="date" name="RegisterDateTo" value="@Model.Filter.RegisterDateTo?.ToString("yyyy-MM-dd")" class="form-control form-control-sm" />
+                </th>
+                <th>
+                    <div class="d-flex justify-content-end mb-4">
+                        <button type="submit" class="btn btn-primary btn-sm">ძიება</button>
+                        <a href="@Url.Action("UserList", "Manage")" class="btn btn-secondary btn-sm ms-2">გასუფთავება</a>
+                    </div>
+                </th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var row in Model)
+            @if (Model.Users != null && Model.Users.Any())
+            {
+                foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.FirstName</td>
+                        <td>@user.LastName</td>
+                        <td>@user.PIN</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>@user.PhoneNumber</td>
+                        <td>@user.Balance?.ToString("C")</td>
+                        <td>@(user.IsBlocked ? "კი" : "არა")</td>
+                        <td>@user.RegisterDate?.ToString("yyyy-MM-dd")</td>
+                        <td></td>
+                    </tr>
+                }
+            }
+            else
             {
                 <tr>
-                    <td>@row.FirstName</td>
-                    <td>@row.LastName</td>
-                    <td>@row.PIN</td>
-                    <td>@row.UserName</td>
-                    <td>@row.Email</td>
-                    <td>@row.PhoneNumber</td>
-                    <td>@row.Balance?.ToString("C")</td>
-                    <td>@(row.IsBlocked == true ? "კი" : "არა")</td>
-                    <td>@row.BlockDate?.ToString("yyyy-MM-dd")</td>
-                    <td>@row.RegisterDate</td>
+                    <td colspan="10" class="text-center">მომხმარებლები ვერ მოიძებნა.</td>
                 </tr>
             }
         </tbody>
     </table>
-</div>
-<a href="@Url.Action("Index", "Home")" class="btn btn-primary" style="margin-left: 50px;">უკან დაბრუნება</a>
+
+    
+    <div class="d-flex justify-content-center mt-4">
+        @if (Model.Page > 1)
+        {
+            <a class="btn btn-secondary mx-1" asp-action="UserList"
+               asp-route-Page="@(Model.Page - 1)" asp-route-PageSize="@Model.PageSize">უკან</a>
+        }
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a class="btn @(i == Model.Page ? "btn-primary" : "btn-outline-primary") mx-1"
+               asp-action="UserList" asp-route-Page="@i" asp-route-PageSize="@Model.PageSize">@i</a>
+        }
+
+        @if (Model.Page < Model.TotalPages)
+        {
+            <a class="btn btn-secondary mx-1" asp-action="UserList"
+               asp-route-Page="@(Model.Page + 1)" asp-route-PageSize="@Model.PageSize">წინ</a>
+        }
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">← უკან დაბრუნება</a>
+    </div>
+</form>
 
 <style>
     table {
-        width: 100%; 
-        margin: 20px 0;
-        border-collapse: collapse;
+        min-width: 100%;
     }
 
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border: 1px solid #ddd;
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
 
-    th {
-        background-color: #f2f2f2;
-        color: #333;
+    .container-fluid {
+        padding: 0;
     }
 
-    tr:hover {
-        background-color: #f5f5f5;
-    }
-
-    .table-container {
-        width: 120%;
-        margin: auto;
-        overflow-x: auto; 
-    }
-
-    .btn-primary {
-        margin-left: 50px;
+    .container {
+        max-width: 90% !important;
+        padding: 0;
     }
 </style>

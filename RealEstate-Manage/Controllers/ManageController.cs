@@ -7,6 +7,7 @@ using RealEstate.Models.User.List;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency.List;
 using RealEstate_Manage.Models.Apartment.List;
+using RealEstate_Manage.Models.User.List;
 
 namespace RealEstate.MVC.Controllers
 {
@@ -38,10 +39,9 @@ namespace RealEstate.MVC.Controllers
                 IsBlocked = filter.IsBlocked,
                 BlockDateFrom = filter.BlockDateFrom,
                 BlockDateTo = filter.BlockDateTo,
-                Gender = filter.Gender, 
+                Gender = filter.Gender,
                 RegisterDateFrom = filter.RegisterDateFrom,
                 RegisterDateTo = filter.RegisterDateTo,
-                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
                 PageSize = filter.PageSize,
                 Page = filter.Page
             };
@@ -50,10 +50,25 @@ namespace RealEstate.MVC.Controllers
             var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
-            var tableRows = mapper.MapToTableRowsForUsers(apiResponse.UserListForManage).ToList();
-            return View(tableRows);
+            var tableRows = new List<UserTableRowViewModel>();
 
+            if (apiResponse?.UserListForManage != null)
+            {
+                tableRows = new MapToTableRowsHelper()
+                    .MapToTableRowsForUsers(apiResponse.UserListForManage)
+                    .ToList();
+            }
+
+            var viewModel = new UserListViewModel
+            {
+                Filter = filter,
+                Users = tableRows,
+                TotalCount = apiResponse.TotalCount
+            };
+
+            return View(viewModel);
         }
+
 
         public async Task<IActionResult> AgencyList(AgencyFilterRowModel filter)
         {
