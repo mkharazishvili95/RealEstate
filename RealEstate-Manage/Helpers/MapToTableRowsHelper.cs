@@ -40,11 +40,11 @@ namespace RealEstate_Manage.Helpers
                 CreateDate = agency.CreateDate ?? null,
                 DeleteDate = agency.DeleteDate ?? null,
                 Email = agency.Email ?? null,
-                IsApproved = agency.IsApproved ?? null,
-                IsDeleted = agency.IsDeleted ?? null,
+                IsApproved = (bool)agency.IsApproved,
+                IsDeleted = (bool)agency.IsDeleted,
                 UpdateDate = agency.UpdateDate ?? null,
                 UserId = agency.UserId ?? null,
-                UserPin = agency.UserPin ?? null
+                OwnerPIN = agency.OwnerPIN ?? null
 
             }).ToList();
 

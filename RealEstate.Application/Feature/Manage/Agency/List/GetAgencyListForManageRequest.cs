@@ -11,6 +11,7 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
         public bool? IsApproved { get; set; }
         public bool? IsDeleted { get; set; }
         public string? IdentificationNumber { get; set; }
+        public string? OwnerPIN { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public DateTime? UpdateDateFrom { get; set; }

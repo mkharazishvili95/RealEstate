@@ -12,6 +12,7 @@ namespace RealEstate_Manage.Models.Agency.List
         public string? IdentificationNumber { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
+        public string? OwnerPIN { get; set; }
         public DateTime? UpdateDateFrom { get; set; }
         public DateTime? UpdateDateTo { get; set; }
         public DateTime? DeleteDateFrom { get; set; }

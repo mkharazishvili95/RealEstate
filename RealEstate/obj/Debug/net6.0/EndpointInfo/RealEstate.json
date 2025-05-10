@@ -581,11 +581,9 @@
       },
       "AgencyType": {
         "enum": [
+          0,
           1,
-          2,
-          3,
-          4,
-          5
+          2
         ],
         "type": "integer",
         "format": "int32"
@@ -695,6 +693,10 @@
             "type": "string",
             "nullable": true
           },
+          "ownerPIN": {
+            "type": "string",
+            "nullable": true
+          },
           "email": {
             "type": "string",
             "nullable": true
@@ -717,14 +719,14 @@
             "type": "string",
             "nullable": true
           },
-          "userPin": {
-            "type": "string",
-            "nullable": true
-          },
           "createDate": {
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "user": {
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -759,6 +761,10 @@
             "nullable": true
           },
           "identificationNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerPIN": {
             "type": "string",
             "nullable": true
           },

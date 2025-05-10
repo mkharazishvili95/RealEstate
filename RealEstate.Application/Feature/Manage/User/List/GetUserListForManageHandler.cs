@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using RealEstate.Application.Helpers;
 using RealEstate.Infrastructure.Data;
 

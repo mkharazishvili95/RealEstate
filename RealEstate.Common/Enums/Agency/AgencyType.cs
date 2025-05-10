@@ -2,10 +2,8 @@
 {
     public enum AgencyType
     {
+        NotSpecified = 0,
         Agency = 1,
-        Construction = 2,
-        Company = 3,
-        Shop = 4,
-        Finance = 5
+        Construction = 2
     }
 }

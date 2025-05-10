@@ -1,4 +1,5 @@
 ﻿using RealEstate.Common.Enums.Agency;
+using RealEstate.Core.User;
 
 namespace RealEstate.Core.Agency
 {
@@ -21,5 +22,6 @@ namespace RealEstate.Core.Agency
         public string? Link { get; set; }
         public string? PhoneNumber { get; set; }
         public DateTime? CreateDate { get; set; }
+        public RealEstate.Core.User.User User { get; set; }
     }
 }

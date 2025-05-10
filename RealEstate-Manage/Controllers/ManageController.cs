@@ -4,6 +4,7 @@ using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Models.User.List;
+using RealEstate_Manage.Extensions;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency.List;
 using RealEstate_Manage.Models.Apartment.List;
@@ -74,23 +75,23 @@ namespace RealEstate.MVC.Controllers
         {
             var apiRequest = new GetAgencyListForManageRequest
             {
-                 AgencyId = filter.AgencyId,
-                 AgencyType = filter.AgencyType,
-                 CreateDateFrom = filter.CreateDateFrom,
-                 CreateDateTo = filter.CreateDateTo,
-                 DeleteDateFrom = filter.DeleteDateFrom,
-                 DeleteDateTo = filter.DeleteDateTo,
-                 Email = filter.Email,
-                 IdentificationNumber = filter.IdentificationNumber,
-                 IsApproved = filter.IsApproved,
-                 IsDeleted = filter.IsDeleted,
-                 Name = filter.Name,
-                 PhoneNumber = filter.PhoneNumber,
-                 UpdateDateFrom = filter.UpdateDateFrom,
-                 UpdateDateTo = filter.UpdateDateTo,
-                //Order = (Application.Feature.Manage.User.List.Order?)filter.Order,
-                PageSize = filter.PageSize,
-                Page = filter.Page
+                AgencyId = filter.AgencyId,
+                Name = filter.Name,
+                AgencyType = filter.AgencyType,
+                Email = filter.Email,
+                IdentificationNumber = filter.IdentificationNumber,
+                OwnerPIN = filter.OwnerPIN,
+                PhoneNumber = filter.PhoneNumber,
+                IsDeleted = filter.IsDeleted,
+                IsApproved = filter.IsApproved,
+                CreateDateFrom = filter.CreateDateFrom,
+                CreateDateTo = filter.CreateDateTo,
+                UpdateDateFrom = filter.UpdateDateFrom,
+                UpdateDateTo = filter.UpdateDateTo,
+                DeleteDateFrom = filter.DeleteDateFrom,
+                DeleteDateTo = filter.DeleteDateTo,
+                Page = filter.Page,
+                PageSize = filter.PageSize
             };
 
             var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/agencies", apiRequest);
@@ -98,8 +99,25 @@ namespace RealEstate.MVC.Controllers
 
             var mapper = new MapToTableRowsHelper();
             var tableRows = mapper.MapToTableRowsForAgencies(apiResponse.AgencyListForManage).ToList();
-            return View(tableRows);
 
+            var viewModel = new AgencyListViewModel
+            {
+                Filter = filter,
+                Agencies = tableRows,
+                TotalCount = apiResponse.TotalCount,
+                AgencyTypeOptions = AgencyTypeExtensions.GetAgencyTypeOptions()
+                    .Select(at => new SelectListItem
+                    {
+                        Text = at.Text,
+                        Value = at.Value,
+                        Selected = filter.AgencyType.HasValue && at.Value == filter.AgencyType.ToString()
+                    })
+                    .ToList()
+            };
+
+            viewModel.AgencyTypeOptions.Insert(0, new SelectListItem { Text = "ყველა", Value = "" });
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
