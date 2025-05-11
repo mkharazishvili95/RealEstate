@@ -5,8 +5,8 @@ namespace RealEstate.Application.Services
 {
     public interface IManageService
     {
-        Task<UserBlockResponseModel> BlockUser(string id);
-        Task<UserUnBlockResponseModel> UnBlockUser(string id);
+        Task<UserBlockResponseModel> BlockUser(UserBlockRequest request);
+        Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request);
         Task<TopUpBalanceResponse> TopUpBalance(string id, decimal balance);
         Task<AgencyDeleteResponseModel> DeleteAgency(int agencyId, string? deleteReason);
         Task<AgencyRestoreResponseModel> RestoreAgency(int agencyId);

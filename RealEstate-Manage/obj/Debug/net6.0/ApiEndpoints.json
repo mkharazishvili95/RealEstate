@@ -138,9 +138,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.User.UserBlockRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -252,9 +252,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.User.UseUnBlockRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

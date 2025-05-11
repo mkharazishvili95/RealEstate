@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
@@ -175,6 +176,38 @@ namespace RealEstate.MVC.Controllers
                 new SelectListItem { Value = "1", Text = "ლარი" },
                 new SelectListItem { Value = "2", Text = "დოლარი" }
             };
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> BlockUser([FromBody] string userId)
+        {
+            var response = await _httpClient.PutAsJsonAsync(
+                "https://localhost:7010/api/Manage/block-user", new { userId });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "მომხმარებელი წარმატებით დაიბლოკა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "მომხმარებლის დაბლოკვისას მოხდა შეცდომა" });
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UnblockUser([FromBody] string userId)
+        {
+            var response = await _httpClient.PutAsJsonAsync(
+                "https://localhost:7010/api/Manage/unblock-user", new { userId });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "მომხმარებელი წარმატებით განიბლოკა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "მომხმარებლის განბლოკვისას მოხდა შეცდომა." });
+            }
         }
     }
 }

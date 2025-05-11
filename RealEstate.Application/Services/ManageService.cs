@@ -18,9 +18,13 @@ namespace RealEstate.Application.Services
             _agencyService = agencyService;
         }
 
-        public async Task<UserBlockResponseModel> BlockUser(string id)
+        public async Task<UserBlockResponseModel> BlockUser(UserBlockRequest request)
         {
-            var user = await _identityService.GetUserById(id);
+            if(request == null)
+                return new UserBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
+
+            var userId = request.UserId;
+            var user = await _identityService.GetUserById(userId);
             if (user == null)
                 return new UserBlockResponseModel { StatusCode = 404, Success = false, UserMessage = "User not found." };
 
@@ -33,9 +37,13 @@ namespace RealEstate.Application.Services
             await _db.SaveChangesAsync(CancellationToken.None);
             return new UserBlockResponseModel { Success = true, StatusCode = 200 };
         }
-        public async Task<UserUnBlockResponseModel> UnBlockUser(string id)
+        public async Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request)
         {
-            var user = await _identityService.GetUserById(id);
+            if(request == null)
+                return new UserUnBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
+
+            var userId = request.UserId;
+            var user = await _identityService.GetUserById(userId);
             if (user == null)
                 return new UserUnBlockResponseModel { StatusCode = 404, Success = false, UserMessage = "User not found." };
 

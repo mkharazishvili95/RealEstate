@@ -68,7 +68,33 @@
                         <td>@user.Balance?.ToString("C")</td>
                         <td>@(user.IsBlocked ? "კი" : "არა")</td>
                         <td>@user.RegisterDate?.ToString("yyyy-MM-dd")</td>
-                        <td></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    მოქმედება
+                                </button>
+                                <ul class="dropdown-menu">
+                                    @if (user.IsBlocked)
+                                    {
+                                        <li>
+                                            <button type="button" class="dropdown-item text-success unblock-user-btn"
+                                                    data-user-id="@user.UserId">
+                                                ბლოკის მოხსნა
+                                            </button>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            <button type="button" class="dropdown-item text-danger block-user-btn"
+                                                    data-user-id="@user.UserId">
+                                                დაბლოკვა
+                                            </button>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
                     </tr>
                 }
             }
@@ -127,3 +153,49 @@
         padding: 0;
     }
 </style>
+
+@section Scripts {
+    <script>
+                async function sendBlockRequest(userId, isBlocking) {
+            const confirmMsg = isBlocking
+                ? "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებლის დაბლოკვა?"
+                : "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებელზე ბლოკის მოხსნა?";
+
+            if (!confirm(confirmMsg)) return;
+
+            const endpoint = isBlocking ? '/Manage/BlockUser' : '/Manage/UnblockUser';
+
+            const response = await fetch(endpoint, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                },
+                body: JSON.stringify(userId)
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert(result.message);
+                location.reload();
+            } else {
+                alert(result.message);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".block-user-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    sendBlockRequest(button.dataset.userId, true);
+                });
+            });
+
+            document.querySelectorAll(".unblock-user-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    sendBlockRequest(button.dataset.userId, false);
+                });
+            });
+        });
+    </script>
+}
+

@@ -31,10 +31,10 @@ namespace RealEstate.Controllers
         public async Task<GetApartmentListForManageResponse> GetApartmentListForManage([FromBody] GetApartmentListForManageRequest request) => await _mediator.Send(request);
 
         [HttpPut("block-user")]
-        public async Task<UserBlockResponseModel> BlockUser(string userId) => await _manageService.BlockUser(userId);
+        public async Task<UserBlockResponseModel> BlockUser(UserBlockRequest request) => await _manageService.BlockUser(request);
 
         [HttpPut("unblock-user")]
-        public async Task<UserUnBlockResponseModel> UnBlockUser(string userId) => await _manageService.UnBlockUser(userId);
+        public async Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request) => await _manageService.UnBlockUser(request);
 
         [HttpPost("top-up-balance")]
         public async Task<TopUpBalanceResponse> UnBlockUser(string userId, decimal balance) => await _manageService.TopUpBalance(userId, balance);
