@@ -74,19 +74,12 @@
                                     მოქმედება
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <button type="button" class="dropdown-item text-info topup-user-btn"
-                                                data-user-id="@user.UserId">
-                                            ბალანსის შევსება
-                                        </button>
-                                    </li>
-
                                     @if (user.IsBlocked)
                                     {
                                         <li>
                                             <button type="button" class="dropdown-item text-success unblock-user-btn"
                                                     data-user-id="@user.UserId">
-                                                ბლოკის მოხსნა
+                                                <i class="bi bi-unlock"></i> ბლოკის მოხსნა
                                             </button>
                                         </li>
                                     }
@@ -95,7 +88,13 @@
                                         <li>
                                             <button type="button" class="dropdown-item text-danger block-user-btn"
                                                     data-user-id="@user.UserId">
-                                                დაბლოკვა
+                                                <i class="bi bi-lock"></i> დაბლოკვა
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item text-info topup-user-btn"
+                                                    data-user-id="@user.UserId">
+                                                <i class="bi bi-credit-card"></i> ბალანსის შევსება
                                             </button>
                                         </li>
                                     }
@@ -140,6 +139,8 @@
     </div>
 </form>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 <style>
     table {
         min-width: 100%;
@@ -159,16 +160,98 @@
         max-width: 90% !important;
         padding: 0;
     }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        justify-content: flex-start;
+    }
+
+        .dropdown-item i {
+            margin-right: 10px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            transform: scale(1.05);
+        }
+
+    .text-info.topup-user-btn {
+        background-color: white;
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .text-info.topup-user-btn:hover {
+            background-color: white;
+        }
+
+    .text-success.unblock-user-btn {
+        background-color: white;
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .text-success.unblock-user-btn:hover {
+            background-color: white;
+        }
+
+    .text-danger.block-user-btn {
+        background-color: white;
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .text-danger.block-user-btn:hover {
+            background-color: white;
+        }
+
+    .dropdown-toggle {
+        background-color: #6f42c1;
+        color: white;
+        border-radius: 8px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .dropdown-toggle:hover {
+            background-color: #5a32a3;
+            transform: scale(1.05);
+        }
+
+
+
 </style>
 
 @section Scripts {
     <script>
-                async function sendBlockRequest(userId, isBlocking) {
+        async function sendBlockRequest(userId, isBlocking) {
             const confirmMsg = isBlocking
                 ? "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებლის დაბლოკვა?"
                 : "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებელზე ბლოკის მოხსნა?";
 
             if (!confirm(confirmMsg)) return;
+
+            let data = { userId: userId };
+
+            if (isBlocking) {
+                const reason = prompt("შეიყვანეთ დაბლოკვის მიზეზი (არასავალდებულო):");
+                data.blockReason = reason || null;
+            }
 
             const endpoint = isBlocking ? '/Manage/BlockUser' : '/Manage/UnblockUser';
 
@@ -178,7 +261,7 @@
                     'Content-Type': 'application/json',
                     'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
                 },
-                body: JSON.stringify(userId)
+                body: JSON.stringify(data)
             });
 
             const result = await response.json();
@@ -190,21 +273,7 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".block-user-btn").forEach(button => {
-                button.addEventListener("click", () => {
-                    sendBlockRequest(button.dataset.userId, true);
-                });
-            });
-
-            document.querySelectorAll(".unblock-user-btn").forEach(button => {
-                button.addEventListener("click", () => {
-                    sendBlockRequest(button.dataset.userId, false);
-                });
-            });
-        });
-
-                    async function sendTopUpRequest(userId) {
+        async function sendTopUpRequest(userId) {
             const amount = prompt("შეიყვანეთ შესატანი ბალანსის ოდენობა:");
 
             if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
@@ -254,7 +323,6 @@
                 });
             });
         });
-
     </script>
 }
 

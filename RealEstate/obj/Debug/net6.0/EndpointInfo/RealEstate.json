@@ -1450,6 +1450,10 @@
           "userId": {
             "type": "string",
             "nullable": true
+          },
+          "blockReason": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

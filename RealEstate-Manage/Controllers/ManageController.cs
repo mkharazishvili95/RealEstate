@@ -181,10 +181,16 @@ namespace RealEstate.MVC.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> BlockUser([FromBody] string userId)
+        public async Task<IActionResult> BlockUser([FromBody] BlockUserRequestModel request)
         {
             var response = await _httpClient.PutAsJsonAsync(
-                "https://localhost:7010/api/Manage/block-user", new { userId });
+                "https://localhost:7010/api/Manage/block-user", 
+
+                new BlockUserRequestModel 
+                { 
+                    UserId = request.UserId ,
+                    BlockReason = request.BlockReason
+                });
 
             if (response.IsSuccessStatusCode)
             {
@@ -197,10 +203,14 @@ namespace RealEstate.MVC.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UnblockUser([FromBody] string userId)
+        public async Task<IActionResult> UnblockUser([FromBody] UnblockUserRequestModel request)
         {
             var response = await _httpClient.PutAsJsonAsync(
-                "https://localhost:7010/api/Manage/unblock-user", new { userId });
+                "https://localhost:7010/api/Manage/unblock-user", 
+                new UnblockUserRequestModel 
+                { 
+                    UserId = request.UserId 
+                });
 
             if (response.IsSuccessStatusCode)
             {
@@ -223,7 +233,11 @@ namespace RealEstate.MVC.Controllers
 
             var response = await _httpClient.PostAsJsonAsync(
                 "https://localhost:7010/api/Manage/top-up-balance",
-                new TopUpBalanceRequest { UserId = request.UserId, Balance = request.Balance });
+                new TopUpBalanceRequest 
+                { 
+                    UserId = request.UserId, 
+                    Balance = request.Balance 
+                });
 
             if (response.IsSuccessStatusCode)
             {

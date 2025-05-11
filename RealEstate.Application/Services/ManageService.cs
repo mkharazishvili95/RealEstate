@@ -32,6 +32,7 @@ namespace RealEstate.Application.Services
                 return new UserBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "User is already blocked" };
 
             user.IsBlocked = true;
+            user.BlockReason = request.BlockReason ?? null;
             user.BlockDate = DateTime.UtcNow;
 
             await _db.SaveChangesAsync(CancellationToken.None);
@@ -52,6 +53,7 @@ namespace RealEstate.Application.Services
 
             user.IsBlocked = false;
             user.BlockDate = null;
+            user.BlockReason = null;
 
             await _db.SaveChangesAsync(CancellationToken.None);
             return new UserUnBlockResponseModel { Success = true, StatusCode = 200 };
