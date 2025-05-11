@@ -74,6 +74,13 @@
                                     მოქმედება
                                 </button>
                                 <ul class="dropdown-menu">
+                                    <li>
+                                        <button type="button" class="dropdown-item text-info topup-user-btn"
+                                                data-user-id="@user.UserId">
+                                            ბალანსის შევსება
+                                        </button>
+                                    </li>
+
                                     @if (user.IsBlocked)
                                     {
                                         <li>
@@ -196,6 +203,58 @@
                 });
             });
         });
+
+                    async function sendTopUpRequest(userId) {
+            const amount = prompt("შეიყვანეთ შესატანი ბალანსის ოდენობა:");
+
+            if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
+                alert("გთხოვთ შეიყვანოთ ვალიდური თანხა.");
+                return;
+            }
+
+            const data = {
+                userId: userId,
+                balance: parseFloat(amount)
+            };
+
+            const response = await fetch('/Manage/TopUpBalance', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert(result.message);
+                location.reload();
+            } else {
+                alert(result.message);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".block-user-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    sendBlockRequest(button.dataset.userId, true);
+                });
+            });
+
+            document.querySelectorAll(".unblock-user-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    sendBlockRequest(button.dataset.userId, false);
+                });
+            });
+
+            document.querySelectorAll(".topup-user-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    sendTopUpRequest(button.dataset.userId);
+                });
+            });
+        });
+
     </script>
 }
 

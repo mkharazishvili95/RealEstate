@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
+using RealEstate.Application.Models.User;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Extensions;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency.List;
 using RealEstate_Manage.Models.Apartment.List;
+using RealEstate_Manage.Models.User;
 using RealEstate_Manage.Models.User.List;
 
 namespace RealEstate.MVC.Controllers
@@ -207,6 +209,29 @@ namespace RealEstate.MVC.Controllers
             else
             {
                 return Json(new { success = false, message = "მომხმარებლის განბლოკვისას მოხდა შეცდომა." });
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> TopUpBalance([FromBody] TopUpBalanceRequestModel request)
+        {
+            if (request.UserId == null)
+                return Json(new { success = false, message = "მომხმარებლის ბალანსის შევსებისას მოხდა შეცდომა." });
+
+            if (request.Balance <= 0)
+                return Json(new { success = false, message = "შეყვანილი ბალანსი უნდა იყოს 0-ზე მეტი" });
+
+            var response = await _httpClient.PostAsJsonAsync(
+                "https://localhost:7010/api/Manage/top-up-balance",
+                new TopUpBalanceRequest { UserId = request.UserId, Balance = request.Balance });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "მომხმარებლის ბალანსი წარმატებით შეივსო" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "მომხმარებლის ბალანსის შევსებისას მოხდა შეცდომა." });
             }
         }
     }

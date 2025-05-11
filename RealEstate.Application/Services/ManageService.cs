@@ -57,14 +57,17 @@ namespace RealEstate.Application.Services
             return new UserUnBlockResponseModel { Success = true, StatusCode = 200 };
         }
 
-        public async Task<TopUpBalanceResponse> TopUpBalance(string id, decimal balance)
+        public async Task<TopUpBalanceResponse> TopUpBalance(TopUpBalanceRequest request)
         {
-            var user = await _identityService.GetUserById(id);
-            if (string.IsNullOrEmpty(id))
-                return new TopUpBalanceResponse { StatusCode = 400, Success = false, UserMessage = "Enter UserId and balance." };
+            if (request == null)
+                return new TopUpBalanceResponse { StatusCode = 400, Success = false, UserMessage = "request should not be empty" };
 
-            if (balance <= 0)
-                return new TopUpBalanceResponse { StatusCode = 404, Success = false, UserMessage = "Enter amount." };
+            var userId = request.UserId;    
+
+            var user = await _identityService.GetUserById(userId);
+
+            if (request.Balance <= 0)
+                return new TopUpBalanceResponse { StatusCode = 404, Success = false, UserMessage = "Enter correct amount." };
 
             if (user == null)
             {
@@ -72,7 +75,7 @@ namespace RealEstate.Application.Services
             }
             else
             {
-                user.Balance += balance;
+                user.Balance += request.Balance;
                 await _db.SaveChangesAsync(CancellationToken.None);
                 return new TopUpBalanceResponse { StatusCode = 200, Success = true, UserMessage = "Success." };
             }

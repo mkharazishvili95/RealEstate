@@ -221,14 +221,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "balance",
-        "Type": "System.Decimal",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.User.TopUpBalanceRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

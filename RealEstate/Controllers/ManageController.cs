@@ -37,7 +37,7 @@ namespace RealEstate.Controllers
         public async Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request) => await _manageService.UnBlockUser(request);
 
         [HttpPost("top-up-balance")]
-        public async Task<TopUpBalanceResponse> UnBlockUser(string userId, decimal balance) => await _manageService.TopUpBalance(userId, balance);
+        public async Task<TopUpBalanceResponse> UnBlockUser(TopUpBalanceRequest request) => await _manageService.TopUpBalance(request);
 
         [HttpDelete("delete-agency")]
         public async Task<AgencyDeleteResponseModel> DeleteAgency(int agencyId, string? deleteReason) => await _manageService.DeleteAgency(agencyId, deleteReason);
