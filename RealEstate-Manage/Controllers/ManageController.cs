@@ -1,5 +1,4 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
@@ -9,6 +8,7 @@ using RealEstate.Models.User.List;
 using RealEstate_Manage.Extensions;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency.List;
+using RealEstate_Manage.Models.Apartment;
 using RealEstate_Manage.Models.Apartment.List;
 using RealEstate_Manage.Models.User;
 using RealEstate_Manage.Models.User.List;
@@ -19,11 +19,14 @@ namespace RealEstate.MVC.Controllers
     {
         private readonly HttpClient _httpClient;
         private readonly MapToTableRowsHelper _mapper;
+        private readonly string _baseUrl;
 
-        public ManageController(IHttpClientFactory httpClientFactory, MapToTableRowsHelper mapper)
+        public ManageController(IHttpClientFactory httpClientFactory, MapToTableRowsHelper mapper, IConfiguration configuration)
         {
             _httpClient = httpClientFactory.CreateClient();
             _mapper = mapper;
+            //Local, ჩემი აპის შემთხვევაში:
+            _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
 
         public async Task<IActionResult> UserList(UserFilterRowModel filter)
@@ -50,7 +53,8 @@ namespace RealEstate.MVC.Controllers
                 Page = filter.Page
             };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/users", apiRequest);
+            var requestUrl = $"{_baseUrl}/Manage/users";
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
@@ -97,7 +101,8 @@ namespace RealEstate.MVC.Controllers
                 PageSize = filter.PageSize
             };
 
-            var response = await _httpClient.PostAsJsonAsync("https://localhost:7010/api/Manage/agencies", apiRequest);
+            var requestUrl = $"{_baseUrl}/Manage/agencies";
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
@@ -125,6 +130,7 @@ namespace RealEstate.MVC.Controllers
 
         public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
         {
+            SetApartmentStatusSelectList();
             SetCurrencySelectList();
 
             var apiRequest = new GetApartmentListForManageRequest
@@ -148,8 +154,10 @@ namespace RealEstate.MVC.Controllers
                 Page = filter.Page ?? 1
             };
 
+            var requestUrl = $"{_baseUrl}/Manage/apartments";
+
             var response = await _httpClient.PostAsJsonAsync(
-                "https://localhost:7010/api/Manage/apartments", apiRequest);
+                requestUrl, apiRequest);
 
             var apiResponse = await response.Content.ReadFromJsonAsync<GetApartmentListForManageResponse>();
 
@@ -162,6 +170,8 @@ namespace RealEstate.MVC.Controllers
                     .ToList();
             }
 
+            ViewBag.ApiBaseUrl = _baseUrl;
+
             return View(new ApartmentListViewModel
             {
                 Filter = filter,
@@ -170,25 +180,16 @@ namespace RealEstate.MVC.Controllers
             });
         }
 
-        private void SetCurrencySelectList()
-        {
-            ViewBag.Currencies = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "", Text = "აირჩიეთ ვალუტა" },
-                new SelectListItem { Value = "1", Text = "ლარი" },
-                new SelectListItem { Value = "2", Text = "დოლარი" }
-            };
-        }
-
         [HttpPut]
         public async Task<IActionResult> BlockUser([FromBody] BlockUserRequestModel request)
         {
-            var response = await _httpClient.PutAsJsonAsync(
-                "https://localhost:7010/api/Manage/block-user", 
+            var requestUrl = $"{_baseUrl}/Manage/block-user";
 
-                new BlockUserRequestModel 
-                { 
-                    UserId = request.UserId ,
+            var response = await _httpClient.PutAsJsonAsync(
+                requestUrl,
+                new BlockUserRequestModel
+                {
+                    UserId = request.UserId,
                     BlockReason = request.BlockReason
                 });
 
@@ -205,11 +206,13 @@ namespace RealEstate.MVC.Controllers
         [HttpPut]
         public async Task<IActionResult> UnblockUser([FromBody] UnblockUserRequestModel request)
         {
+            var requestUrl = $"{_baseUrl}/Manage/unblock-user";
+
             var response = await _httpClient.PutAsJsonAsync(
-                "https://localhost:7010/api/Manage/unblock-user", 
-                new UnblockUserRequestModel 
-                { 
-                    UserId = request.UserId 
+                requestUrl,
+                new UnblockUserRequestModel
+                {
+                    UserId = request.UserId
                 });
 
             if (response.IsSuccessStatusCode)
@@ -231,12 +234,14 @@ namespace RealEstate.MVC.Controllers
             if (request.Balance <= 0)
                 return Json(new { success = false, message = "შეყვანილი ბალანსი უნდა იყოს 0-ზე მეტი" });
 
+            var requestUrl = $"{_baseUrl}/Manage/top-up-balance";
+
             var response = await _httpClient.PostAsJsonAsync(
-                "https://localhost:7010/api/Manage/top-up-balance",
-                new TopUpBalanceRequest 
-                { 
-                    UserId = request.UserId, 
-                    Balance = request.Balance 
+                requestUrl,
+                new TopUpBalanceRequest
+                {
+                    UserId = request.UserId,
+                    Balance = request.Balance
                 });
 
             if (response.IsSuccessStatusCode)
@@ -247,6 +252,72 @@ namespace RealEstate.MVC.Controllers
             {
                 return Json(new { success = false, message = "მომხმარებლის ბალანსის შევსებისას მოხდა შეცდომა." });
             }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> BlockApartment([FromBody] BlockApartmentRequestModel request)
+        {
+            var requestUrl = $"{_baseUrl}/Manage/block-apartment";
+
+            var response = await _httpClient.PutAsJsonAsync(
+                requestUrl,
+
+                new BlockApartmentRequestModel
+                {
+                    ApartmentId = request.ApartmentId,
+                    BlockReason = request.BlockReason
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "უძრავი ქონება წარმატებით დაიბლოკა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "უძრავი ქონების დაბლოკვისას მოხდა შეცდომა" });
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UnblockApartment([FromBody] UnblockApartmentRequestModel request)
+        {
+            var requestUrl = $"{_baseUrl}/Manage/unblock-apartment";
+
+            var response = await _httpClient.PutAsJsonAsync(
+                requestUrl,
+                new UnblockApartmentRequestModel
+                {
+                    ApartmentId = request.ApartmentId
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "უძრავი ქონება წარმატებით განიბლოკა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "უძრავი ქონების განბლოკვისას მოხდა შეცდომა." });
+            }
+        }
+        private void SetCurrencySelectList()
+        {
+            ViewBag.Currencies = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "", Text = "აირჩიეთ ვალუტა" },
+                new SelectListItem { Value = "1", Text = "ლარი" },
+                new SelectListItem { Value = "2", Text = "დოლარი" }
+            };
+        }
+        private void SetApartmentStatusSelectList()
+        {
+            ViewBag.Status = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "", Text = "აირჩიეთ სტატუსი" },
+                new SelectListItem { Value = "0", Text = "აქტიური" },
+                new SelectListItem { Value = "1", Text = "ვადაგასული" },
+                new SelectListItem { Value = "2", Text = "დაბლოკილი" },
+                new SelectListItem { Value = "3", Text = "წაშლილი" }
+            };
         }
     }
 }

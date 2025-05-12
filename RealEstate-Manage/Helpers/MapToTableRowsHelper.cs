@@ -1,6 +1,7 @@
 ﻿using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
+using RealEstate.Common.Enums.Apartment;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Models.Agency.List;
 using RealEstate_Manage.Models.Apartment.List;
@@ -55,7 +56,7 @@ namespace RealEstate_Manage.Helpers
             {
                  UserPin = agency.UserPin ?? null,
                  Title = agency.Title ?? null,
-                 Status = agency.Status ?? null,
+                 Status = (ApartmentStatus)agency.Status,
                  AgencyId = agency.AgencyId ?? null,
                  ApartmentId = agency.ApartmentId ?? null,
                  CreateDate = agency.CreateDate ?? null,

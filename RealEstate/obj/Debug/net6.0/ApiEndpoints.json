@@ -131,6 +131,32 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "BlockApartment",
+    "RelativePath": "api/Manage/block-apartment",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.Block.BlockApartmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.Block.BlockApartmentResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "BlockUser",
     "RelativePath": "api/Manage/block-user",
     "HttpMethod": "PUT",
@@ -229,6 +255,32 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Models.User.TopUpBalanceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "UnblockApartment",
+    "RelativePath": "api/Manage/unblock-apartment",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.Unblock.UnblockApartmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Apartment.Unblock.UnblockApartmentResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealEstate-Manage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88982e2dd329ee94d79272c0165db50d3c8e4695")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a749f6f3f0b66455e243e5db6aa1a62c3f1e217b")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealEstate-Manage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealEstate-Manage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

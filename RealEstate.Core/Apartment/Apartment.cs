@@ -8,6 +8,7 @@ namespace RealEstate.Core.Apartment
         public string Title { get; set; }
         public string? Description { get; set; }
         public ApartmentStatus Status { get; set; }
+        public string? BlockReason { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime EndDate { get; set; }
         public DateTime? UpdateDate { get; set; }

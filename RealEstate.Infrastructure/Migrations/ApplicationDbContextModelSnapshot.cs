@@ -164,9 +164,11 @@ namespace RealEstate.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("AgencyId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Agencies");
                 });
@@ -181,6 +183,9 @@ namespace RealEstate.Infrastructure.Migrations
 
                     b.Property<int?>("AgencyId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BlockReason")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -382,6 +387,17 @@ namespace RealEstate.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("District");
+                });
+
+            modelBuilder.Entity("RealEstate.Core.Agency.Agency", b =>
+                {
+                    b.HasOne("RealEstate.Core.User.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("RealEstate.Core.Apartment.Apartment", b =>

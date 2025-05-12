@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Common.Enums.Agency;
+using RealEstate.Common.Enums.Apartment;
 
 namespace RealEstate_Manage.Extensions
 {
@@ -19,7 +20,17 @@ namespace RealEstate_Manage.Extensions
                     return "უცნობია";
             }
         }
-
+        public static string GetGeorgianStatus(ApartmentStatus status)
+        {
+            return status switch
+            {
+                ApartmentStatus.Active => "აქტიური",
+                ApartmentStatus.Expired => "ვადაგასული",
+                ApartmentStatus.Blocked => "დაბლოკილი",
+                ApartmentStatus.Deleted => "წაშლილი",
+                _ => ""
+            };
+        }
         public static List<SelectListItem> GetAgencyTypeOptions()
         {
             var agencyTypes = Enum.GetValues(typeof(AgencyType))

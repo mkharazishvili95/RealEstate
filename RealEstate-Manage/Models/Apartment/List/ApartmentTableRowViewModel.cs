@@ -6,7 +6,9 @@ namespace RealEstate_Manage.Models.Apartment.List
     {
         public int? ApartmentId { get; set; }
         public string? Title { get; set; }
-        public ApartmentStatus? Status { get; set; }
+        public ApartmentStatus Status { get; set; }
+        public string? ApartmentStatus { get; set; }
+        public string? BlockReason { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? UpdateDate { get; set; }
         public DateTime? DeleteDate { get; set; }

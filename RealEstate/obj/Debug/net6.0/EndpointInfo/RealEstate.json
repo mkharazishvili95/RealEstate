@@ -508,6 +508,102 @@
         }
       }
     },
+    "/api/Manage/block-apartment": {
+      "put": {
+        "tags": [
+          "Manage"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlockApartmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlockApartmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlockApartmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlockApartmentResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlockApartmentResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlockApartmentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Manage/unblock-apartment": {
+      "put": {
+        "tags": [
+          "Manage"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnblockApartmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnblockApartmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnblockApartmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnblockApartmentResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnblockApartmentResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnblockApartmentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/User/favorite-apartments": {
       "get": {
         "tags": [
@@ -619,6 +715,42 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "BlockApartmentRequest": {
+        "type": "object",
+        "properties": {
+          "apartmentId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "blockReason": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BlockApartmentResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "rawResponse": {
+            "type": "string",
+            "nullable": true
+          },
+          "userMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "Currency": {
         "type": "object",
@@ -1414,6 +1546,38 @@
         "additionalProperties": false
       },
       "TopUpBalanceResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "rawResponse": {
+            "type": "string",
+            "nullable": true
+          },
+          "userMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnblockApartmentRequest": {
+        "type": "object",
+        "properties": {
+          "apartmentId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnblockApartmentResponse": {
         "type": "object",
         "properties": {
           "statusCode": {

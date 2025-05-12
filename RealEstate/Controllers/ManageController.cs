@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Manage.Agency.List;
+using RealEstate.Application.Feature.Manage.Apartment.Block;
 using RealEstate.Application.Feature.Manage.Apartment.List;
+using RealEstate.Application.Feature.Manage.Apartment.Unblock;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Models.Agency;
 using RealEstate.Application.Models.User;
@@ -44,6 +46,18 @@ namespace RealEstate.Controllers
 
         [HttpPost("restore-agency")]
         public async Task<AgencyRestoreResponseModel> RestoreAgency(int agencyId) => await _manageService.RestoreAgency(agencyId);
+
+        //[HttpPut("block-apartment")]
+        //public async Task<BlockApartmentResponse> BlockApartment(BlockApartmentRequest request) => await _mediator.Send(request);
+
+        //[HttpPut("unblock-apartment")]
+        //public async Task<UnblockApartmentResponse> UnblockApartment(UnblockApartmentRequest request) => await _mediator.Send(request);
+
+        [HttpPut("block-apartment")]
+        public async Task<BlockApartmentResponse> BlockApartment(BlockApartmentRequest request) => await _manageService.BlockApartment(request);
+
+        [HttpPut("unblock-apartment")]
+        public async Task<UnblockApartmentResponse> UnblockApartment(UnblockApartmentRequest request) => await _manageService.UnblockApartment(request);
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using RealEstate.Common.Enums.Apartment;
 using RealEstate.Infrastructure.Data;
 
 namespace RealEstate.Application.Feature.Manage.Apartment.List
@@ -18,6 +19,8 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
             var apartments = _database.Apartments
                 .Include(a => a.User)
                 .Where(request.WhereClause())
+                .OrderByDescending(a => a.Status == ApartmentStatus.Active)
+                .ThenByDescending(a => a.CreateDate)
                 .Select(a => new GetApartmentListForManageItemsResponse
                 {
                     ApartmentId = a.ApartmentId,
