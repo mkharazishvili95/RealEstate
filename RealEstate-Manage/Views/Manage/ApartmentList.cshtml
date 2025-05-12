@@ -153,7 +153,7 @@
         padding: 0;
     }
 </style>
-
+@* 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -211,6 +211,105 @@
                             },
                             error: function () {
                                 Swal.fire('დაფიქსირდა შეცდომა');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+                $.ajax({
+            url: '@Url.Action("BlockApartment", "Manage")',
+            method: 'PUT', // change to POST if PUT doesn't work
+            contentType: 'application/json',
+            data: JSON.stringify({
+                ApartmentId: apartmentId,
+                BlockReason: result.value
+            }),
+            success: function (response) {
+                Swal.fire(response.message).then(() => location.reload());
+            },
+            error: function () {
+                Swal.fire('დაფიქსირდა შეცდომა');
+            }
+        });
+
+    </script>
+}
+ *@
+ @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function () {
+            $('.block-btn').click(function () {
+                const apartmentId = $(this).data('id');
+
+                Swal.fire({
+                    title: 'დაბლოკვა',
+                    input: 'text',
+                    inputLabel: 'შეიყვანეთ დაბლოკვის მიზეზი',
+                    inputPlaceholder: 'მიზეზი...',
+                    showCancelButton: true,
+                    confirmButtonText: 'დადასტურება',
+                    cancelButtonText: 'გაუქმება'
+                }).then((result) => {
+                    if (result.isConfirmed && result.value.trim() !== '') {
+                        $.ajax({
+                            url: '@Url.Action("BlockApartment", "Manage")',
+                            method: 'PUT',
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                ApartmentId: apartmentId,
+                                BlockReason: result.value
+                            }),
+                            success: function (response) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: response.message
+                                }).then(() => {
+                                    location.reload();
+                                });
+                            },
+                            error: function () {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'დაფიქსირდა შეცდომა'
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
+            $('.unblock-btn').click(function () {
+                const apartmentId = $(this).data('id');
+
+                Swal.fire({
+                    title: 'დარწმუნებული ხართ?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'დიახ, განიბლოკოს!',
+                    cancelButtonText: 'გაუქმება'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: '@Url.Action("UnblockApartment", "Manage")',
+                            method: 'PUT',
+                            contentType: 'application/json',
+                            data: JSON.stringify({ ApartmentId: apartmentId }),
+                            success: function (response) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: response.message
+                                }).then(() => {
+                                    location.reload();
+                                });
+                            },
+                            error: function () {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'დაფიქსირდა შეცდომა'
+                                });
                             }
                         });
                     }

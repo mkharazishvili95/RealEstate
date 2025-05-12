@@ -1,5 +1,6 @@
-﻿namespace RealEstate.Application.Feature.Manage.Apartment.Block
+﻿namespace RealEstate.Application.Models.Apartment
 {
+    public class BlockApartmentResponse : ResponseBaseModel { }
     public class BlockApartmentRequest : IRequest<BlockApartmentResponse>
     {
         public int? ApartmentId { get; set; }

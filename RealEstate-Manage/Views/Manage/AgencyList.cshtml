@@ -17,7 +17,7 @@
                 <th>ტიპი</th>
                 <th>მეილი</th>
                 <th>საიდენტიფიკაციო კოდი</th>
-                <th>მფლობელის PIN</th>
+                <th>PIN</th>
                 <th>მობილური</th>
                 <th>წაშლილი</th>
                 <th>დადასტურებული</th>
@@ -84,7 +84,33 @@
                         <td>@agency.CreateDate?.ToString("yyyy-MM-dd")</td>
                         <td>@agency.UpdateDate?.ToString("yyyy-MM-dd")</td>
                         <td>@agency.DeleteDate?.ToString("yyyy-MM-dd")</td>
-                        <td></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    მოქმედება
+                                </button>
+                                <ul class="dropdown-menu">
+                                    @if (agency.IsDeleted)
+                                    {
+                                        <li>
+                                            <button type="button" class="dropdown-item text-success restore-agency" data-id="@agency.AgencyId">
+                                                <i class="bi bi-arrow-counterclockwise"></i> აღდგენა
+                                            </button>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            <button type="button" class="dropdown-item text-danger delete-agency" data-id="@agency.AgencyId">
+                                                <i class="bi bi-trash"></i> წაშლა
+                                            </button>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+
+
                     </tr>
                 }
             }
@@ -146,3 +172,50 @@
         padding: 0;
     }
 </style>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".delete-agency").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const agencyId = this.dataset.id;
+                    const deleteReason = prompt("გთხოვთ, მიუთითეთ წაშლის მიზეზი:");
+                    if (!deleteReason) return;
+
+                    fetch('/Manage/DeleteAgency', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ agencyId, deleteReason })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        if (data.success) location.reload();
+                    });
+                });
+            });
+
+            document.querySelectorAll(".restore-agency").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const agencyId = this.dataset.id;
+
+                    fetch('/Manage/RestoreAgency', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ agencyId })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        if (data.success) location.reload();
+                    });
+                });
+            });
+        });
+    </script>
+}
+

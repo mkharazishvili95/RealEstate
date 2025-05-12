@@ -139,13 +139,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.Block.BlockApartmentRequest",
+        "Type": "RealEstate.Application.Models.Apartment.BlockApartmentRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.Block.BlockApartmentResponse",
+        "Type": "RealEstate.Application.Models.Apartment.BlockApartmentResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -185,19 +185,14 @@
     "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "DeleteAgency",
     "RelativePath": "api/Manage/delete-agency",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "agencyId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "deleteReason",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.Agency.AgencyDeleteRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -221,9 +216,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "agencyId",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.Agency.AgencyRestoreRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -274,13 +269,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.Unblock.UnblockApartmentRequest",
+        "Type": "RealEstate.Application.Models.Apartment.UnblockApartmentRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "RealEstate.Application.Feature.Manage.Apartment.Unblock.UnblockApartmentResponse",
+        "Type": "RealEstate.Application.Models.Apartment.UnblockApartmentResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -7,6 +7,7 @@ using RealEstate.Application.Models.User;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Extensions;
 using RealEstate_Manage.Helpers;
+using RealEstate_Manage.Models.Agency;
 using RealEstate_Manage.Models.Agency.List;
 using RealEstate_Manage.Models.Apartment;
 using RealEstate_Manage.Models.Apartment.List;
@@ -25,7 +26,7 @@ namespace RealEstate.MVC.Controllers
         {
             _httpClient = httpClientFactory.CreateClient();
             _mapper = mapper;
-            //Local, ჩემი აპის შემთხვევაში:
+            //Local, ჩემი აპის შემთხვევაში: https://localhost:7010/api
             _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
 
@@ -297,6 +298,51 @@ namespace RealEstate.MVC.Controllers
             else
             {
                 return Json(new { success = false, message = "უძრავი ქონების განბლოკვისას მოხდა შეცდომა." });
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteAgency(DeleteAgencyRequestModel request)
+        {
+            var requestUrl = $"{_baseUrl}/Manage/delete-agency";
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new DeleteAgencyRequestModel
+                {
+                    AgencyId = request.AgencyId,
+                    DeleteReason = request.DeleteReason
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "სააგენტო წარმატებით წაიშალა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "სააგენტოს წაშლისას მოხდა შეცდომა." });
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RestoreAgency([FromBody] RestoreAgencyRequestModel request)
+        {
+            var requestUrl = $"{_baseUrl}/Manage/restore-agency";
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new RestoreAgencyRequestModel
+                {
+                    AgencyId = request.AgencyId
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "სააგენტო წარმატებით განიბლოკა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "სააგენტოს განბლოკვისას მოხდა შეცდომა." });
             }
         }
         private void SetCurrencySelectList()

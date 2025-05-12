@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RealEstate.Application.Feature.Manage.Apartment.Block;
-using RealEstate.Application.Feature.Manage.Apartment.Unblock;
 using RealEstate.Application.Models.Agency;
+using RealEstate.Application.Models.Apartment;
 using RealEstate.Application.Models.User;
 using RealEstate.Infrastructure.Data;
 
@@ -22,7 +21,7 @@ namespace RealEstate.Application.Services
 
         public async Task<UserBlockResponseModel> BlockUser(UserBlockRequest request)
         {
-            if(request == null)
+            if (request == null)
                 return new UserBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
 
             var userId = request.UserId;
@@ -42,7 +41,7 @@ namespace RealEstate.Application.Services
         }
         public async Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request)
         {
-            if(request == null)
+            if (request == null)
                 return new UserUnBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
 
             var userId = request.UserId;
@@ -66,7 +65,7 @@ namespace RealEstate.Application.Services
             if (request == null)
                 return new TopUpBalanceResponse { StatusCode = 400, Success = false, UserMessage = "request should not be empty" };
 
-            var userId = request.UserId;    
+            var userId = request.UserId;
 
             var user = await _identityService.GetUserById(userId);
 
@@ -85,23 +84,29 @@ namespace RealEstate.Application.Services
             }
         }
 
-        public async Task<AgencyDeleteResponseModel> DeleteAgency(int agencyId, string? deleteReason)
+        public async Task<AgencyDeleteResponseModel> DeleteAgency(AgencyDeleteRequest request)
         {
-            var agency = await _agencyService.GetAgencyById(agencyId);
+            if (request == null)
+                return new AgencyDeleteResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
+
+            var agency = await _agencyService.GetAgencyById(request.AgencyId);
             if (agency == null) return new AgencyDeleteResponseModel { StatusCode = 404, Success = false, UserMessage = $"Agency with id: {agency} not found." };
             if (agency.IsDeleted) return new AgencyDeleteResponseModel { StatusCode = 404, Success = false, UserMessage = $"Agency is already deleted." };
 
             agency.IsDeleted = true;
             agency.DeleteDate = DateTime.Now;
             agency.IsApproved = false;
-            agency.DeleteReason = deleteReason != null ? deleteReason : null;
+            agency.DeleteReason = request.DeleteReason ?? null;
             await _db.SaveChangesAsync(CancellationToken.None);
             return new AgencyDeleteResponseModel { StatusCode = 200, Success = true };
         }
 
-        public async Task<AgencyRestoreResponseModel> RestoreAgency(int agencyId)
+        public async Task<AgencyRestoreResponseModel> RestoreAgency(AgencyRestoreRequest request)
         {
-            var agency = await _agencyService.GetAgencyById(agencyId);
+            if (request == null)
+                return new AgencyRestoreResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
+
+            var agency = await _agencyService.GetAgencyById(request.AgencyId);
             if (agency == null) return new AgencyRestoreResponseModel { StatusCode = 404, Success = false, UserMessage = $"Agency with id: {agency} not found." };
             if (!agency.IsDeleted) return new AgencyRestoreResponseModel { StatusCode = 404, Success = false, UserMessage = $"Agency is not deleted." };
 
