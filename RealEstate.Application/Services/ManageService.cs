@@ -50,7 +50,7 @@ namespace RealEstate.Application.Services
                 return new UserUnBlockResponseModel { StatusCode = 404, Success = false, UserMessage = "User not found." };
 
             if (!user.IsBlocked)
-                return new UserUnBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "User is not bloocked." };
+                return new UserUnBlockResponseModel { StatusCode = 400, Success = false, UserMessage = "User is not blocked." };
 
             user.IsBlocked = false;
             user.BlockDate = null;
@@ -86,7 +86,7 @@ namespace RealEstate.Application.Services
 
         public async Task<AgencyDeleteResponseModel> DeleteAgency(AgencyDeleteRequest request)
         {
-            if (request == null)
+            if (request.AgencyId <= 0)
                 return new AgencyDeleteResponseModel { StatusCode = 400, Success = false, UserMessage = "request should not be empty." };
 
             var agency = await _agencyService.GetAgencyById(request.AgencyId);

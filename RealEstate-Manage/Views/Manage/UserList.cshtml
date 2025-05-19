@@ -237,70 +237,116 @@
 
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         async function sendBlockRequest(userId, isBlocking) {
-            const confirmMsg = isBlocking
-                ? "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებლის დაბლოკვა?"
-                : "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებელზე ბლოკის მოხსნა?";
+            const confirmResult = await Swal.fire({
+                title: isBlocking ? 'დაბლოკვა?' : 'ბლოკის მოხსნა?',
+                text: isBlocking
+                    ? 'დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებლის დაბლოკვა?'
+                    : 'დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებელზე ბლოკის მოხსნა?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'დიახ',
+                cancelButtonText: 'არა'
+            });
 
-            if (!confirm(confirmMsg)) return;
+            if (!confirmResult.isConfirmed) return;
 
             let data = { userId: userId };
 
             if (isBlocking) {
-                const reason = prompt("შეიყვანეთ დაბლოკვის მიზეზი (არასავალდებულო):");
+                const { value: reason } = await Swal.fire({
+                    title: 'შეიყვანეთ დაბლოკვის მიზეზი',
+                    input: 'text',
+                    inputLabel: 'მიზეზი (არასავალდებულო)',
+                    showCancelButton: true,
+                    inputPlaceholder: 'მაგ. სპამი, არასწორი ინფორმაცია და ა.შ.'
+                });
+
+                if (reason === null) return;
                 data.blockReason = reason || null;
             }
 
             const endpoint = isBlocking ? '/Manage/BlockUser' : '/Manage/UnblockUser';
 
-            const response = await fetch(endpoint, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
-                },
-                body: JSON.stringify(data)
-            });
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                    },
+                    body: JSON.stringify(data)
+                });
 
-            const result = await response.json();
-            if (result.success) {
-                alert(result.message);
-                location.reload();
-            } else {
-                alert(result.message);
+                const result = await response.json();
+
+                Swal.fire({
+                    icon: result.success ? 'success' : 'error',
+                    title: result.success ? 'წარმატებით შესრულდა' : 'შეცდომა',
+                    text: result.message
+                }).then(() => {
+                    if (result.success) location.reload();
+                });
+            } catch (error) {
+                Swal.fire('შეცდომა', 'მოთხოვნის შესრულება ვერ მოხერხდა.', 'error');
             }
         }
 
-        async function sendTopUpRequest(userId) {
-            const amount = prompt("შეიყვანეთ შესატანი ბალანსის ოდენობა:");
+               async function sendTopUpRequest(userId) {
+            let amount = null;
 
-            if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
-                alert("გთხოვთ შეიყვანოთ ვალიდური თანხა.");
-                return;
+            while (true) {
+                const { value, isConfirmed, isDismissed } = await Swal.fire({
+                    title: 'შეიყვანეთ ბალანსის თანხა',
+                    input: 'number',
+                    inputLabel: 'თანხა',
+                    inputPlaceholder: 'მაგ. 100',
+                    showCancelButton: true,
+                    inputAttributes: {
+                        min: 1,
+                        step: 0.01
+                    }
+                });
+
+                if (isDismissed) return;
+
+                amount = parseFloat(value);
+                if (!isNaN(amount) && amount > 0) break;
+
+                await Swal.fire('შეცდომა', 'გთხოვთ შეიყვანოთ ვალიდური თანხა.', 'warning');
             }
 
             const data = {
                 userId: userId,
-                balance: parseFloat(amount)
+                balance: amount
             };
 
-            const response = await fetch('/Manage/TopUpBalance', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
-                },
-                body: JSON.stringify(data)
-            });
+            try {
+                const response = await fetch('/Manage/TopUpBalance', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                    },
+                    body: JSON.stringify(data)
+                });
 
-            const result = await response.json();
-            if (result.success) {
-                alert(result.message);
-                location.reload();
-            } else {
-                alert(result.message);
+                const result = await response.json();
+
+                Swal.fire({
+                    icon: result.success ? 'success' : 'error',
+                    title: result.success ? 'წარმატებით შესრულდა' : 'შეცდომა',
+                    text: result.message
+                }).then(() => {
+                    if (result.success) location.reload();
+                });
+            } catch (error) {
+                Swal.fire('შეცდომა', 'მოთხოვნის შესრულება ვერ მოხერხდა.', 'error');
             }
         }
 

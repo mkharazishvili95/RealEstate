@@ -82,20 +82,23 @@
                                     @if (apartment.Status != RealEstate.Common.Enums.Apartment.ApartmentStatus.Blocked)
                                     {
                                         <li>
-                                            <button type="button" class="dropdown-item text-danger block-btn" data-id="@apartment.ApartmentId">
-                                                დაბლოკვა
+                                            <button type="button" class="dropdown-item text-danger block-apartment-btn"
+                                                    data-apartment-id="@apartment.ApartmentId">
+                                                <i class="bi bi-lock"></i> დაბლოკვა
                                             </button>
                                         </li>
                                     }
-                                    else if (apartment.Status == RealEstate.Common.Enums.Apartment.ApartmentStatus.Blocked)
+                                    else
                                     {
                                         <li>
-                                            <button type="button" class="dropdown-item text-success unblock-btn" data-id="@apartment.ApartmentId">
-                                                განბლოკვა
+                                            <button type="button" class="dropdown-item text-success unblock-apartment-btn"
+                                                    data-apartment-id="@apartment.ApartmentId">
+                                                <i class="bi bi-unlock"></i> განბლოკვა
                                             </button>
                                         </li>
                                     }
                                 </ul>
+
                             </div>
                         </td>
 
@@ -153,168 +156,77 @@
         padding: 0;
     }
 </style>
-@* 
-@section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(document).ready(function () {
-            $('.block-btn').click(function () {
-                const apartmentId = $(this).data('id');
 
-                Swal.fire({
-                    title: 'დაბლოკვა',
-                    input: 'text',
-                    inputLabel: 'შეიყვანეთ დაბლოკვის მიზეზი',
-                    inputPlaceholder: 'მიზეზი...',
-                    showCancelButton: true,
-                    confirmButtonText: 'დადასტურება',
-                    cancelButtonText: 'გაუქმება'
-                }).then((result) => {
-                    if (result.isConfirmed && result.value.trim() !== '') {
-                        $.ajax({
-                            url: '@Url.Action("BlockApartment", "Manage")',
-                            method: 'PUT',
-                            contentType: 'application/json',
-                            data: JSON.stringify({
-                                ApartmentId: apartmentId,
-                                BlockReason: result.value
-                            }),
-                            success: function (response) {
-                                Swal.fire(response.message);
-                            },
-                            error: function () {
-                                Swal.fire('დაფიქსირდა შეცდომა');
-                            }
-                        });
-                    }
-                });
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    async function sendApartmentBlockRequest(apartmentId, isBlocking) {
+        const confirmResult = await Swal.fire({
+            title: isBlocking ? 'დაბლოკვა?' : 'განბლოკვა?',
+            text: isBlocking
+                ? 'დარწმუნებული ხართ, რომ გსურთ ამ ბინის დაბლოკვა?'
+                : 'დარწმუნებული ხართ, რომ გსურთ ამ ბინაზე ბლოკის მოხსნა?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'დიახ',
+            cancelButtonText: 'არა'
+        });
+
+        if (!confirmResult.isConfirmed) return;
+
+        let data = { apartmentId: apartmentId };
+
+        if (isBlocking) {
+            const { value: reason } = await Swal.fire({
+                title: 'შეიყვანეთ დაბლოკვის მიზეზი',
+                input: 'text',
+                inputLabel: 'მიზეზი (არასავალდებულო)',
+                showCancelButton: true,
+                inputPlaceholder: 'მაგ. არასწორი მონაცემები, დაუდასტურებელი ქონება და ა.შ.'
             });
 
-            $('.unblock-btn').click(function () {
-                const apartmentId = $(this).data('id');
+            if (reason === null) return;
+            data.blockReason = reason || null;
+        }
 
-                Swal.fire({
-                    title: 'დარწმუნებული ხართ?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'დიახ, განიბლოკოს!',
-                    cancelButtonText: 'გაუქმება'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $.ajax({
-                            url: '@Url.Action("UnblockApartment", "Manage")',
-                            method: 'PUT',
-                            contentType: 'application/json',
-                            data: JSON.stringify({ ApartmentId: apartmentId }),
-                            success: function (response) {
-                                Swal.fire(response.message);
-                            },
-                            error: function () {
-                                Swal.fire('დაფიქსირდა შეცდომა');
-                            }
-                        });
-                    }
-                });
+        const endpoint = isBlocking ? '/Manage/BlockApartment' : '/Manage/UnblockApartment';
+
+        try {
+            const response = await fetch(endpoint, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            Swal.fire({
+                icon: result.success ? 'success' : 'error',
+                title: result.success ? 'წარმატებით შესრულდა' : 'შეცდომა',
+                text: result.message
+            }).then(() => {
+                if (result.success) location.reload();
+            });
+        } catch (error) {
+            Swal.fire('შეცდომა', 'მოთხოვნის შესრულება ვერ მოხერხდა.', 'error');
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".block-apartment-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                sendApartmentBlockRequest(button.dataset.apartmentId, true);
             });
         });
 
-                $.ajax({
-            url: '@Url.Action("BlockApartment", "Manage")',
-            method: 'PUT', // change to POST if PUT doesn't work
-            contentType: 'application/json',
-            data: JSON.stringify({
-                ApartmentId: apartmentId,
-                BlockReason: result.value
-            }),
-            success: function (response) {
-                Swal.fire(response.message).then(() => location.reload());
-            },
-            error: function () {
-                Swal.fire('დაფიქსირდა შეცდომა');
-            }
-        });
-
-    </script>
-}
- *@
- @section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(document).ready(function () {
-            $('.block-btn').click(function () {
-                const apartmentId = $(this).data('id');
-
-                Swal.fire({
-                    title: 'დაბლოკვა',
-                    input: 'text',
-                    inputLabel: 'შეიყვანეთ დაბლოკვის მიზეზი',
-                    inputPlaceholder: 'მიზეზი...',
-                    showCancelButton: true,
-                    confirmButtonText: 'დადასტურება',
-                    cancelButtonText: 'გაუქმება'
-                }).then((result) => {
-                    if (result.isConfirmed && result.value.trim() !== '') {
-                        $.ajax({
-                            url: '@Url.Action("BlockApartment", "Manage")',
-                            method: 'PUT',
-                            contentType: 'application/json',
-                            data: JSON.stringify({
-                                ApartmentId: apartmentId,
-                                BlockReason: result.value
-                            }),
-                            success: function (response) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: response.message
-                                }).then(() => {
-                                    location.reload();
-                                });
-                            },
-                            error: function () {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'დაფიქსირდა შეცდომა'
-                                });
-                            }
-                        });
-                    }
-                });
-            });
-
-            $('.unblock-btn').click(function () {
-                const apartmentId = $(this).data('id');
-
-                Swal.fire({
-                    title: 'დარწმუნებული ხართ?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'დიახ, განიბლოკოს!',
-                    cancelButtonText: 'გაუქმება'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $.ajax({
-                            url: '@Url.Action("UnblockApartment", "Manage")',
-                            method: 'PUT',
-                            contentType: 'application/json',
-                            data: JSON.stringify({ ApartmentId: apartmentId }),
-                            success: function (response) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: response.message
-                                }).then(() => {
-                                    location.reload();
-                                });
-                            },
-                            error: function () {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'დაფიქსირდა შეცდომა'
-                                });
-                            }
-                        });
-                    }
-                });
+        document.querySelectorAll(".unblock-apartment-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                sendApartmentBlockRequest(button.dataset.apartmentId, false);
             });
         });
-    </script>
-}
+    });
+</script>

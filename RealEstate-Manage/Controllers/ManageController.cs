@@ -26,7 +26,7 @@ namespace RealEstate.MVC.Controllers
         {
             _httpClient = httpClientFactory.CreateClient();
             _mapper = mapper;
-            //Local, ჩემი აპის შემთხვევაში: https://localhost:7010/api
+            /* Local, ჩემი აპის შემთხვევაში: https://localhost:7010/api */
             _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
 
@@ -57,6 +57,12 @@ namespace RealEstate.MVC.Controllers
             var requestUrl = $"{_baseUrl}/Manage/users";
             var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError("", "Cannot load users at this time.");
+                return View(new UserListViewModel { Filter = filter });
+            }
 
             var mapper = new MapToTableRowsHelper();
             var tableRows = new List<UserTableRowViewModel>();
@@ -302,7 +308,7 @@ namespace RealEstate.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteAgency(DeleteAgencyRequestModel request)
+        public async Task<IActionResult> DeleteAgency([FromBody]DeleteAgencyRequestModel request)
         {
             var requestUrl = $"{_baseUrl}/Manage/delete-agency";
 

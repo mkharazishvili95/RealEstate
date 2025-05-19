@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj": {}
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj",
         "projectName": "RealEstate-Manage",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
         "projectName": "RealEstate.Application",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,11 +118,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
               }
             }
           }
@@ -192,14 +192,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
         "projectName": "RealEstate.Common",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -267,14 +267,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj",
         "projectName": "RealEstate.Core",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -295,8 +295,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
               }
             }
           }
@@ -346,14 +346,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
         "projectName": "RealEstate.Infrastructure",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -374,11 +374,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\RealEstate.Core.csproj"
               }
             }
           }
@@ -452,14 +452,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj": {
+    "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj",
         "projectName": "RealEstate",
-        "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\RealEstate.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate\\obj\\",
+        "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -480,11 +480,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
+              "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj"
               }
             }
           }

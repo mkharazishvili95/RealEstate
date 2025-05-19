@@ -173,26 +173,45 @@
     }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".delete-agency").forEach(btn => {
                 btn.addEventListener("click", function () {
                     const agencyId = this.dataset.id;
-                    const deleteReason = prompt("გთხოვთ, მიუთითეთ წაშლის მიზეზი:");
-                    if (!deleteReason) return;
 
-                    fetch('/Manage/DeleteAgency', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ agencyId, deleteReason })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert(data.message);
-                        if (data.success) location.reload();
+                    Swal.fire({
+                        title: 'დარწმუნებული ხარ?',
+                        text: 'გთხოვთ მიუთითეთ წაშლის მიზეზი:',
+                        input: 'text',
+                        inputPlaceholder: 'წაშლის მიზეზი',
+                        showCancelButton: true,
+                        confirmButtonText: 'წაშლა',
+                        cancelButtonText: 'გაუქმება',
+                        inputValidator: (value) => {
+                            if (!value) return null;
+                        }
+                    }).then(result => {
+                        if (result.isConfirmed) {
+                            fetch('/Manage/DeleteAgency', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ agencyId, deleteReason: result.value })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                Swal.fire({
+                                    icon: data.success ? 'success' : 'error',
+                                    text: data.message
+                                }).then(() => {
+                                    if (data.success) location.reload();
+                                });
+                            });
+                        }
                     });
                 });
             });
@@ -201,17 +220,31 @@
                 btn.addEventListener("click", function () {
                     const agencyId = this.dataset.id;
 
-                    fetch('/Manage/RestoreAgency', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ agencyId })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert(data.message);
-                        if (data.success) location.reload();
+                    Swal.fire({
+                        title: 'გსურს სააგენტოს აღდგენა?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'დიახ',
+                        cancelButtonText: 'არა'
+                    }).then(result => {
+                        if (result.isConfirmed) {
+                            fetch('/Manage/RestoreAgency', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ agencyId })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                Swal.fire({
+                                    icon: data.success ? 'success' : 'error',
+                                    text: data.message
+                                }).then(() => {
+                                    if (data.success) location.reload();
+                                });
+                            });
+                        }
                     });
                 });
             });
