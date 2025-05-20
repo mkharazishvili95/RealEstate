@@ -8,6 +8,20 @@
 
 <h2>უძრავი ქონება</h2>
 
+@functions {
+    public string GetStatusClass(RealEstate.Common.Enums.Apartment.ApartmentStatus status)
+    {
+        return status switch
+        {
+            RealEstate.Common.Enums.Apartment.ApartmentStatus.Active => "status-active",
+            RealEstate.Common.Enums.Apartment.ApartmentStatus.Expired => "status-expired",
+            RealEstate.Common.Enums.Apartment.ApartmentStatus.Blocked => "status-blocked",
+            RealEstate.Common.Enums.Apartment.ApartmentStatus.Deleted => "status-deleted",
+            _ => ""
+        };
+    }
+}
+
 <form asp-action="ApartmentList" method="get" class="container-fluid">
     <table class="table table-bordered table-striped w-100">
         <thead class="thead-dark">
@@ -72,7 +86,10 @@
                         <td>@apartment.AgencyId</td>
                         <td>@apartment.CreateDate?.ToString("yyyy-MM-dd")</td>
                         <td>@apartment.UpdateDate?.ToString("yyyy-MM-dd")</td>
-                        <td>@AgencyTypeExtensions.GetGeorgianStatus(apartment.Status)</td>
+                        @* <td>@AgencyTypeExtensions.GetGeorgianStatus(apartment.Status)</td> *@
+                        <td class="@GetStatusClass(apartment.Status)">
+                            @AgencyTypeExtensions.GetGeorgianStatus(apartment.Status)
+                        </td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,7 +124,7 @@
             }
             else
             {
-                <tr><td colspan="10" class="text-center">უძრავი ქონება არ მოიძებნა.</td></tr>
+                <tr><td colspan="10" class="text-center">უძრავი ქონება ვერ მოიძებნა.</td></tr>
             }
         </tbody>
     </table>
@@ -155,6 +172,66 @@
         max-width: 90% !important;
         padding: 0;
     }
+
+    .dropdown-toggle {
+        background-color: #6f42c1;
+        color: white;
+        border-radius: 8px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .dropdown-toggle:hover {
+            background-color: #5a32a3;
+            transform: scale(1.05);
+        }
+
+    .swal2-popup {
+        width: 400px !important;
+        font-size: 14px;
+    }
+
+    .swal2-input {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .swal2-title {
+        font-size: 16px;
+    }
+
+    .swal2-html-container {
+        font-size: 14px;
+    }
+
+    .swal2-confirm, .swal2-cancel {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .status-active {
+        color: green;
+        font-weight: bold;
+    }
+
+    .status-expired {
+        color: #b8860b;
+        font-weight: bold;
+    }
+
+    .status-blocked {
+        color: red;
+        font-weight: bold;
+    }
+
+    .status-deleted {
+        color: darkred;
+        font-weight: bold;
+    }
+
+
 </style>
 
 

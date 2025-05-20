@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using RealEstate.Application.Helpers;
+using Microsoft.EntityFrameworkCore;
 using RealEstate.Infrastructure.Data;
 
 namespace RealEstate.Application.Feature.Manage.User.List
@@ -34,16 +34,19 @@ namespace RealEstate.Application.Feature.Manage.User.List
                     RegisterDate = x.RegisterDate
                 });
 
-            var paginatedResult = await users.ToPaginatedListAsync(request);
-            paginatedResult.StatusCode = StatusCodes.Status200OK;
-            paginatedResult.Success = true;
+            var totalCount = await users.CountAsync(cancellationToken);
+
+            var paginatedResult = await users
+                .Skip((request.Page.Value - 1) * request.PageSize.Value)
+                .Take(request.PageSize.Value)
+                .ToListAsync(cancellationToken);
 
             return new GetUserListForManageResponse
             {
-                UserListForManage = paginatedResult.Items,
+                UserListForManage = paginatedResult,
                 Success = true,
                 StatusCode = StatusCodes.Status200OK,
-                TotalCount = paginatedResult.Items.Count()
+                TotalCount = totalCount
             };
         }
     }

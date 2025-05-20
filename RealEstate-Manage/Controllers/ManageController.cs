@@ -29,7 +29,7 @@ namespace RealEstate.MVC.Controllers
             /* Local, ჩემი აპის შემთხვევაში: https://localhost:7010/api */
             _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
-
+        
         public async Task<IActionResult> UserList(UserFilterRowModel filter)
         {
             var apiRequest = new GetUserListForManageRequest

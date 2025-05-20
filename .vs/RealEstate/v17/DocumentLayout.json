@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\controllers\\managecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\controllers\\managecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.application\\feature\\manage\\user\\list\\getuserlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\feature\\manage\\user\\list\\getuserlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.application\\feature\\manage\\apartment\\list\\getapartmentlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\feature\\manage\\apartment\\list\\getapartmentlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -21,18 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.application\\services\\manageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\manageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\apartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\controllers\\managecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\controllers\\managecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA3A8499-C359-462C-B492-661A56BA061A}|RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.infrastructure\\queries\\models\\apartment\\getnewapartmentsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\views\\manage\\agencylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\deleteagencyrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\models\\agency\\deleteagencyrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -129,10 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.application\\feature\\manage\\apartment\\list\\getapartmentlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\feature\\manage\\apartment\\list\\getapartmentlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\helpers\\maptotablerowshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -217,10 +221,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.core\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|solutionrelative:realestate.core\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate.application\\feature\\manage\\user\\list\\getuserlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\feature\\manage\\user\\list\\getuserlistformanagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|c:\\users\\admin\\onedrive\\desktop\\re\\realestate\\realestate-manage\\models\\agency\\list\\agencyfilterrowmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -509,85 +509,35 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetNewApartmentsModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
-              "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
-              "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "GetUserListForManageHandler.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
+              "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowC0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:35:07.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ManageController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\ManageController.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
-              "RelativeToolTip": "RealEstate-Manage\\Controllers\\ManageController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAP8AAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:57:00.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApartmentList.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
-              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
-              "ViewState": "AgIAANMAAAAAAAAAAAAAAEoAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T20:45:38.694Z",
+              "WhenOpened": "2025-02-16T16:29:27.576Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserList.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
-              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
-              "ViewState": "AgIAAEoBAAAAAAAAAAAAAGEBAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T18:35:53.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ManageService.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\ManageService.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\ManageService.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\ManageService.cs",
-              "RelativeToolTip": "RealEstate.Application\\Services\\ManageService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAlwFYAAABeAAAAAAAAAA==",
+              "Title": "GetApartmentListForManageHandler.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
+              "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAmwCUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:21:20.347Z",
+              "WhenOpened": "2025-02-16T16:30:48.116Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AgencyDeleteResponseModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
-              "RelativeToolTip": "RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:22:30.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ManageController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\Controllers\\ManageController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\ManageController.cs",
@@ -595,12 +545,11 @@
               "RelativeToolTip": "RealEstate\\Controllers\\ManageController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAnwCUAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:14:26.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:14:26.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\appsettings.json",
               "RelativeDocumentMoniker": "RealEstate-Manage\\appsettings.json",
@@ -608,25 +557,112 @@
               "RelativeToolTip": "RealEstate-Manage\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T19:53:11.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:53:11.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\appsettings.json",
               "RelativeDocumentMoniker": "RealEstate\\appsettings.json",
               "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\appsettings.json",
               "RelativeToolTip": "RealEstate\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-02-16T15:01:21.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApartmentList.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
+              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\ApartmentList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T20:45:38.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserList.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
+              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\UserList.cshtml",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAGEBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T18:35:53.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AgencyList.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
+              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T18:42:40.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
+              "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\ManageController.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
+              "RelativeToolTip": "RealEstate-Manage\\Controllers\\ManageController.cs",
+              "ViewState": "AgIAAEsBAAAAAAAAAAAAAF8BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T17:57:00.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "AgencyDeleteResponseModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
+              "RelativeToolTip": "RealEstate.Application\\Models\\Agency\\AgencyDeleteResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T16:22:30.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManageService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\ManageService.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\ManageService.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\ManageService.cs",
+              "RelativeToolTip": "RealEstate.Application\\Services\\ManageService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAlwFYAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T16:21:20.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetNewApartmentsModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
+              "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
+              "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetNewApartmentsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T20:35:07.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "GetApartmentDetailsModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetApartmentDetailsModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetApartmentDetailsModel.cs",
@@ -634,12 +670,11 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetApartmentDetailsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:34:41.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:34:41.404Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "GetFavoriteApartmentsModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetFavoriteApartmentsModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetFavoriteApartmentsModel.cs",
@@ -647,12 +682,11 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Apartment\\GetFavoriteApartmentsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:36:06.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:36:06.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "GetAgencyApartmentsModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyApartmentsModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyApartmentsModel.cs",
@@ -660,12 +694,11 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Models\\Agency\\GetAgencyApartmentsModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:37:09.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:37:09.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IApartmentQueries.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Apartment\\IApartmentQueries.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Apartment\\IApartmentQueries.cs",
@@ -673,12 +706,11 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Apartment\\IApartmentQueries.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:25:33.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:25:33.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ApartmentQueries.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Queries\\Apartment\\ApartmentQueries.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Queries\\Apartment\\ApartmentQueries.cs",
@@ -686,12 +718,11 @@
               "RelativeToolTip": "RealEstate.Infrastructure\\Queries\\Apartment\\ApartmentQueries.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAwwEkAAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:25:44.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:25:44.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "FavoriteApartmentsResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsResponse.cs",
@@ -699,12 +730,11 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsResponse.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAjwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:13.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:13.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "FavoriteApartmentsHandler.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsHandler.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsHandler.cs",
@@ -712,12 +742,11 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmentsHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:20.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:20.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "FavoriteApartmenstRequest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmenstRequest.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmenstRequest.cs",
@@ -725,12 +754,11 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\FavoriteApartment\\FavoriteApartmenstRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T11:04:04.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T11:04:04.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "AgencyRestoreResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Agency\\AgencyRestoreResponseModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\Agency\\AgencyRestoreResponseModel.cs",
@@ -742,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "IManageService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\IManageService.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Services\\IManageService.cs",
@@ -754,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UserBlockResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\User\\UserBlockResponseModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\User\\UserBlockResponseModel.cs",
@@ -766,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "RealEstate.Application.csproj",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
               "RelativeDocumentMoniker": "RealEstate.Application\\RealEstate.Application.csproj",
@@ -778,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\HomeController.cs",
@@ -790,19 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AgencyList.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
-              "RelativeDocumentMoniker": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
-              "RelativeToolTip": "RealEstate-Manage\\Views\\Manage\\AgencyList.cshtml",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAgwLwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T18:42:40.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "DeleteAgencyRequestModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\DeleteAgencyRequestModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\DeleteAgencyRequestModel.cs",
@@ -814,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "RestoreAgencyRequestModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\RestoreAgencyRequestModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\RestoreAgencyRequestModel.cs",
@@ -826,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "IAgencyService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Services\\IAgencyService.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Services\\IAgencyService.cs",
@@ -838,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Agency.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\Agency\\Agency.cs",
               "RelativeDocumentMoniker": "RealEstate.Core\\Agency\\Agency.cs",
@@ -850,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "AgencyType.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\Enums\\Agency\\AgencyType.cs",
               "RelativeDocumentMoniker": "RealEstate.Common\\Enums\\Agency\\AgencyType.cs",
@@ -862,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\Program.cs",
               "RelativeDocumentMoniker": "RealEstate\\Program.cs",
@@ -874,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "AgencyTypeExtensions.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Extensions\\AgencyTypeExtensions.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Extensions\\AgencyTypeExtensions.cs",
@@ -886,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "TopUpBalanceResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\User\\TopUpBalanceResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\User\\TopUpBalanceResponse.cs",
@@ -898,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "BlockApartmentResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Apartment\\BlockApartmentResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\Apartment\\BlockApartmentResponse.cs",
@@ -910,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "UnblockApartmentResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\Apartment\\UnblockApartmentResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\Apartment\\UnblockApartmentResponse.cs",
@@ -922,19 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "GetApartmentListForManageHandler.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
-              "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageHandler.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAmwB8AAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:30:48.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ApartmentStatus.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\Enums\\Apartment\\ApartmentStatus.cs",
               "RelativeDocumentMoniker": "RealEstate.Common\\Enums\\Apartment\\ApartmentStatus.cs",
@@ -946,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "MapToTableRowsHelper.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Helpers\\MapToTableRowsHelper.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Helpers\\MapToTableRowsHelper.cs",
@@ -958,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "GetApartmentListHelper.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Helpers\\GetApartmentListHelper.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Helpers\\GetApartmentListHelper.cs",
@@ -970,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "ApartmentTableRowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Apartment\\List\\ApartmentTableRowViewModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Apartment\\List\\ApartmentTableRowViewModel.cs",
@@ -982,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "GetApartmentListForManageResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Apartment\\List\\GetApartmentListForManageResponse.cs",
@@ -1006,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "TopUpBalanceRequestModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\User\\TopUpBalanceRequestModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\User\\TopUpBalanceRequestModel.cs",
@@ -1018,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\appsettings.Development.json",
               "RelativeDocumentMoniker": "RealEstate-Manage\\appsettings.Development.json",
@@ -1030,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\appsettings.Development.json",
               "RelativeDocumentMoniker": "RealEstate\\appsettings.Development.json",
@@ -1042,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Apartment.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\Apartment\\Apartment.cs",
               "RelativeDocumentMoniker": "RealEstate.Core\\Apartment\\Apartment.cs",
@@ -1054,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "RealEstate\\Properties\\launchSettings.json",
@@ -1066,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Properties\\launchSettings.json",
@@ -1078,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "RealEstate-Manage.csproj",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\RealEstate-Manage.csproj",
               "RelativeDocumentMoniker": "RealEstate-Manage\\RealEstate-Manage.csproj",
@@ -1090,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "UserUnBlockResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Models\\User\\UserUnBlockResponseModel.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Models\\User\\UserUnBlockResponseModel.cs",
@@ -1102,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "GetAgencyListForManageRequest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageRequest.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageRequest.cs",
@@ -1114,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Data\\ApplicationDbContext.cs",
@@ -1126,19 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "GetUserListForManageHandler.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
-              "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:29:27.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "AgencyListViewModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate-Manage\\Models\\Agency\\List\\AgencyListViewModel.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Models\\Agency\\List\\AgencyListViewModel.cs",
@@ -1150,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "GetAgencyListForManageHandler.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageHandler.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageHandler.cs",
@@ -1162,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "GetAgencyListForManageResponse.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageResponse.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageResponse.cs",
@@ -1174,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Core\\User\\User.cs",
               "RelativeDocumentMoniker": "RealEstate.Core\\User\\User.cs",
@@ -1186,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "GetAgencyListHelper.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Application\\Helpers\\GetAgencyListHelper.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Helpers\\GetAgencyListHelper.cs",

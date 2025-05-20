@@ -112,7 +112,7 @@ namespace RealEstate.Application.Services
 
             agency.IsDeleted = false;
             agency.DeleteDate = null;
-            agency.IsApproved = true;
+            agency.IsApproved = false;
             await _db.SaveChangesAsync(CancellationToken.None);
             return new AgencyRestoreResponseModel { StatusCode = 200, Success = true };
         }
