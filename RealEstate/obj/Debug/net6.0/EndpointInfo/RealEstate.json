@@ -1630,6 +1630,14 @@
         },
         "additionalProperties": false
       },
+      "RegistrationMethod": {
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "SortingModel": {
         "type": "object",
         "properties": {
@@ -1759,15 +1767,14 @@
       },
       "UserLoginModel": {
         "required": [
-          "email",
-          "password"
+          "password",
+          "userName"
         ],
         "type": "object",
         "properties": {
-          "email": {
+          "userName": {
             "minLength": 1,
-            "type": "string",
-            "format": "email"
+            "type": "string"
           },
           "password": {
             "minLength": 1,
@@ -1790,10 +1797,6 @@
             "type": "string",
             "nullable": true
           },
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
           "email": {
             "type": "string",
             "nullable": true
@@ -1812,6 +1815,9 @@
           },
           "gender": {
             "$ref": "#/components/schemas/Gender"
+          },
+          "registrationMethod": {
+            "$ref": "#/components/schemas/RegistrationMethod"
           }
         },
         "additionalProperties": false

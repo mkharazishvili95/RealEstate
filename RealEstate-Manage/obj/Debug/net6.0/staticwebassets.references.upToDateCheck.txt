@@ -400,3 +400,6 @@ C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\static
 C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\admin\OneDrive\Desktop\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json

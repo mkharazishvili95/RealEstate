@@ -42,7 +42,7 @@ namespace RealEstate.API.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLoginModel model)
         {
-            var user = _userService.Authenticate(model.Email, model.Password);
+            var user = _userService.Authenticate(model.UserName, model.Password);
             if (user == null)
                 return Unauthorized("Incorrect email or password.");
 

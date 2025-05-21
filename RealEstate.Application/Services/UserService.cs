@@ -1,5 +1,6 @@
 ﻿using RealEstate.Application.Helpers;
 using RealEstate.Application.Models.Auth;
+using RealEstate.Common.Enums.Auth;
 using RealEstate.Core.User;
 using RealEstate.Infrastructure.Data;
 
@@ -14,9 +15,9 @@ namespace RealEstate.Application.Services
             _context = context;
         }
 
-        public User? Authenticate(string email, string password)
+        public User? Authenticate(string userName, string password)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+            var user = _context.Users.FirstOrDefault(u => u.UserName.ToUpper() == userName.ToUpper());
 
             if (user == null)
             {
@@ -31,7 +32,6 @@ namespace RealEstate.Application.Services
             return user;
         }
 
-
         public bool EmailExists(string email)
         {
             return _context.Users.Any(u => u.Email.ToUpper() == email.ToUpper());
@@ -44,11 +44,15 @@ namespace RealEstate.Application.Services
 
         public (bool Success, string ErrorMessage) Register(UserRegisterModel model)
         {
-            if (EmailExists(model.Email))
+            if (model.RegistrationMethod == RegistrationMethod.Email && EmailExists(model.Email))
                 return (false, "Email already exists.");
 
-            if (PhoneNumberExists(model.PhoneNumber))
+            if (model.RegistrationMethod == RegistrationMethod.Phone && PhoneNumberExists(model.PhoneNumber))
                 return (false, "Phone number already exists.");
+
+            var userName = model.RegistrationMethod == RegistrationMethod.Email
+                ? model.Email
+                : model.PhoneNumber;
 
             var user = new User
             {
@@ -56,7 +60,6 @@ namespace RealEstate.Application.Services
                 PIN = GenerateUniquePIN(),
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                UserName = model.UserName,
                 Email = model.Email,
                 PhoneNumber = model.PhoneNumber,
                 Gender = model.Gender,
@@ -66,7 +69,8 @@ namespace RealEstate.Application.Services
                 BlockReason = null,
                 IsBlocked = false,
                 Balance = 0,
-                Type = Common.Enums.User.UserType.Individual
+                Type = Common.Enums.User.UserType.Individual,
+                UserName = userName
             };
 
             _context.Users.Add(user);
