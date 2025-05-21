@@ -158,5 +158,28 @@ namespace RealEstate.Application.Services
                 return new UnblockApartmentResponse { Success = true, StatusCode = 200, UserMessage = "Successfully unblocked." };
             }
         }
+
+        public async Task<AgencyApproveResponseModel> ApproveAgency(AgencyApproveRequest request)
+        {
+            if (request == null || request.AgencyId <= 0)
+                return new AgencyApproveResponseModel { Success = false, StatusCode = 400, UserMessage = "request should not be empty." };
+
+            var agency = await _db.Agencies.FirstOrDefaultAsync(x => x.AgencyId == request.AgencyId);
+
+            if (agency == null)
+                return new AgencyApproveResponseModel { Success = false, StatusCode = 404, UserMessage = "Agency not found." };
+
+            if (agency.IsApproved)
+            {
+                return new AgencyApproveResponseModel { Success = false, StatusCode = 400, UserMessage = "Agency is already approved." };
+            }
+            else
+            {
+                agency.IsApproved = true;
+                agency.UpdateDate = DateTime.Now;
+                await _db.SaveChangesAsync();
+                return new AgencyApproveResponseModel { Success = true, StatusCode = 200, UserMessage = "Agency successfully approved." };
+            }
+        }
     }
 }

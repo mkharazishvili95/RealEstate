@@ -12,6 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Models\User\Auth\" />
 	  <Folder Include="Views\Agency\" />
 	  <Folder Include="Views\Apartment\" />
 	</ItemGroup>

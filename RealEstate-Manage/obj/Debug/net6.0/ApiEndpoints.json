@@ -131,6 +131,32 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "ApproveAgency",
+    "RelativePath": "api/Manage/approve-agency",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Models.Agency.AgencyApproveRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Models.Agency.AgencyApproveResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "BlockApartment",
     "RelativePath": "api/Manage/block-apartment",
     "HttpMethod": "PUT",

@@ -308,6 +308,28 @@ namespace RealEstate.MVC.Controllers
         }
 
         [HttpPost]
+        public async Task<IActionResult> ApproveAgency([FromBody] ApproveAgencyRequestModel request)
+        {
+            var requestUrl = $"{_baseUrl}/Manage/approve-agency";
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new ApproveAgencyRequestModel
+                {
+                    AgencyId = request.AgencyId
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { success = true, message = "სააგენტო წარმატებით დადასტურდა" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "სააგენტოს წაშლისას მოხდა შეცდომა." });
+            }
+        }
+
+        [HttpPost]
         public async Task<IActionResult> DeleteAgency([FromBody]DeleteAgencyRequestModel request)
         {
             var requestUrl = $"{_baseUrl}/Manage/delete-agency";

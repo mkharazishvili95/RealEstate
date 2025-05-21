@@ -9,6 +9,7 @@ namespace RealEstate.Application.Services
         Task<UserBlockResponseModel> BlockUser(UserBlockRequest request);
         Task<UserUnBlockResponseModel> UnBlockUser(UseUnBlockRequest request);
         Task<TopUpBalanceResponse> TopUpBalance(TopUpBalanceRequest request);
+        Task<AgencyApproveResponseModel> ApproveAgency(AgencyApproveRequest request);
         Task<AgencyDeleteResponseModel> DeleteAgency(AgencyDeleteRequest request);
         Task<AgencyRestoreResponseModel> RestoreAgency(AgencyRestoreRequest request);
         Task<BlockApartmentResponse> BlockApartment(BlockApartmentRequest request);

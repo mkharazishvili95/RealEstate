@@ -100,6 +100,14 @@
                                     მოქმედება
                                 </button>
                                 <ul class="dropdown-menu">
+                                    @if (!agency.IsApproved)
+                                    {
+                                        <li>
+                                            <button type="button" class="dropdown-item text-primary approve-agency" data-id="@agency.AgencyId">
+                                                <i class="bi bi-check-circle"></i> დადასტურება
+                                            </button>
+                                        </li>
+                                    }
                                     @if (agency.IsDeleted)
                                     {
                                         <li>
@@ -233,6 +241,41 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+                document.querySelectorAll(".approve-agency").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const agencyId = this.dataset.id;
+
+                Swal.fire({
+                    title: 'დადასტურება',
+                    text: 'გსურს სააგენტოს დადასტურება?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'დიახ',
+                    cancelButtonText: 'არა'
+                }).then(result => {
+                    if (result.isConfirmed) {
+                        fetch('/Manage/ApproveAgency', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ agencyId })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            Swal.fire({
+                                icon: data.success ? 'success' : 'error',
+                                text: data.message
+                            }).then(() => {
+                                if (data.success) location.reload();
+                            });
+                        });
+                    }
+                });
+            });
+        });
+
+
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".delete-agency").forEach(btn => {
                 btn.addEventListener("click", function () {

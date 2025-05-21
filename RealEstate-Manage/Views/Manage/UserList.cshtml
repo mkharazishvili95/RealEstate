@@ -70,7 +70,7 @@
                         <td class="@(user.IsBlocked ? "blocked-text" : "approved-text")">
                             @(user.IsBlocked ? "კი" : "არა")
                         </td>
-                        <td>@user.RegisterDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@user.RegisterDate?.ToString("yyyy-MM-dd HH:mm:ss")</td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
