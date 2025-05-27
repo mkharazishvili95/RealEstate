@@ -27,7 +27,7 @@ namespace RealEstate.Controllers
 
         [HttpPost("agencies")]
         public async Task<GetAgencyListForManageResponse> GetAgencyListForManage([FromBody] GetAgencyListForManageRequest request) => await _mediator.Send(request);
-
+        
         [HttpPost("apartments")]
         public async Task<GetApartmentListForManageResponse> GetApartmentListForManage([FromBody] GetApartmentListForManageRequest request) => await _mediator.Send(request);
 
