@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\RE\\RealEstate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|d:\\re\\realestate\\realestate\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|d:\\re\\realestate\\realestate-manage\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}|RealEstate-Manage\\RealEstate-Manage.csproj|solutionrelative:realestate-manage\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|d:\\re\\realestate\\realestate\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|d:\\re\\realestate\\realestate\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,16 +71,8 @@
       "RelativeMoniker": "D:0:0:{EA3A8499-C359-462C-B492-661A56BA061A}|RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj|solutionrelative:realestate.infrastructure\\migrations\\20250521205023_notnullableusername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|d:\\re\\realestate\\realestate.core\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|solutionrelative:realestate.core\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\models\\auth\\userloginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -529,11 +529,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "GetUserListForManageHandler.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Manage\\User\\List\\GetUserListForManageHandler.cs",
@@ -542,8 +542,7 @@
               "ViewState": "AgIAABUAAAAAAAAAAAAowCgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T16:29:27.576Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -556,18 +555,17 @@
               "ViewState": "AgIAABcAAAAAAAAAAAAmwCUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T16:30:48.116Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\AccountController.cs",
               "RelativeToolTip": "RealEstate-Manage\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T19:41:04.899Z",
               "EditorCaption": ""
@@ -575,27 +573,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\JwtTokenService.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\JwtTokenService.cs",
-              "RelativeToolTip": "RealEstate.Application\\Services\\JwtTokenService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\appsettings.json",
+              "RelativeDocumentMoniker": "RealEstate\\appsettings.json",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\appsettings.json",
+              "RelativeToolTip": "RealEstate\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-16T15:01:21.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManageController.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ManageController.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Controllers\\ManageController.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ManageController.cs",
+              "RelativeToolTip": "RealEstate\\Controllers\\ManageController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:16:00.895Z",
+              "WhenOpened": "2025-02-16T16:14:26.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RealEstate\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:19:28.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Program.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Program.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Program.cs",
-              "RelativeToolTip": "RealEstate\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\IUserService.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\IUserService.cs",
+              "RelativeToolTip": "RealEstate.Application\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T15:00:50.105Z",
+              "WhenOpened": "2025-02-26T19:23:49.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\UserService.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "RealEstate.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:24:04.25Z",
               "EditorCaption": ""
             },
             {
@@ -612,33 +647,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\appsettings.json",
-              "RelativeDocumentMoniker": "RealEstate\\appsettings.json",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\appsettings.json",
-              "RelativeToolTip": "RealEstate\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-16T15:01:21.31Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Program.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Program.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Program.cs",
+              "RelativeToolTip": "RealEstate\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T15:00:50.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\JwtTokenService.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "RealEstate.Application\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:16:00.895Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ManageController.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ManageController.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Controllers\\ManageController.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ManageController.cs",
-              "RelativeToolTip": "RealEstate\\Controllers\\ManageController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:14:26.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate-Manage\\appsettings.json",
               "RelativeDocumentMoniker": "RealEstate-Manage\\appsettings.json",
@@ -646,12 +679,11 @@
               "RelativeToolTip": "RealEstate-Manage\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T19:53:11.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:53:11.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate-Manage\\Program.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Program.cs",
@@ -659,12 +691,11 @@
               "RelativeToolTip": "RealEstate-Manage\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:18:19.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:18:19.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Services\\IJwtTokenService.cs",
@@ -672,25 +703,11 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IJwtTokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:15:43.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:15:43.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "RealEstate\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAjwDAAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:19:28.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ApartmentController.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ApartmentController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\ApartmentController.cs",
@@ -698,12 +715,11 @@
               "RelativeToolTip": "RealEstate\\Controllers\\ApartmentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T20:22:45.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:22:45.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\JwtSettings.cs",
               "RelativeDocumentMoniker": "RealEstate.Application\\Services\\JwtSettings.cs",
@@ -711,12 +727,11 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\JwtSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:00:44.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T20:00:44.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\HomeController.cs",
@@ -728,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ManageController.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate-Manage\\Controllers\\ManageController.cs",
               "RelativeDocumentMoniker": "RealEstate-Manage\\Controllers\\ManageController.cs",
@@ -736,8 +751,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Controllers\\ManageController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:57:00.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:57:00.791Z"
             },
             {
               "$type": "Document",
@@ -753,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "20250521205023_NotNullableUserName.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Infrastructure\\Migrations\\20250521205023_NotNullableUserName.cs",
               "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Migrations\\20250521205023_NotNullableUserName.cs",
@@ -762,30 +776,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T20:50:23.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\UserService.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "RealEstate.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:24:04.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "RealEstate.Application\\Services\\IUserService.cs",
-              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Services\\IUserService.cs",
-              "RelativeToolTip": "RealEstate.Application\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T19:23:49.294Z"
             },
             {
               "$type": "Document",
@@ -801,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Core\\User\\User.cs",
               "RelativeDocumentMoniker": "RealEstate.Core\\User\\User.cs",
@@ -881,8 +871,7 @@
               "RelativeToolTip": "RealEstate.Application\\Services\\IManageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:21:07.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:21:07.1Z"
             },
             {
               "$type": "Document",
@@ -1422,8 +1411,7 @@
               "RelativeToolTip": "RealEstate.Application\\Feature\\Manage\\Agency\\List\\GetAgencyListForManageResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:27:33.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:27:33.077Z"
             },
             {
               "$type": "Document",
@@ -1879,8 +1867,7 @@
               "RelativeToolTip": "RealEstate-Manage\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAwDAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T17:08:31.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:08:31.965Z"
             },
             {
               "$type": "Document",

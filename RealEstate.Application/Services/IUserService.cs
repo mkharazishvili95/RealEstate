@@ -1,4 +1,5 @@
-﻿using RealEstate.Application.Models.Auth;
+﻿using Microsoft.EntityFrameworkCore;
+using RealEstate.Application.Models.Auth;
 using RealEstate.Core.User;
 
 namespace RealEstate.Application.Services
@@ -10,5 +11,6 @@ namespace RealEstate.Application.Services
         (bool Success, string ErrorMessage) Register(UserRegisterModel model);
         bool EmailExists(string email);
         bool PhoneNumberExists(string phoneNumber);
+        public User? GetById(string userId);
     }
 }

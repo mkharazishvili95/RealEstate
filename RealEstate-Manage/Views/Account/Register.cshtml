@@ -1,0 +1,114 @@
+﻿@using RealEstate.Common.Enums.User
+@using RealEstate.Common.Enums.Auth
+@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "რეგისტრაცია";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    form.register-form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+        form.register-form .form-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        form.register-form .form-control,
+        form.register-form .form-select {
+            font-size: 0.9rem;
+            padding: 6px 10px;
+        }
+
+        form.register-form .btn-primary {
+            font-size: 1rem;
+            padding: 8px;
+        }
+
+    .form-check-label {
+        font-size: 0.9rem;
+    }
+</style>
+
+<h2 class="mb-4 text-center">რეგისტრაცია</h2>
+
+<form asp-action="Register" method="post" novalidate class="register-form">
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label">სახელი</label>
+        <input asp-for="FirstName" class="form-control" placeholder="შეიყვანეთ თქვენი სახელი" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label">გვარი</label>
+        <input asp-for="LastName" class="form-control" placeholder="შეიყვანეთ თქვენი გვარი" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">რეგისტრაციის მეთოდი</label><br />
+        <div class="form-check form-check-inline">
+            <input type="radio" asp-for="RegistrationMethod" value="Email" checked onchange="toggleFields()" class="form-check-input" id="regMethodEmail" />
+            <label class="form-check-label" for="regMethodEmail">ელ.ფოსტა</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" asp-for="RegistrationMethod" value="Phone" onchange="toggleFields()" class="form-check-input" id="regMethodPhone" />
+            <label class="form-check-label" for="regMethodPhone">ტელეფონი</label>
+        </div>
+        <span asp-validation-for="RegistrationMethod" class="text-danger d-block mt-1"></span>
+    </div>
+
+    <div class="mb-3" id="emailField">
+        <label asp-for="Email" class="form-label">ელ.ფოსტა</label>
+        <input asp-for="Email" class="form-control" placeholder="შეიყვანეთ ელ.ფოსტა" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" id="phoneField" style="display:none;">
+        <label asp-for="PhoneNumber" class="form-label">ტელეფონის ნომერი</label>
+        <input asp-for="PhoneNumber" class="form-control" placeholder="+995 5XX XXX XXX" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">პაროლი</label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="შეიყვანეთ პაროლი" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ConfirmPassword" class="form-label">პაროლის დადასტურება</label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="გაიმეორეთ პაროლი" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <div class="mb-4">
+        <label asp-for="Gender" class="form-label">სქესი</label>
+        <select asp-for="Gender" class="form-select" asp-items="Html.GetEnumSelectList<Gender>()">
+            <option value="">აირჩიეთ სქესი</option>
+        </select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">რეგისტრაცია</button>
+</form>
+
+@section Scripts {
+    @Html.Partial("_ValidationScriptsPartial")
+    <script>
+        function toggleFields() {
+            const method = document.querySelector('input[name="RegistrationMethod"]:checked').value;
+            document.getElementById('emailField').style.display = method === 'Email' ? 'block' : 'none';
+            document.getElementById('phoneField').style.display = method === 'Phone' ? 'block' : 'none';
+        }
+        toggleFields();
+    </script>
+}

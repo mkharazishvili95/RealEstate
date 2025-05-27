@@ -95,5 +95,9 @@ namespace RealEstate.Application.Services
 
             return pin;
         }
+        public User? GetById(string userId)
+        {
+            return _context.Users.FirstOrDefault(u => u.UserId == userId);
+        }
     }
 }
