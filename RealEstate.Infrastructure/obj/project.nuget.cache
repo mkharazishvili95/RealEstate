@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "315xdQxDDe0=",
+  "dgSpecHash": "mHbBA2Lz6vQ=",
   "success": true,
-  "projectFilePath": "D:\\RE\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\admin\\OneDrive\\Desktop\\RealEstate\\RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
