@@ -13,6 +13,7 @@ using RealEstate_Manage.Models.Apartment;
 using RealEstate_Manage.Models.Apartment.List;
 using RealEstate_Manage.Models.User;
 using RealEstate_Manage.Models.User.List;
+using System.Text;
 
 namespace RealEstate.MVC.Controllers
 {
@@ -84,6 +85,53 @@ namespace RealEstate.MVC.Controllers
             return View(viewModel);
         }
 
+        [HttpGet("Manage/ExportUsersToCsv")]
+        public async Task<IActionResult> ExportUsersCsv(UserFilterRowModel filter)
+        {
+            var apiRequest = new GetUserListForManageRequest
+            {
+                UserId = filter.UserId,
+                FirstName = filter.FirstName,
+                LastName = filter.LastName,
+                PIN = filter.PIN,
+                UserName = filter.UserName,
+                Type = filter.Type,
+                Email = filter.Email,
+                PhoneNumber = filter.PhoneNumber,
+                BalanceFrom = filter.BalanceFrom,
+                BalanceTo = filter.BalanceTo,
+                IsBlocked = filter.IsBlocked,
+                BlockDateFrom = filter.BlockDateFrom,
+                BlockDateTo = filter.BlockDateTo,
+                Gender = filter.Gender,
+                RegisterDateFrom = filter.RegisterDateFrom,
+                RegisterDateTo = filter.RegisterDateTo,
+                PageSize = filter.PageSize,
+                Page = filter.Page
+            };
+
+            var requestUrl = $"{_baseUrl}/Manage/users";
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["Error"] = "CSV export failed.";
+                return RedirectToAction("UserList", filter);
+            }
+
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
+
+            if (apiResponse?.UserListForManage == null || !apiResponse.UserListForManage.Any())
+            {
+                TempData["Error"] = "No users found for export.";
+                return RedirectToAction("UserList", filter);
+            }
+
+            var csvBytes = ExportCsvHelper.GenerateUserCsv(apiResponse.UserListForManage);
+            var fileName = $"Users_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+
+            return File(csvBytes, "text/csv", fileName);
+        }
 
         public async Task<IActionResult> AgencyList(AgencyFilterRowModel filter)
         {
@@ -133,6 +181,53 @@ namespace RealEstate.MVC.Controllers
             viewModel.AgencyTypeOptions.Insert(0, new SelectListItem { Text = "ყველა", Value = "" });
 
             return View(viewModel);
+        }
+
+        [HttpGet("Manage/ExportAgenciesToCsv")]
+        public async Task<IActionResult> ExportAgenciesCsv(AgencyFilterRowModel filter)
+        {
+            var apiRequest = new GetAgencyListForManageRequest
+            {
+                AgencyId = filter.AgencyId,
+                Name = filter.Name,
+                AgencyType = filter.AgencyType,
+                Email = filter.Email,
+                IdentificationNumber = filter.IdentificationNumber,
+                OwnerPIN = filter.OwnerPIN,
+                PhoneNumber = filter.PhoneNumber,
+                IsDeleted = filter.IsDeleted,
+                IsApproved = filter.IsApproved,
+                CreateDateFrom = filter.CreateDateFrom,
+                CreateDateTo = filter.CreateDateTo,
+                UpdateDateFrom = filter.UpdateDateFrom,
+                UpdateDateTo = filter.UpdateDateTo,
+                DeleteDateFrom = filter.DeleteDateFrom,
+                DeleteDateTo = filter.DeleteDateTo,
+                Page = filter.Page,
+                PageSize = filter.PageSize
+            };
+
+            var requestUrl = $"{_baseUrl}/Manage/agencies";
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["Error"] = "CSV export failed.";
+                return RedirectToAction("AgencyList", filter);
+            }
+
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
+
+            if (apiResponse?.AgencyListForManage == null || !apiResponse.AgencyListForManage.Any())
+            {
+                TempData["Error"] = "No agencies found for export.";
+                return RedirectToAction("AgencyList", filter);
+            }
+
+            var csvBytes = ExportCsvHelper.GenerateAgencyCsv(apiResponse.AgencyListForManage);
+            var fileName = $"Agencies_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+
+            return File(csvBytes, "text/csv", fileName);
         }
 
         public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
@@ -185,6 +280,53 @@ namespace RealEstate.MVC.Controllers
                 Apartments = tableRows,
                 TotalCount = apiResponse.TotalCount
             });
+        }
+
+        [HttpGet("Manage/ExportApartmentsToCsv")]
+        public async Task<IActionResult> ExportApartmentsCsv(ApartmentFilterRowModel filter)
+        {
+            var apiRequest = new GetApartmentListForManageRequest
+            {
+                AgencyId = filter.AgencyId,
+                ApartmentId = filter.ApartmentId,
+                CreateDateFrom = filter.CreateDateFrom,
+                CreateDateTo = filter.CreateDateTo,
+                CurrencyId = filter.CurrencyId,
+                DeleteDateFrom = filter.DeleteDateFrom,
+                DeleteDateTo = filter.DeleteDateTo,
+                PriceFrom = filter.PriceFrom,
+                PriceTo = filter.PriceTo,
+                Status = filter.Status,
+                Title = filter.Title,
+                UserId = filter.UserId,
+                UserPin = filter.UserPin,
+                UpdateDateFrom = filter.UpdateDateFrom,
+                UpdateDateTo = filter.UpdateDateTo,
+                PageSize = filter.PageSize ?? 20,
+                Page = filter.Page ?? 1
+            };
+
+            var requestUrl = $"{_baseUrl}/Manage/apartments";
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["Error"] = "CSV export failed.";
+                return RedirectToAction("ApartmentList", filter);
+            }
+
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetApartmentListForManageResponse>();
+
+            if (apiResponse?.ApartmentListForManage == null || !apiResponse.ApartmentListForManage.Any())
+            {
+                TempData["Error"] = "No apartments found for export.";
+                return RedirectToAction("ApartmentList", filter);
+            }
+
+            var csvBytes = ExportCsvHelper.GenerateApartmentCsv(apiResponse.ApartmentListForManage);
+            var fileName = $"Apartments_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+
+            return File(csvBytes, "text/csv", fileName);
         }
 
         [HttpPut]

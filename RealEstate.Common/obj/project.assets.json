@@ -567,11 +567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
       "projectName": "RealEstate.Common",
-      "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
+      "projectPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\RealEstate.Common.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RealEstate\\RealEstate.Common\\obj\\",
+      "outputPath": "C:\\Users\\admin\\OneDrive\\Desktop\\RE\\RealEstate\\RealEstate.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

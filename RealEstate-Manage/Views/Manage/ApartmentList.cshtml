@@ -6,6 +6,30 @@
     ViewData["Title"] = "უძრავი ქონების სია";
 }
 
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"></h4>
+    <a href="@Url.Action("ExportApartmentsToCsv", "Manage", new {
+        AgencyId = Model.Filter.AgencyId,
+        ApartmentId = Model.Filter.ApartmentId,
+        CreateDateFrom = Model.Filter.CreateDateFrom?.ToString("yyyy-MM-dd"),
+        CreateDateTo = Model.Filter.CreateDateTo?.ToString("yyyy-MM-dd"),
+        CurrencyId = Model.Filter.CurrencyId,
+        DeleteDateFrom = Model.Filter.DeleteDateFrom?.ToString("yyyy-MM-dd"),
+        DeleteDateTo = Model.Filter.DeleteDateTo?.ToString("yyyy-MM-dd"),
+        PriceFrom = Model.Filter.PriceFrom,
+        PriceTo = Model.Filter.PriceTo,
+        Status = Model.Filter.Status,
+        Title = Model.Filter.Title,
+        UserId = Model.Filter.UserId,
+        UserPin = Model.Filter.UserPin,
+        UpdateDateFrom = Model.Filter.UpdateDateFrom?.ToString("yyyy-MM-dd"),
+        UpdateDateTo = Model.Filter.UpdateDateTo?.ToString("yyyy-MM-dd")
+    })" class="btn btn-success btn-sm">
+        <i class="bi bi-download"></i> ექსპორტი CSV-ში
+    </a>
+</div>
+
+
 <h2>უძრავი ქონება</h2>
 
 @functions {

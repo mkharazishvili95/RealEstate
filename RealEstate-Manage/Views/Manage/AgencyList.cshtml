@@ -6,6 +6,30 @@
     ViewData["Title"] = "სააგენტოების სია";
 }
 
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"></h4>
+    <a href="@Url.Action("ExportAgenciesToCsv", "Manage", new {
+        AgencyId = Model.Filter.AgencyId,
+        Name = Model.Filter.Name,
+        AgencyType = Model.Filter.AgencyType,
+        Email = Model.Filter.Email,
+        IdentificationNumber = Model.Filter.IdentificationNumber,
+        OwnerPIN = Model.Filter.OwnerPIN,
+        PhoneNumber = Model.Filter.PhoneNumber,
+        IsDeleted = Model.Filter.IsDeleted,
+        IsApproved = Model.Filter.IsApproved,
+        CreateDateFrom = Model.Filter.CreateDateFrom?.ToString("yyyy-MM-dd"),
+        CreateDateTo = Model.Filter.CreateDateTo?.ToString("yyyy-MM-dd"),
+        UpdateDateFrom = Model.Filter.UpdateDateFrom?.ToString("yyyy-MM-dd"),
+        UpdateDateTo = Model.Filter.UpdateDateTo?.ToString("yyyy-MM-dd"),
+        DeleteDateFrom = Model.Filter.DeleteDateFrom?.ToString("yyyy-MM-dd"),
+        DeleteDateTo = Model.Filter.DeleteDateTo?.ToString("yyyy-MM-dd")
+    })" class="btn btn-success btn-sm">
+        <i class="bi bi-download"></i> ექსპორტი CSV-ში
+    </a>
+</div>
+
+
 <h2>სააგენტოები</h2>
 
 <form asp-action="AgencyList" method="get" class="container-fluid">

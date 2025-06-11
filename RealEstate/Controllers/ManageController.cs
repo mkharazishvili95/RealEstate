@@ -2,9 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
-using RealEstate.Application.Feature.Manage.Export.Agency;
-using RealEstate.Application.Feature.Manage.Export.Apartment;
-using RealEstate.Application.Feature.Manage.Export.User;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Models.Agency;
 using RealEstate.Application.Models.Apartment;
@@ -58,28 +55,6 @@ namespace RealEstate.Controllers
         [HttpPut("unblock-apartment")]
         public async Task<UnblockApartmentResponse> UnblockApartment(UnblockApartmentRequest request) => await _manageService.UnblockApartment(request);
 
-        [HttpGet("export-users")]
-        public async Task<IActionResult> ExportUsers([FromQuery] GetUserListForManageRequest filters)
-        {
-            var result = await _mediator.Send(new ExportUserListCsvRequest { Filter = filters });
-
-            return File(result.FileContent, result.ContentType, result.FileName);
-        }
-
-        [HttpGet("export-agencies")]
-        public async Task<IActionResult> ExportAgencies([FromQuery] GetAgencyListForManageRequest filters)
-        {
-            var result = await _mediator.Send(new ExportAgencyListCsvRequest { Filter = filters });
-
-            return File(result.FileContent, result.ContentType, result.FileName);
-        }
-
-        [HttpGet("export-apartments")]
-        public async Task<IActionResult> ExportApartments([FromQuery] GetApartmentListForManageRequest filter)
-        {
-            var result = await _mediator.Send(new ExportApartmentListCsvRequest { Filter = filter });
-
-            return File(result.FileContent, result.ContentType, result.FileName);
-        }
+        
     }
 }

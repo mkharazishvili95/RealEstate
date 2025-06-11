@@ -5,6 +5,25 @@
     ViewData["Title"] = "მომხმარებელთა სია";
 }
 
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"></h4>
+    <a href="@Url.Action("ExportUsersToCsv", "Manage", new {
+        FirstName = Model.Filter.FirstName,
+        LastName = Model.Filter.LastName,
+        PIN = Model.Filter.PIN,
+        UserName = Model.Filter.UserName,
+        Email = Model.Filter.Email,
+        PhoneNumber = Model.Filter.PhoneNumber,
+        BalanceFrom = Model.Filter.BalanceFrom,
+        BalanceTo = Model.Filter.BalanceTo,
+        IsBlocked = Model.Filter.IsBlocked,
+        RegisterDateFrom = Model.Filter.RegisterDateFrom?.ToString("yyyy-MM-dd"),
+        RegisterDateTo = Model.Filter.RegisterDateTo?.ToString("yyyy-MM-dd")
+    })" class="btn btn-success btn-sm">
+        <i class="bi bi-download"></i> ექსპორტი CSV-ში
+    </a>
+</div>
+
 <h2>მომხმარებლები</h2>
 
 <form asp-action="UserList"  method="get" class="container-fluid">
