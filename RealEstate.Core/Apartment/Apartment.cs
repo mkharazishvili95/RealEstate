@@ -18,6 +18,7 @@ namespace RealEstate.Core.Apartment
         public decimal? Price { get; set; }
         public int? CurrencyId { get; set; }
         public Core.Currency.Currency? Currency { get; set; }
+        public Agency.Agency? Agency { get; set; }
         public int? AgencyId { get; set; }
     }
 }

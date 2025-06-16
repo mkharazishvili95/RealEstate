@@ -220,6 +220,8 @@ namespace RealEstate.Infrastructure.Migrations
 
                     b.HasKey("ApartmentId");
 
+                    b.HasIndex("AgencyId");
+
                     b.HasIndex("CurrencyId");
 
                     b.HasIndex("UserId");
@@ -403,6 +405,10 @@ namespace RealEstate.Infrastructure.Migrations
 
             modelBuilder.Entity("RealEstate.Core.Apartment.Apartment", b =>
                 {
+                    b.HasOne("RealEstate.Core.Agency.Agency", "Agency")
+                        .WithMany()
+                        .HasForeignKey("AgencyId");
+
                     b.HasOne("RealEstate.Core.Currency.Currency", "Currency")
                         .WithMany()
                         .HasForeignKey("CurrencyId");
@@ -410,6 +416,8 @@ namespace RealEstate.Infrastructure.Migrations
                     b.HasOne("RealEstate.Core.User.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
+
+                    b.Navigation("Agency");
 
                     b.Navigation("Currency");
 
