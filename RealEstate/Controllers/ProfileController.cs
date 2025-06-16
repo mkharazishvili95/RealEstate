@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Profile.Agencies;
 using RealEstate.Application.Feature.Profile.Apartments;
 using RealEstate.Application.Feature.Profile.Details;
+using RealEstate.Application.Feature.Profile.Transfer;
 
 namespace RealEstate.Controllers
 {
@@ -24,5 +25,8 @@ namespace RealEstate.Controllers
 
         [HttpPost("my-agencies")]
         public async Task<MyAgenciesResponse> MyAgencies([FromBody]MyAgenciesRequest request) => await _mediator.Send(request);
+
+        [HttpPut("transfer")]
+        public async Task<TransferBalanceResponse> TransferBalance(TransferBalanceRequest request) => await _mediator.Send(request);
     }
 }

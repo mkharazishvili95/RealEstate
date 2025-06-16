@@ -442,6 +442,32 @@
     ]
   },
   {
+    "ContainingType": "RealEstate.Controllers.ProfileController",
+    "Method": "TransferBalance",
+    "RelativePath": "api/Profile/transfer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RealEstate.Controllers.UserController",
     "Method": "GetFavoriteApartments",
     "RelativePath": "api/User/favorite-apartments",
