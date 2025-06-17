@@ -7,16 +7,16 @@ namespace RealEstate.Application.Feature.Manage.Apartment.List
 {
     public class GetApartmentListForManageHandler : IRequestHandler<GetApartmentListForManageRequest, GetApartmentListForManageResponse>
     {
-        private readonly ApplicationDbContext _database;
+        private readonly ApplicationDbContext _db;
 
-        public GetApartmentListForManageHandler(ApplicationDbContext database)
+        public GetApartmentListForManageHandler(ApplicationDbContext db)
         {
-            _database = database;
+            _db = db;
         }
 
         public async Task<GetApartmentListForManageResponse> Handle(GetApartmentListForManageRequest request, CancellationToken cancellationToken)
         {
-            var apartments = _database.Apartments
+            var apartments = _db.Apartments
                 .Include(a => a.User)
                 .Where(request.WhereClause())
                 .OrderByDescending(a => a.Status == ApartmentStatus.Active)

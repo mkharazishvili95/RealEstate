@@ -3,6 +3,7 @@ using RealEstate.Core.Address;
 using RealEstate.Core.Agency;
 using RealEstate.Core.Apartment;
 using RealEstate.Core.Currency;
+using RealEstate.Core.PaidService;
 using RealEstate.Core.User;
 
 namespace RealEstate.Infrastructure.Data
@@ -20,6 +21,7 @@ namespace RealEstate.Infrastructure.Data
         public DbSet<District> Districts { get; set; }
         public DbSet<Street> Streets { get; set; }
         public DbSet<Subdistrict> Subdistricts { get; set; }
+        public DbSet<Tariff> Tariffs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,4 +1,5 @@
 ﻿using RealEstate.Common.Enums.Apartment;
+using RealEstate.Core.Address;
 
 namespace RealEstate.Core.Apartment
 {
@@ -20,5 +21,13 @@ namespace RealEstate.Core.Apartment
         public Core.Currency.Currency? Currency { get; set; }
         public Agency.Agency? Agency { get; set; }
         public int? AgencyId { get; set; }
+        public ApartmentType ApartmentType { get; set; }
+        public ApartmentDealType ApartmentDealType { get; set; }
+        public RealEstate.Common.Enums.Apartment.ApartmentState? ApartmentState { get; set; }
+        public BuildingStatus? BuildingStatus { get; set; }
+        public int? StreetId { get; set; }
+        public int? DistrictId { get; set; }
+        public int? SubdistrictId { get; set; }
+        public int? CityId {get; set; }
     }
 }

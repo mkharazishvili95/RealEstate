@@ -6,16 +6,16 @@ namespace RealEstate.Application.Feature.Manage.User.List
 {
     public class GetUserListForManageHandler : IRequestHandler<GetUserListForManageRequest, GetUserListForManageResponse>
     {
-        private readonly ApplicationDbContext _database;
+        private readonly ApplicationDbContext _db;
 
-        public GetUserListForManageHandler(ApplicationDbContext database)
+        public GetUserListForManageHandler(ApplicationDbContext db)
         {
-            _database = database;
+            _db = db;
         }
 
         public async Task<GetUserListForManageResponse> Handle(GetUserListForManageRequest request, CancellationToken cancellationToken)
         {
-            var users = _database.Users
+            var users = _db.Users
                 .Where(request.WhereClause())
                 .Select(x => new GetUserListForManageItemsResponse
                 {

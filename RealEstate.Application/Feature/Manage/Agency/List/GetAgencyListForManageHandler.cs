@@ -6,18 +6,18 @@ namespace RealEstate.Application.Feature.Manage.Agency.List
 {
     public class GetAgencyListForManageHandler : IRequestHandler<GetAgencyListForManageRequest, GetAgencyListForManageResponse>
     {
-        private readonly ApplicationDbContext _database;
+        private readonly ApplicationDbContext _db;
 
-        public GetAgencyListForManageHandler(ApplicationDbContext database)
+        public GetAgencyListForManageHandler(ApplicationDbContext db)
         {
-            _database = database;
+            _db = db;
         }
 
         public async Task<GetAgencyListForManageResponse> Handle(GetAgencyListForManageRequest request, CancellationToken cancellationToken)
         {
-            var agencies = _database.Agencies
+            var agencies = _db.Agencies
             .Where(request.WhereClause())
-            .Join(_database.Users,
+            .Join(_db.Users,
           agency => agency.UserId,
           user => user.UserId,
           (agency, user) => new { Agency = agency, User = user });
