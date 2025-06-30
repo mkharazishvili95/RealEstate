@@ -3,7 +3,6 @@
 public class LoginViewModel
 {
     [Required]
-    [EmailAddress]
     public string UserName { get; set; }
 
     [Required]

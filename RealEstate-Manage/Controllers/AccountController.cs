@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Common.Enums.Auth;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Security.Claims;
 
@@ -76,9 +77,21 @@ public class AccountController : Controller
 
         HttpContext.Session.SetString("JWT", token);
 
+        var handler = new JwtSecurityTokenHandler();
+        var jwtToken = handler.ReadJwtToken(token);
+
+        var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
+
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            ModelState.AddModelError("", "UserId not found in token.");
+            return View(model);
+        }
+
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, model.UserName),
+            new Claim("sub", userId) 
         };
 
         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -103,5 +116,4 @@ public class AccountController : Controller
         HttpContext.Session.Remove("JWT");
         return RedirectToAction("Login", "Account");
     }
-
 }
