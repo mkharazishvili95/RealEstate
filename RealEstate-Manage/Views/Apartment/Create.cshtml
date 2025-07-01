@@ -1,0 +1,123 @@
+﻿@using RealEstate.Common.Enums.Apartment
+@using RealEstate_Manage.Models.Apartment.Create
+@model CreateApartmentViewModel
+
+@{
+    ViewBag.Title = "განცხადების დამატება";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center my-4">🛠️ განცხადების დამატება</h2>
+
+<div class="card shadow p-4 mx-auto" style="max-width: 800px;">
+    <form asp-action="Create" method="post">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="Title" class="form-label">სათაური</label>
+                <input asp-for="Title" class="form-control" placeholder="შეიყვანე ბინის სათაური..." />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Price" class="form-label">ფასი</label>
+                <input asp-for="Price" class="form-control" placeholder="ფასი (₾ ან $)" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="CurrencyId" class="form-label">ვალუტა</label>
+                <select asp-for="CurrencyId" class="form-select">
+                    <option value="1">დოლარი (USD)</option>
+                    <option value="2">ლარი (GEL)</option>
+                </select>
+                <span asp-validation-for="CurrencyId" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="AgencyId" class="form-label">სააგენტო</label>
+                <select asp-for="AgencyId" class="form-select" asp-items="Model.Agencies">
+                    <option value="">-- აირჩიე სააგენტო --</option>
+                </select>
+                <span asp-validation-for="AgencyId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="ApartmentType" class="form-label">ბინის ტიპი</label>
+                <select asp-for="ApartmentType" class="form-select" asp-items="Html.GetEnumSelectList<ApartmentType>()">
+                    <option value="">-- აირჩიე ტიპი --</option>
+                </select>
+                <span asp-validation-for="ApartmentType" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="ApartmentDealType" class="form-label">გარიგების ტიპი</label>
+                <select asp-for="ApartmentDealType" class="form-select" asp-items="Html.GetEnumSelectList<ApartmentDealType>()">
+                    <option value="">-- აირჩიე გარიგება --</option>
+                </select>
+                <span asp-validation-for="ApartmentDealType" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="ApartmentState" class="form-label">ბინის მდგომარეობა</label>
+                <select asp-for="ApartmentState" class="form-select" asp-items="Html.GetEnumSelectList<ApartmentState>()">
+                    <option value="">-- აირჩიე მდგომარეობა --</option>
+                </select>
+                <span asp-validation-for="ApartmentState" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="BuildingStatus" class="form-label">მშენებლობის სტატუსი</label>
+                <select asp-for="BuildingStatus" class="form-select" asp-items="Html.GetEnumSelectList<BuildingStatus>()">
+                    <option value="">-- აირჩიე სტატუსი --</option>
+                </select>
+                <span asp-validation-for="BuildingStatus" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="CityId" class="form-label">ქალაქი</label>
+                <input asp-for="CityId" class="form-control" placeholder="ქალაქის ID" />
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="DistrictId" class="form-label">რაიონი</label>
+                <input asp-for="DistrictId" class="form-control" placeholder="რაიონის ID" />
+                <span asp-validation-for="DistrictId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="SubdistrictId" class="form-label">უბანი</label>
+                <input asp-for="SubdistrictId" class="form-control" placeholder="უბნის ID" />
+                <span asp-validation-for="SubdistrictId" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="StreetId" class="form-label">ქუჩა</label>
+                <input asp-for="StreetId" class="form-control" placeholder="ქუჩის ID" />
+                <span asp-validation-for="StreetId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">აღწერა</label>
+            <textarea asp-for="Description" class="form-control" rows="4" placeholder="დამატებითი ინფორმაცია ბინაზე..."></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">➕ დაამატე ბინა</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
