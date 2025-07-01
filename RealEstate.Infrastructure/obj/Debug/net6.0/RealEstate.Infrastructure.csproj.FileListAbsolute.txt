@@ -46,7 +46,6 @@ D:\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Common.dl
 D:\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Core.dll
 D:\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Common.pdb
 D:\RE\RealEstate\RealEstate.Infrastructure\bin\Debug\net6.0\RealEstate.Core.pdb
-D:\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.csproj.AssemblyReference.cache
 D:\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.AssemblyInfoInputs.cache
 D:\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.AssemblyInfo.cs
@@ -78,3 +77,4 @@ C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate.Infrastructure\obj\Debug\n
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.pdb
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.genruntimeconfig.cache
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\ref\RealEstate.Infrastructure.dll
+D:\RE\RealEstate\RealEstate.Infrastructure\obj\Debug\net6.0\RealEstate.Infrastructure.csproj.AssemblyReference.cache

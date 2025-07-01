@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\RE\\RealEstate\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|d:\\re\\realestate\\realestate\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A320093-76DB-44E8-BE9D-5CD1CBFB9C7B}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA3A8499-C359-462C-B492-661A56BA061A}|RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj|d:\\re\\realestate\\realestate.infrastructure\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA3A8499-C359-462C-B492-661A56BA061A}|RealEstate.Infrastructure\\RealEstate.Infrastructure.csproj|solutionrelative:realestate.infrastructure\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|d:\\re\\realestate\\realestate.core\\address\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|solutionrelative:realestate.core\\address\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|d:\\re\\realestate\\realestate.core\\address\\iaddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44AA5FB2-6BCC-49B7-BD19-C597A85BA40D}|RealEstate.Core\\RealEstate.Core.csproj|solutionrelative:realestate.core\\address\\iaddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|d:\\re\\realestate\\realestate.application\\feature\\apartment\\create\\createapartmenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE3DDEA-B1E6-4437-B1D4-E2863573D32E}|RealEstate.Application\\RealEstate.Application.csproj|solutionrelative:realestate.application\\feature\\apartment\\create\\createapartmenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Core\\Address\\City.cs",
+              "RelativeDocumentMoniker": "RealEstate.Core\\Address\\City.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Core\\Address\\City.cs",
+              "RelativeToolTip": "RealEstate.Core\\Address\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T20:13:17.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAddressRepository.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Core\\Address\\IAddressRepository.cs",
+              "RelativeDocumentMoniker": "RealEstate.Core\\Address\\IAddressRepository.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Core\\Address\\IAddressRepository.cs",
+              "RelativeToolTip": "RealEstate.Core\\Address\\IAddressRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T20:10:34.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddressRepository.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Infrastructure\\Repositories\\AddressRepository.cs",
+              "RelativeDocumentMoniker": "RealEstate.Infrastructure\\Repositories\\AddressRepository.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Infrastructure\\Repositories\\AddressRepository.cs",
+              "RelativeToolTip": "RealEstate.Infrastructure\\Repositories\\AddressRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T20:09:18.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApartmentController.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ApartmentController.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Controllers\\ApartmentController.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate\\Controllers\\ApartmentController.cs",
+              "RelativeToolTip": "RealEstate\\Controllers\\ApartmentController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T19:46:46.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateApartmentHandler.cs",
+              "DocumentMoniker": "D:\\RE\\RealEstate\\RealEstate.Application\\Feature\\Apartment\\Create\\CreateApartmentHandler.cs",
+              "RelativeDocumentMoniker": "RealEstate.Application\\Feature\\Apartment\\Create\\CreateApartmentHandler.cs",
+              "ToolTip": "D:\\RE\\RealEstate\\RealEstate.Application\\Feature\\Apartment\\Create\\CreateApartmentHandler.cs",
+              "RelativeToolTip": "RealEstate.Application\\Feature\\Apartment\\Create\\CreateApartmentHandler.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwEcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T19:43:36.038Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

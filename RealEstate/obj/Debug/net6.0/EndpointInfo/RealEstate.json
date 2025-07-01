@@ -73,6 +73,54 @@
         }
       }
     },
+    "/api/Apartment/create": {
+      "post": {
+        "tags": [
+          "Apartment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApartmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApartmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApartmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateApartmentResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateApartmentResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateApartmentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/auth/register": {
       "post": {
         "tags": [
@@ -1012,12 +1060,49 @@
         "type": "integer",
         "format": "int32"
       },
+      "ApartmentDealType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ApartmentState": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "ApartmentStatus": {
         "enum": [
           0,
           1,
           2,
           3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ApartmentType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "type": "integer",
         "format": "int32"
@@ -1038,6 +1123,106 @@
         "additionalProperties": false
       },
       "BlockApartmentResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "rawResponse": {
+            "type": "string",
+            "nullable": true
+          },
+          "userMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BuildingStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CreateApartmentRequest": {
+        "required": [
+          "apartmentDealType",
+          "apartmentType"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "currencyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "agencyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "apartmentType": {
+            "$ref": "#/components/schemas/ApartmentType"
+          },
+          "apartmentDealType": {
+            "$ref": "#/components/schemas/ApartmentDealType"
+          },
+          "apartmentState": {
+            "$ref": "#/components/schemas/ApartmentState"
+          },
+          "buildingStatus": {
+            "$ref": "#/components/schemas/BuildingStatus"
+          },
+          "streetId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "districtId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "subdistrictId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cityId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateApartmentResponse": {
         "type": "object",
         "properties": {
           "statusCode": {

@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ApartmentController",
+    "Method": "CreateApartment",
+    "RelativePath": "api/Apartment/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Apartment.Create.CreateApartmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Apartment.Create.CreateApartmentResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ApartmentController",
     "Method": "GetNewApartments",
     "RelativePath": "api/Apartment/new-apartments",
     "HttpMethod": "GET",

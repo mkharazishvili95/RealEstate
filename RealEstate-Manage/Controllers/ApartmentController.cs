@@ -34,6 +34,8 @@ namespace RealEstate_Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateApartmentViewModel model)
         {
+            var userId = User?.FindFirst("sub")?.Value;
+
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -51,7 +53,7 @@ namespace RealEstate_Manage.Controllers
                 SubdistrictId = model.SubdistrictId,
                 StreetId = model.StreetId,
                 Description = model.Description,
-                UserId = model.UserId,
+                UserId = userId,
                 AgencyId = model.AgencyId
             };
 

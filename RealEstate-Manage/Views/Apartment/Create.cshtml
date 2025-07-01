@@ -13,7 +13,9 @@
     <form asp-action="Create" method="post">
         <div class="row mb-3">
             <div class="col-md-6">
-                <label asp-for="Title" class="form-label">სათაური</label>
+                <label asp-for="Title" class="form-label">
+                    სათაური <span class="text-danger">*</span>
+                </label>
                 <input asp-for="Title" class="form-control" placeholder="შეიყვანე ბინის სათაური..." />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
@@ -46,15 +48,19 @@
 
         <div class="row mb-3">
             <div class="col-md-6">
-                <label asp-for="ApartmentType" class="form-label">ბინის ტიპი</label>
+                <label asp-for="ApartmentType" class="form-label">
+                    ბინის ტიპი <span class="text-danger">*</span>
+                </label>
                 <select asp-for="ApartmentType" class="form-select" asp-items="Html.GetEnumSelectList<ApartmentType>()">
                     <option value="">-- აირჩიე ტიპი --</option>
                 </select>
                 <span asp-validation-for="ApartmentType" class="text-danger"></span>
-            </div>
+                 </div>
 
             <div class="col-md-6">
-                <label asp-for="ApartmentDealType" class="form-label">გარიგების ტიპი</label>
+                <label asp-for="ApartmentDealType" class="form-label">
+                    გარიგების ტიპი <span class="text-danger">*</span>
+                </label>
                 <select asp-for="ApartmentDealType" class="form-select" asp-items="Html.GetEnumSelectList<ApartmentDealType>()">
                     <option value="">-- აირჩიე გარიგება --</option>
                 </select>

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.Apartment.Create;
 using RealEstate.Infrastructure.Queries.Apartment;
 using RealEstate.Infrastructure.Queries.Models.Apartment;
 
@@ -22,5 +23,8 @@ namespace RealEstate.Controllers
 
         [HttpGet("new-apartments")]
         public async Task<GetNewApartmentsModel> GetNewApartments() => await _apartmentQueries.GetNewApartments();
+
+        [HttpPost("create")]
+        public async Task<CreateApartmentResponse> CreateApartment(CreateApartmentRequest request) => await _mediator.Send(request);
     }
 }
