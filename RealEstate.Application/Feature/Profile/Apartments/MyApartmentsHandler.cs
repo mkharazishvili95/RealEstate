@@ -39,6 +39,7 @@ namespace RealEstate.Application.Feature.Profile.Apartments
 
             var query = _db.Apartments
                 .Include(x => x.Agency)
+                .OrderByDescending(x => x.CreateDate)
                 .Where(x => x.UserId == request.UserId);
 
             if (request.Status.HasValue)
@@ -72,8 +73,8 @@ namespace RealEstate.Application.Feature.Profile.Apartments
                 DeleteDate = x.DeleteDate,
                 Price = x.Price,
                 CurrencyId = x.CurrencyId,
-                AgencyId = x.AgencyId,
-                AgencyName = x.Agency?.Name ?? null
+                AgencyId = (x.Agency != null && x.Agency.IsDeleted == false) ? x.Agency.AgencyId : null,
+                AgencyName = (x.Agency != null && x.Agency.IsDeleted == false) ? x.Agency.Name : null,
             }).ToList();
 
             return new MyApartmentsResponse

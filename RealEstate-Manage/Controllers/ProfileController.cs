@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.Profile.Apartments;
+using RealEstate.Common.Enums.Apartment;
 using RealEstate_Manage.Models.Profile;
 
 namespace RealEstate_Manage.Controllers
@@ -63,6 +65,54 @@ namespace RealEstate_Manage.Controllers
             };
 
             return View(model);
+        }
+
+        public async Task<IActionResult> MyApartments(ApartmentStatus? status)
+        {
+            var userId = User?.FindFirst("sub")?.Value;
+
+            var requestUrl = $"{_baseUrl}/profile/my-apartments";
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new MyApartmentsRequestModel
+                {
+                    UserId = userId,
+                    Status = status
+                });
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.Error = "Could not load your apartments.";
+                return View(new List<MyApartmentViewModel>());
+            }
+
+            var apiResult = await response.Content.ReadFromJsonAsync<MyApartmentsResponse>();
+
+            if (apiResult == null || !apiResult.Success)
+            {
+                ViewBag.Error = apiResult?.UserMessage ?? "Error";
+                return View(new List<MyApartmentViewModel>());
+            }
+
+            var apartments = apiResult.Items.Select(x => new MyApartmentViewModel
+            {
+                ApartmentId = x.ApartmentId,
+                Title = x.Title ?? null,
+                Description = x.Description ?? null,
+                Status = (int?)x.Status,
+                BlockReason = x.BlockReason ?? null,
+                CreateDate = x.CreateDate ?? null,
+                EndDate = x.EndDate ?? null,
+                UpdateDate = x.UpdateDate ?? null,
+                DeleteDate = x.DeleteDate ?? null,
+                Price = x.Price ?? null,
+                CurrencyId = x.CurrencyId ?? null,
+                AgencyId = x.AgencyId ?? null,
+                AgencyName = x.AgencyName ?? null
+            }).ToList();
+
+            return View(apartments);
         }
     }
 }

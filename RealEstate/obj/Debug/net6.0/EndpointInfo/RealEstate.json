@@ -759,7 +759,7 @@
         }
       }
     },
-    "/api/Profile/my-applications": {
+    "/api/Profile/my-apartments": {
       "post": {
         "tags": [
           "Profile"

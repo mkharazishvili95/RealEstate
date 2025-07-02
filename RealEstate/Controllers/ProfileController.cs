@@ -20,7 +20,7 @@ namespace RealEstate.Controllers
         [HttpPost("my-profile")]
         public async Task<MyProfileDetailsResponse> MyProfile([FromBody]MyProfileDetailsRequest request) => await _mediator.Send(request);
 
-        [HttpPost("my-applications")]
+        [HttpPost("my-apartments")]
         public async Task<MyApartmentsResponse> MyApartments([FromBody]MyApartmentsRequest request) => await _mediator.Send(request);
 
         [HttpPost("my-agencies")]

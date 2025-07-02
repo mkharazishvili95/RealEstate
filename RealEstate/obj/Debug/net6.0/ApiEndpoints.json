@@ -418,7 +418,7 @@
   {
     "ContainingType": "RealEstate.Controllers.ProfileController",
     "Method": "MyApartments",
-    "RelativePath": "api/Profile/my-applications",
+    "RelativePath": "api/Profile/my-apartments",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
