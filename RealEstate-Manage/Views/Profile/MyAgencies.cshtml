@@ -1,0 +1,117 @@
+﻿@model List<RealEstate_Manage.Models.Profile.MyAgenciesViewModel>
+@using RealEstate.Common.Enums.Agency
+
+@{
+    ViewBag.Title = "ჩემი სააგენტოები";
+
+    var selectedType = Context.Request.Query["type"].ToString();
+    var agencyNameFilter = Context.Request.Query["agencyName"].ToString();
+    var idNumberFilter = Context.Request.Query["identificationNumber"].ToString();
+
+    string GetGeorgianAgencyType(AgencyType? type)
+    {
+        return type switch
+        {
+            AgencyType.Agency => "სააგენტო",
+            AgencyType.Construction => "სამშენებლო კომპანია",
+            _ => "უცნობი"
+        };
+    }
+}
+
+<h2 class="text-center my-4">🏢 ჩემი სააგენტოები</h2>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <form method="get" class="row g-3 align-items-end">
+            <div class="col-md-3">
+                <label class="form-label small fw-semibold">დასახელება</label>
+                <input type="text" name="agencyName" class="form-control form-control-sm" value="@agencyNameFilter" placeholder="შეიყვანე სააგენტოს სახელი" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label small fw-semibold">საიდენტიფიკაციო ნომერი</label>
+                <input type="text" name="identificationNumber" class="form-control form-control-sm" value="@idNumberFilter" placeholder="შეიყვანე ნომერი" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label small fw-semibold">ტიპი</label>
+                <select name="type" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">ყველა</option>
+                    @foreach (AgencyType type in Enum.GetValues(typeof(AgencyType)))
+                    {
+                        var value = ((int)type).ToString();
+
+                        if (selectedType == value)
+                        {
+                            <option value="@value" selected="selected">@GetGeorgianAgencyType(type)</option>
+                        }
+                        else
+                        {
+                            <option value="@value">@GetGeorgianAgencyType(type)</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3 text-end">
+                <button type="submit" class="btn btn-primary btn-sm me-2">ძებნა</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="window.location='/profile/myagencies'">
+                    გასუფთავება
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+else if (Model.Count == 0)
+{
+    <div class="alert alert-info">თქვენ არ გაქვთ სააგენტოები.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>დასახელება</th>
+                    <th>ტიპი</th>
+                    <th>საიდენტიფიკაციო ნომერი</th>
+                    <th>ელ. ფოსტა</th>
+                    <th>სტატუსი</th>
+                    <th>შექმნის თარიღი</th>
+                    <th>წაშლის თარიღი</th>
+                    <th>წაშლის მიზეზი</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var agency in Model)
+                {
+                    <tr>
+                        <td>@agency.Name</td>
+                        <td>@GetGeorgianAgencyType(agency.AgencyType)</td>
+                        <td>@agency.IdentificationNumber</td>
+                        <td>@agency.Email</td>
+                        <td>
+                            @if (agency.IsApproved == true)
+                            {
+                                <span class="badge bg-success">დამტკიცებული</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning text-dark">მოლოდინში</span>
+                            }
+                        </td>
+                        <td>@agency.CreateDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@(agency.DeleteDate?.ToString("yyyy-MM-dd") ?? "—")</td>
+                        <td>@(agency.DeleteReason ?? "—")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.Profile.Agencies;
 using RealEstate.Application.Feature.Profile.Apartments;
+using RealEstate.Common.Enums.Agency;
 using RealEstate.Common.Enums.Apartment;
 using RealEstate_Manage.Models.Profile;
 
@@ -113,6 +115,61 @@ namespace RealEstate_Manage.Controllers
             }).ToList();
 
             return View(apartments);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> MyAgencies(string? agencyName, string? identificationNumber, AgencyType? type)
+        {
+            var userId = User?.FindFirst("sub")?.Value;
+
+            var requestUrl = $"{_baseUrl}/profile/my-agencies";
+
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new MyAgenciesRequestModel
+                {
+                   UserId = userId,
+                   AgencyName = agencyName,
+                   IdentificationNumber = identificationNumber,
+                   Type = type
+                });
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.Error = "საგენტოები ვერ მოიძებნა.";
+                return View(new List<MyAgenciesViewModel>());
+            }
+
+            var apiResult = await response.Content.ReadFromJsonAsync<MyAgenciesResponse>();
+
+            if (apiResult == null || !apiResult.Success)
+            {
+                ViewBag.Error = apiResult?.UserMessage ?? "მოხდა შეცდომა.";
+                return View(new List<MyAgenciesViewModel>());
+            }
+
+            var agencies = apiResult.Items.Select(x => new MyAgenciesViewModel
+            {
+                AgencyId = x.AgencyId,
+                AgencyType = x.AgencyType,
+                Name = x.Name,
+                LogoUrl = x.LogoUrl,
+                IsApproved = x.IsApproved,
+                IsDeleted = x.IsDeleted,
+                DeleteReason = x.DeleteReason,
+                UpdateDate = x.UpdateDate,
+                DeleteDate = x.DeleteDate,
+                Address = x.Address,
+                IdentificationNumber = x.IdentificationNumber,
+                Description = x.Description,
+                Email = x.Email,
+                Link = x.Link,
+                PhoneNumber = x.PhoneNumber,
+                CreateDate = x.CreateDate
+            }).ToList();
+
+            return View(agencies);
         }
     }
 }
