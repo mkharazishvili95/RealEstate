@@ -1,0 +1,64 @@
+﻿@model RealEstate_Manage.Models.Profile.MyProfileViewModel
+
+@{
+    ViewBag.Title = "ჩემი პროფილი";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center my-4">👤 ჩემი პროფილი</h2>
+
+@if (Model != null)
+{
+    <div class="card shadow p-4 mx-auto mb-4" style="max-width: 800px;">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>სახელი:</strong> @Model.FirstName</p>
+                <p><strong>გვარი:</strong> @Model.LastName</p>
+                <p><strong>მომხმარებლის სახელი:</strong> @Model.UserName</p>
+                <p><strong>Email:</strong> @Model.Email</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>ტელეფონი:</strong> @Model.PhoneNumber</p>
+                <p>
+                    <strong>ტიპი:</strong>
+                    @{
+                        string userTypeText = Model.Type switch
+                        {
+                            RealEstate.Common.Enums.User.UserType.Individual => "ფიზიკური პირი",
+                            RealEstate.Common.Enums.User.UserType.Agent => "აგენტი",
+                            RealEstate.Common.Enums.User.UserType.Agency => "სააგენტო",
+                            _ => ""
+                        };
+                    }
+                    @userTypeText
+                </p>
+                <p><strong>ბალანსი:</strong> @Model.Balance?.ToString("N2") ₾</p>
+                <p>
+                    <strong>სქესი:</strong>
+                    @{
+                        string gender = Model.Gender switch
+                        {
+                            RealEstate.Common.Enums.User.Gender.Male => "კაცი",
+                            RealEstate.Common.Enums.User.Gender.Female => "ქალი",
+                            _ => ""
+                        };
+                    }
+                    @gender
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="@Url.Action("Index", "Profile")" class="btn btn-outline-primary m-2">🔍 პროფილის დეტალები</a>
+        <a href="/profile/myapartments" class="btn btn-outline-success m-2">🏠 ჩემი ბინები</a>
+        <a href="/profile/myagencies" class="btn btn-outline-warning m-2">🏢 ჩემი სააგენტოები</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning text-center">პროფილის მონაცემები ვერ მოიძებნა.</div>
+}
+<div class="d-flex justify-content-center mt-4">
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary">მთავარზე დაბრუნება</a>
+</div>

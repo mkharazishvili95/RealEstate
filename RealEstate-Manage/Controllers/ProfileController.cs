@@ -171,5 +171,51 @@ namespace RealEstate_Manage.Controllers
 
             return View(agencies);
         }
+
+        [Authorize]
+        public async Task<IActionResult> Main()
+        {
+            var userId = User?.FindFirst("sub")?.Value;
+
+            if (string.IsNullOrWhiteSpace(userId))
+                return RedirectToAction("Login", "Account");
+
+            var requestUrl = $"{_baseUrl}/Profile/my-profile";
+
+            var response = await _httpClient.PostAsJsonAsync(
+                requestUrl,
+                new MyProfileRequestModel
+                {
+                    UserId = userId
+                });
+
+            if (!response.IsSuccessStatusCode)
+                return View("Error");
+
+            var apiResponse = await response.Content.ReadFromJsonAsync<MyProfileApiResponse>();
+
+            if (apiResponse == null || !apiResponse.Success)
+                return View("Error");
+
+            var model = new MyProfileViewModel
+
+            {
+                FirstName = apiResponse.FirstName,
+                LastName = apiResponse.LastName,
+                UserName = apiResponse.UserName,
+                Balance = apiResponse.Balance,
+                Email = apiResponse.Email,
+                PhoneNumber = apiResponse.PhoneNumber,
+                IsBlocked = apiResponse.IsBlocked,
+                BlockDate = apiResponse.BlockDate,
+                BlockReason = apiResponse.BlockReason,
+                RegisterDate = apiResponse.RegisterDate,
+                Type = apiResponse.Type,
+                Gender = apiResponse.Gender,
+                PIN = apiResponse.PIN
+            };
+
+            return View(model);
+        }
     }
 }

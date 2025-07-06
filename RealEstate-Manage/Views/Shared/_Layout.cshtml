@@ -28,8 +28,14 @@
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
+                                <a class="btn btn-outline-primary mx-1" asp-controller="Profile" asp-action="Main">👤 ჩემი პროფილი</a>
+                            </li>
+                        }
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
                                 <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                                    <button type="submit" class="btn btn-link nav-link">Logout</button>
+                                    <button type="submit" class="btn btn-outline-danger mx-1">🚪 გამოსვლა</button>
                                 </form>
                             </li>
                         }
