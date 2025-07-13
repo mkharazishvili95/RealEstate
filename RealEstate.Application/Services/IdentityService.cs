@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RealEstate.Core.User;
 using RealEstate.Infrastructure.Data;
 
 namespace RealEstate.Application.Services

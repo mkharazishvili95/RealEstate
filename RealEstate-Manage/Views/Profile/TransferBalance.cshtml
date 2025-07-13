@@ -1,0 +1,48 @@
+﻿@model RealEstate_Manage.Models.Profile.TransferBalanceViewModel
+
+@{
+    ViewData["Title"] = "თანხის გადარიცხვა";
+}
+
+<h2 class="text-center text-dark fw-bold mb-4">💸 თანხის გადარიცხვა</h2>
+
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="TransferBalance" method="post" class="mx-auto" style="max-width: 500px;">
+    <input type="hidden" asp-for="SenderUserId" />
+
+    <div class="form-group mb-3">
+        <label asp-for="ReceiverPIN" class="form-label fw-bold">🔑 მიმღების PIN</label>
+        <input asp-for="ReceiverPIN" class="form-control" placeholder="შეიყვანეთ მიმღების PIN" required />
+        <span asp-validation-for="ReceiverPIN" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <label asp-for="Amount" class="form-label fw-bold">💰 თანხის რაოდენობა</label>
+        <input asp-for="Amount" class="form-control" placeholder="მაგ: 50.00" required />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+
+    <div class="d-grid">
+        <button type="submit" class="btn btn-success fw-bold">✅ გადარიცხვა</button>
+    </div>
+</form>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="@Url.Action("Main", "Profile")" class="btn btn-primary">← უკან დაბრუნება</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

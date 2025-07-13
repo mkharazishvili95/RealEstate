@@ -19,7 +19,7 @@ namespace RealEstate.Application.Feature.Profile.Transfer
         {
             if (string.IsNullOrWhiteSpace(request.SenderUserId) ||
                 string.IsNullOrWhiteSpace(request.ReceiverPIN) ||
-                request.Amount is null || request.Amount <= 0)
+                request.Amount <= 0)
             {
                 return new TransferBalanceResponse
                 {
@@ -74,8 +74,8 @@ namespace RealEstate.Application.Feature.Profile.Transfer
             using var transaction = await _db.Database.BeginTransactionAsync(cancellationToken);
             try
             {
-                sender.Balance -= request.Amount.Value;
-                receiver.Balance += request.Amount.Value;
+                sender.Balance -= request.Amount;
+                receiver.Balance += request.Amount;
 
                 _db.Users.Update(sender);
                 _db.Users.Update(receiver);
@@ -87,7 +87,7 @@ namespace RealEstate.Application.Feature.Profile.Transfer
                 {
                     Success = true,
                     StatusCode = 200,
-                    UserMessage = $"Transferred {request.Amount.Value:C} successfully."
+                    UserMessage = $"Transferred {request.Amount:C} successfully."
                 };
             }
             catch (Exception ex)

@@ -471,7 +471,7 @@
     "ContainingType": "RealEstate.Controllers.ProfileController",
     "Method": "TransferBalance",
     "RelativePath": "api/Profile/transfer",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

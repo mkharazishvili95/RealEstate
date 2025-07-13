@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Profile.Agencies;
 using RealEstate.Application.Feature.Profile.Apartments;
+using RealEstate.Application.Feature.Profile.Transfer;
 using RealEstate.Common.Enums.Agency;
 using RealEstate.Common.Enums.Apartment;
 using RealEstate_Manage.Models.Profile;
+using System.Text;
+using System.Text.Json;
 
 namespace RealEstate_Manage.Controllers
 {
@@ -215,6 +218,45 @@ namespace RealEstate_Manage.Controllers
                 PIN = apiResponse.PIN
             };
 
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult TransferBalance()
+        {
+            return View(new TransferBalanceViewModel());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> TransferBalance(TransferBalanceViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var userId = User.FindFirst("sub")?.Value ?? User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                TempData["Error"] = "მომხმარებელი ვერ მოიძებნა.";
+                return View(model);
+            }
+
+            var requestUrl = $"{_baseUrl}/Profile/transfer";
+
+            var response = await _httpClient.PostAsJsonAsync(requestUrl, new
+            {
+                SenderUserId = userId,
+                ReceiverPIN = model.ReceiverPIN,
+                Amount = model.Amount
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["Success"] = "თანხა წარმატებით გადაირიცხა!";
+                return RedirectToAction("TransferBalance");
+            }
+
+            var errorResponse = await response.Content.ReadAsStringAsync();
+            TempData["Error"] = $"შეცდომა: {errorResponse}";
             return View(model);
         }
     }

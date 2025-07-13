@@ -1,6 +1,4 @@
-﻿using RealEstate.Common.Enums.Apartment;
-
-namespace RealEstate_Manage.Models.Profile
+﻿namespace RealEstate_Manage.Models.Profile
 {
     public class MyApartmentViewModel
     {
