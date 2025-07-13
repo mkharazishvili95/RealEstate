@@ -390,6 +390,32 @@
     ]
   },
   {
+    "ContainingType": "RealEstate.Controllers.PaymentServiceController",
+    "Method": "TransferBalance",
+    "RelativePath": "api/PaidService/transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RealEstate.Controllers.ProfileController",
     "Method": "MyAgencies",
     "RelativePath": "api/Profile/my-agencies",
@@ -458,32 +484,6 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Feature.Profile.Details.MyProfileDetailsResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.ProfileController",
-    "Method": "TransferBalance",
-    "RelativePath": "api/Profile/transfer",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RealEstate.Application.Feature.Profile.Transfer.TransferBalanceResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

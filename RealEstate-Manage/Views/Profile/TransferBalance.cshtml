@@ -6,7 +6,6 @@
 
 <h2 class="text-center text-dark fw-bold mb-4">💸 თანხის გადარიცხვა</h2>
 
-
 @if (TempData["Success"] != null)
 {
     <div class="alert alert-success">@TempData["Success"]</div>
@@ -17,6 +16,8 @@
 }
 
 <form asp-action="TransferBalance" method="post" class="mx-auto" style="max-width: 500px;">
+    @Html.AntiForgeryToken()
+
     <input type="hidden" asp-for="SenderUserId" />
 
     <div class="form-group mb-3">
@@ -31,7 +32,6 @@
         <span asp-validation-for="Amount" class="text-danger"></span>
     </div>
 
-
     <div class="d-grid">
         <button type="submit" class="btn btn-success fw-bold">✅ გადარიცხვა</button>
     </div>
@@ -40,9 +40,3 @@
 <div class="d-flex justify-content-center mt-4">
     <a href="@Url.Action("Main", "Profile")" class="btn btn-primary">← უკან დაბრუნება</a>
 </div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

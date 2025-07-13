@@ -29,7 +29,6 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Progr
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetUserListForManageHandler).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetApartmentListForManageHandler).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAgencyListForManageHandler).Assembly));
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(TransferBalanceHandler).Assembly));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -37,6 +36,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddTransient<IManageService, ManageService>();
 builder.Services.AddTransient<IIdentityService, IdentityService>();
 builder.Services.AddTransient<IAgencyService, AgencyService>();
+builder.Services.AddTransient<IPaymentService, PaymentService>();
 builder.Services.AddTransient<IApartmentQueries, ApartmentQueries>();
 builder.Services.AddTransient<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IUserService, UserService>();

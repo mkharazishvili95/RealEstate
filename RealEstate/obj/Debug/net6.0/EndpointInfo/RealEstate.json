@@ -711,6 +711,54 @@
         }
       }
     },
+    "/api/PaidService/transfer": {
+      "post": {
+        "tags": [
+          "PaymentService"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferBalanceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferBalanceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferBalanceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferBalanceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferBalanceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferBalanceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Profile/my-profile": {
       "post": {
         "tags": [
@@ -848,54 +896,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MyAgenciesResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Profile/transfer": {
-      "post": {
-        "tags": [
-          "Profile"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransferBalanceRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransferBalanceRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransferBalanceRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransferBalanceResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransferBalanceResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransferBalanceResponse"
                 }
               }
             }

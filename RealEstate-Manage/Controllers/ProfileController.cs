@@ -221,30 +221,35 @@ namespace RealEstate_Manage.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult TransferBalance()
         {
-            return View(new TransferBalanceViewModel());
+            var userId = User?.FindFirst("sub")?.Value;
+            if (string.IsNullOrWhiteSpace(userId))
+                return RedirectToAction("Login", "Account");
+
+            var model = new TransferBalanceViewModel
+            {
+                SenderUserId = userId
+            };
+
+            return View(model);
         }
 
+        [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> TransferBalance(TransferBalanceViewModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
 
-            var userId = User.FindFirst("sub")?.Value ?? User.FindFirst("UserId")?.Value;
-            if (string.IsNullOrEmpty(userId))
-            {
-                TempData["Error"] = "მომხმარებელი ვერ მოიძებნა.";
-                return View(model);
-            }
-
-            var requestUrl = $"{_baseUrl}/Profile/transfer";
+            var requestUrl = $"{_baseUrl}/PaidService/transfer";
 
             var response = await _httpClient.PostAsJsonAsync(requestUrl, new
             {
-                SenderUserId = userId,
+                SenderUserId = model.SenderUserId,
                 ReceiverPIN = model.ReceiverPIN,
                 Amount = model.Amount
             });
@@ -255,8 +260,8 @@ namespace RealEstate_Manage.Controllers
                 return RedirectToAction("TransferBalance");
             }
 
-            var errorResponse = await response.Content.ReadAsStringAsync();
-            TempData["Error"] = $"შეცდომა: {errorResponse}";
+            var errorMessage = await response.Content.ReadAsStringAsync();
+            ModelState.AddModelError("", $"შეცდომა: {errorMessage}");
             return View(model);
         }
     }
