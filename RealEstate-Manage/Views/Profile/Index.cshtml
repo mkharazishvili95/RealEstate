@@ -1,100 +1,116 @@
 ﻿@model RealEstate_Manage.Models.Profile.MyProfileViewModel
 
 @{
-    ViewBag.Title = "ჩემი პროფილი"; 
+    ViewBag.Title = "ჩემი პროფილი";
 }
 
-<h2 class="mb-4">ჩემი პროფილი</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">👤 ჩემი პროფილი</h2>
 
-@if (Model != null)
-{
-    <table class="table table-bordered table-striped table-hover">
-        <tbody>
-            <tr>
-                <th>სახელი</th>
-                <td>@Model.FirstName</td>
-            </tr>
-            <tr>
-                <th>გვარი</th>
-                <td>@Model.LastName</td>
-            </tr>
-            <tr>
-                <th>PIN</th>
-                <td>@Model.PIN</td>
-            </tr>
-            <tr>
-                <th>მომხმარებლის სახელი</th>
-                <td>@Model.UserName</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>@Model.Email</td>
-            </tr>
-            <tr>
-                <th>მობილური</th>
-                <td>@Model.PhoneNumber</td>
-            </tr>
-            <tr>
-                <th>სქესი</th>
-                <td>
-                    @{
-                        string genderText = Model.Gender switch
+    @if (Model != null)
+    {
+        <div class="card shadow rounded-4">
+            <div class="card-body">
+                <table class="table table-hover table-bordered align-middle">
+                    <tbody>
+                        <tr>
+                            <th class="text-center w-25">სახელი</th>
+                            <td>@Model.FirstName</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">გვარი</th>
+                            <td>@Model.LastName</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">PIN</th>
+                            <td>@Model.PIN</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">UserName</th>
+                            <td>@Model.UserName</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Email</th>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">მობილური</th>
+                            <td>@Model.PhoneNumber</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">სქესი</th>
+                            <td>
+                                @{
+                                    string genderText = Model.Gender switch
+                                    {
+                                        RealEstate.Common.Enums.User.Gender.Male => "მამრობითი",
+                                        RealEstate.Common.Enums.User.Gender.Female => "მდედრობითი",
+                                        _ => "უცნობი"
+                                    };
+                                }
+                                @genderText
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">მომხმარებლის ტიპი</th>
+                            <td>
+                                @{
+                                    string userTypeText = Model.Type switch
+                                    {
+                                        RealEstate.Common.Enums.User.UserType.Individual => "ფიზიკური პირი",
+                                        RealEstate.Common.Enums.User.UserType.Agent => "აგენტი",
+                                        RealEstate.Common.Enums.User.UserType.Agency => "სააგენტო",
+                                        _ => "უცნობი"
+                                    };
+                                }
+                                @userTypeText
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">ბალანსი</th>
+                            <td>@Model.Balance?.ToString("N2") ₾</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">დაბლოკილი</th>
+                            <td>
+                                @if (Model.IsBlocked == true)
+                                {
+                                    <span class="badge bg-danger">კი</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">არა</span>
+                                }
+                            </td>
+                        </tr>
+
+                        @if (Model.IsBlocked == true)
                         {
-                            RealEstate.Common.Enums.User.Gender.Male => "მამრობითი",
-                            RealEstate.Common.Enums.User.Gender.Female => "მდედრობითი",
-                            _ => ""
-                        };
-                    }
-                    @genderText
-                </td>
-            </tr>
-            <tr>
-                <th>მომხმარებლის ტიპი</th>
-                <td>
-                    @{
-                        string userTypeText = Model.Type switch
-                        {
-                            RealEstate.Common.Enums.User.UserType.Individual => "ფიზიკური პირი",
-                            RealEstate.Common.Enums.User.UserType.Agent => "აგენტი",
-                            RealEstate.Common.Enums.User.UserType.Agency => "სააგენტო",
-                            _ => ""
-                        };
-                    }
-                    @userTypeText
-                </td>
-            </tr>
-            <tr>
-                <th>ბალანსი</th>
-                <td>@Model.Balance?.ToString("N2") ₾</td>
-            </tr>
-            <tr>
-                <th>დაბლოკილი</th>
-                <td>@(Model.IsBlocked == true ? "კი" : "არა")</td>
-            </tr>
+                            <tr>
+                                <th class="text-center">დაბლოკვის თარიღი</th>
+                                <td>@Model.BlockDate?.ToString("yyyy-MM-dd")</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">დაბლოკვის მიზეზი</th>
+                                <td>@Model.BlockReason</td>
+                            </tr>
+                        }
 
-            @if (Model.IsBlocked == true)
-            {
-                <tr>
-                    <th>დაბლოკვის თარიღი</th>
-                    <td>@Model.BlockDate?.ToString("yyyy-MM-dd")</td>
-                </tr>
-                <tr>
-                    <th>დაბლოკვის მიზეზი</th>
-                    <td>@Model.BlockReason</td>
-                </tr>
-            }
+                        <tr>
+                            <th class="text-center">რეგისტრაციის თარიღი</th>
+                            <td>@Model.RegisterDate?.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center mt-4">ინფორმაცია ვერ მოიძებნა.</div>
+    }
 
-            <tr>
-                <th>რეგისტრაციის თარიღი</th>
-                <td>@Model.RegisterDate?.ToString("yyyy-MM-dd")</td>
-            </tr>
-        </tbody>
-    </table>
-}
-else
-{
-    <div class="alert alert-warning">ინფორმაცია ვერ მოიძებნა.</div>
-}
-<div class="d-flex justify-content-center mt-4">
-    <a href="@Url.Action("Main", "Profile")" class="btn btn-primary">← უკან დაბრუნება</a>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="@Url.Action("Main", "Profile")" class="btn btn-outline-primary px-4 py-2 rounded-pill">← უკან დაბრუნება</a>
+    </div>
 </div>
