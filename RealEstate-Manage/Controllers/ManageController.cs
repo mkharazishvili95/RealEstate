@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Models.User;
+using RealEstate.Common.Enums.User;
 using RealEstate.Models.User.List;
 using RealEstate_Manage.Controllers;
 using RealEstate_Manage.Extensions;
@@ -19,6 +21,7 @@ using System.Text;
 
 namespace RealEstate.MVC.Controllers
 {
+    [Authorize(Roles = nameof(UserType.Admin))]
     public class ManageController : BaseController
     {
         private readonly HttpClient _httpClient;

@@ -18,10 +18,10 @@ namespace RealEstate.Controllers
             _apartmentQueries = apartmentQueries;
         }
 
-        [HttpGet("apartment-details")]
+        [HttpGet("details")]
         public async Task<GetApartmentDetailsModel> GetApartmentDetails(int apartmentId) => await _apartmentQueries.GetApartment(apartmentId);
 
-        [HttpGet("new-apartments")]
+        [HttpGet("new")]
         public async Task<GetNewApartmentsModel> GetNewApartments() => await _apartmentQueries.GetNewApartments();
 
         [HttpPost("create")]

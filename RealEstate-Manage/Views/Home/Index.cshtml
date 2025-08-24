@@ -1,1 +1,47 @@
-﻿<p>ტესტი</p>
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Authentication
+
+@{
+    ViewData["Title"] = "მთავარი გვერდი";
+}
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - RealEstate</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1 class="display-4 mb-4">მოგესალმებით <span class="text-primary">RealEstate</span>-ში</h1>
+
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="d-flex justify-content-center gap-3">
+                <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4 shadow">
+                    <i class="bi bi-box-arrow-in-right"></i> შესვლა
+                </a>
+                <a asp-controller="Account" asp-action="Register" class="btn btn-outline-success btn-lg px-4 shadow">
+                    <i class="bi bi-person-plus"></i> რეგისტრაცია
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success mt-4 shadow" role="alert">
+                <h4 class="alert-heading">გამარჯობა, @User.Identity.Name 👋</h4>
+                <p>თქვენ წარმატებით შეხვედით სისტემაში.</p>
+                <a asp-controller="Account" asp-action="Logout" class="btn btn-danger btn-lg mt-3 px-4 shadow">
+                    <i class="bi bi-box-arrow-right"></i> გამოსვლა
+                </a>
+            </div>
+        }
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

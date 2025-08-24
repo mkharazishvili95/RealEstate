@@ -114,11 +114,10 @@ public class AccountController : Controller
             : RedirectToAction("Index", "Home");
     }
 
-    [HttpPost]
+    [HttpGet]
     public async Task<IActionResult> Logout()
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        HttpContext.Session.Remove("JWT");
-        return RedirectToAction("Login", "Account");
+        await HttpContext.SignOutAsync();
+        return RedirectToAction("Index", "Home");
     }
 }
