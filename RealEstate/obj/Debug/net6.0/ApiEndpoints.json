@@ -494,26 +494,6 @@
     ]
   },
   {
-    "ContainingType": "RealEstate.Controllers.TestController",
-    "Method": "GetSession",
-    "RelativePath": "api/test/get-session",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.TestController",
-    "Method": "SetSession",
-    "RelativePath": "api/test/set-session",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "RealEstate.Controllers.UserController",
     "Method": "GetFavoriteApartments",
     "RelativePath": "api/User/favorite-apartments",

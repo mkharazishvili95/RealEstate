@@ -6,10 +6,10 @@ namespace RealEstate_Manage.Controllers
     {
         protected string GetToken()
         {
-            var token = HttpContext.Session.GetString("JWT");
-            if (string.IsNullOrEmpty(token))
+            var claim = User.Claims.FirstOrDefault(c => c.Type == "JWT");
+            if (claim == null)
                 throw new UnauthorizedAccessException("User not logged in.");
-            return token;
+            return claim.Value;
         }
     }
 }

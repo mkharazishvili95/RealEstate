@@ -75,13 +75,13 @@ public class AccountController : Controller
             return View(model);
         }
 
-        HttpContext.Session.SetString("JWT", token);
-
         var handler = new JwtSecurityTokenHandler();
         var jwtToken = handler.ReadJwtToken(token);
 
         var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
-        var role = jwtToken.Claims.FirstOrDefault(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
+        var role = jwtToken.Claims.FirstOrDefault(c =>
+            c.Type == ClaimTypes.Role || c.Type == "role" ||
+            c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
 
         if (string.IsNullOrWhiteSpace(userId))
         {
@@ -90,11 +90,12 @@ public class AccountController : Controller
         }
 
         var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, model.UserName),
-        new Claim("sub", userId),
-        new Claim(ClaimTypes.Role, role ?? "") 
-    };
+            {
+                new Claim(ClaimTypes.Name, model.UserName),
+                new Claim("sub", userId),
+                new Claim(ClaimTypes.Role, role ?? ""),
+                new Claim("JWT", token) 
+            };
 
         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
         var authProperties = new AuthenticationProperties
@@ -108,10 +109,9 @@ public class AccountController : Controller
             new ClaimsPrincipal(claimsIdentity),
             authProperties);
 
-        if (role == "Admin")
-            return RedirectToAction("Index", "Manage");
-        else
-            return RedirectToAction("Index", "Home"); 
+        return role == "Admin"
+            ? RedirectToAction("Index", "Manage")
+            : RedirectToAction("Index", "Home");
     }
 
     [HttpPost]

@@ -903,30 +903,6 @@
         }
       }
     },
-    "/api/test/set-session": {
-      "get": {
-        "tags": [
-          "Test"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/test/get-session": {
-      "get": {
-        "tags": [
-          "Test"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/User/favorite-apartments": {
       "get": {
         "tags": [
