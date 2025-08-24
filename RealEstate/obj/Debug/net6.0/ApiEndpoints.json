@@ -1,32 +1,6 @@
 [
   {
     "ContainingType": "RealEstate.Controllers.ApartmentController",
-    "Method": "GetApartmentDetails",
-    "RelativePath": "api/Apartment/apartment-details",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "apartmentId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RealEstate.Infrastructure.Queries.Models.Apartment.GetApartmentDetailsModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RealEstate.Controllers.ApartmentController",
     "Method": "CreateApartment",
     "RelativePath": "api/Apartment/create",
     "HttpMethod": "POST",
@@ -53,8 +27,34 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ApartmentController",
+    "Method": "GetApartmentDetails",
+    "RelativePath": "api/Apartment/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apartmentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Infrastructure.Queries.Models.Apartment.GetApartmentDetailsModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ApartmentController",
     "Method": "GetNewApartments",
-    "RelativePath": "api/Apartment/new-apartments",
+    "RelativePath": "api/Apartment/new",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -102,6 +102,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.FileController",
+    "Method": "FileUpload",
+    "RelativePath": "api/controller/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.File.Upload.FileUploadRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.File.Upload.FileUploadResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",

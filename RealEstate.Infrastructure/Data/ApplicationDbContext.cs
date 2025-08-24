@@ -22,7 +22,7 @@ namespace RealEstate.Infrastructure.Data
         public DbSet<Street> Streets { get; set; }
         public DbSet<Subdistrict> Subdistricts { get; set; }
         public DbSet<Tariff> Tariffs { get; set; }
-
+        public DbSet<RealEstate.Core.File.File> Files { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

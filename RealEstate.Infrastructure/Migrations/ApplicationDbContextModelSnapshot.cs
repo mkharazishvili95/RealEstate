@@ -184,8 +184,23 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<int?>("AgencyId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ApartmentDealType")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ApartmentState")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApartmentType")
+                        .HasColumnType("int");
+
                     b.Property<string>("BlockReason")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("BuildingStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -199,6 +214,9 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DistrictId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
@@ -206,6 +224,12 @@ namespace RealEstate.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("StreetId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SubdistrictId")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -261,6 +285,50 @@ namespace RealEstate.Infrastructure.Migrations
                     b.HasKey("CurrencyId");
 
                     b.ToTable("Currencies");
+                });
+
+            modelBuilder.Entity("RealEstate.Core.File.File", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("ApartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FileType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Files");
+                });
+
+            modelBuilder.Entity("RealEstate.Core.PaidService.Tariff", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("PaidService")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tariffs");
                 });
 
             modelBuilder.Entity("RealEstate.Core.User.User", b =>
