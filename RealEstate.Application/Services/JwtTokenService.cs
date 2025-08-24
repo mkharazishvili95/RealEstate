@@ -5,6 +5,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 
 namespace RealEstate.Application.Services
 {
@@ -32,7 +33,7 @@ namespace RealEstate.Application.Services
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserId),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email ?? ""),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim("UserType", user.Type.ToString())
+                new Claim(ClaimTypes.Role, user.Type.ToString())
             };
 
             var token = new JwtSecurityToken(
@@ -42,6 +43,8 @@ namespace RealEstate.Application.Services
                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["JwtSettings:AccessTokenExpirationMinutes"])),
                 signingCredentials: new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
             );
+            var test = JsonSerializer.Serialize(token);
+
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

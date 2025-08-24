@@ -25,6 +25,14 @@
                     </ul>
 
                     <ul class="navbar-nav">
+                        @if (User.Identity != null && User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="btn btn-outline-secondary mx-1" asp-controller="Manage" asp-action="Index">
+                                    ⚙️ სამართავი პანელი
+                                </a>
+                            </li>
+                        }
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">

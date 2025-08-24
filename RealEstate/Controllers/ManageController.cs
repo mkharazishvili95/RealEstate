@@ -8,10 +8,12 @@ using RealEstate.Application.Models.Agency;
 using RealEstate.Application.Models.Apartment;
 using RealEstate.Application.Models.User;
 using RealEstate.Application.Services;
+using RealEstate.Common.Enums.User;
 
 namespace RealEstate.Controllers
 {
     [ApiController]
+    [Authorize(Roles = nameof(UserType.Admin))]
     [Route("api/Manage")]
     public class ManageController : ControllerBase
     {

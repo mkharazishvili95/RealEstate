@@ -287,7 +287,7 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
-    "Method": "UnBlockUser",
+    "Method": "TopUpBalance",
     "RelativePath": "api/Manage/top-up-balance",
     "HttpMethod": "POST",
     "IsController": true,
@@ -492,6 +492,26 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.TestController",
+    "Method": "GetSession",
+    "RelativePath": "api/test/get-session",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.TestController",
+    "Method": "SetSession",
+    "RelativePath": "api/test/set-session",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RealEstate.Controllers.UserController",

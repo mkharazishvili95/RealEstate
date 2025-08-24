@@ -4,6 +4,7 @@
     {
         Individual = 0,
         Agent = 1,
-        Agency = 2
+        Agency = 2,
+        Admin = 4
     }
 }

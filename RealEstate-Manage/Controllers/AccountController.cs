@@ -81,6 +81,7 @@ public class AccountController : Controller
         var jwtToken = handler.ReadJwtToken(token);
 
         var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
+        var role = jwtToken.Claims.FirstOrDefault(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
 
         if (string.IsNullOrWhiteSpace(userId))
         {
@@ -89,10 +90,11 @@ public class AccountController : Controller
         }
 
         var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, model.UserName),
-            new Claim("sub", userId) 
-        };
+    {
+        new Claim(ClaimTypes.Name, model.UserName),
+        new Claim("sub", userId),
+        new Claim(ClaimTypes.Role, role ?? "") 
+    };
 
         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
         var authProperties = new AuthenticationProperties
@@ -106,7 +108,10 @@ public class AccountController : Controller
             new ClaimsPrincipal(claimsIdentity),
             authProperties);
 
-        return RedirectToAction("Index", "Home");
+        if (role == "Admin")
+            return RedirectToAction("Index", "Manage");
+        else
+            return RedirectToAction("Index", "Home"); 
     }
 
     [HttpPost]

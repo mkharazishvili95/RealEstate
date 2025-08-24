@@ -5,6 +5,7 @@ using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Models.User;
 using RealEstate.Models.User.List;
+using RealEstate_Manage.Controllers;
 using RealEstate_Manage.Extensions;
 using RealEstate_Manage.Helpers;
 using RealEstate_Manage.Models.Agency;
@@ -13,11 +14,12 @@ using RealEstate_Manage.Models.Apartment;
 using RealEstate_Manage.Models.Apartment.List;
 using RealEstate_Manage.Models.User;
 using RealEstate_Manage.Models.User.List;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace RealEstate.MVC.Controllers
 {
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private readonly HttpClient _httpClient;
         private readonly MapToTableRowsHelper _mapper;
@@ -30,9 +32,25 @@ namespace RealEstate.MVC.Controllers
             /* Local, ჩემი აპის შემთხვევაში: https://localhost:7010/api */
             _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
-        
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> UserList(UserFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var apiRequest = new GetUserListForManageRequest
             {
                 UserId = filter.UserId,
@@ -56,8 +74,14 @@ namespace RealEstate.MVC.Controllers
             };
 
             var requestUrl = $"{_baseUrl}/Manage/users";
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
-            var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
+
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await _httpClient.SendAsync(requestMessage);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -65,21 +89,17 @@ namespace RealEstate.MVC.Controllers
                 return View(new UserListViewModel { Filter = filter });
             }
 
-            var mapper = new MapToTableRowsHelper();
-            var tableRows = new List<UserTableRowViewModel>();
+            var apiResponse = await response.Content.ReadFromJsonAsync<GetUserListForManageResponse>();
 
-            if (apiResponse?.UserListForManage != null)
-            {
-                tableRows = new MapToTableRowsHelper()
-                    .MapToTableRowsForUsers(apiResponse.UserListForManage)
-                    .ToList();
-            }
+            var tableRows = apiResponse?.UserListForManage != null
+                ? _mapper.MapToTableRowsForUsers(apiResponse.UserListForManage).ToList()
+                : new List<UserTableRowViewModel>();
 
             var viewModel = new UserListViewModel
             {
                 Filter = filter,
                 Users = tableRows,
-                TotalCount = apiResponse.TotalCount
+                TotalCount = apiResponse?.TotalCount ?? 0
             };
 
             return View(viewModel);
@@ -88,6 +108,16 @@ namespace RealEstate.MVC.Controllers
         [HttpGet("Manage/ExportUsersToCsv")]
         public async Task<IActionResult> ExportUsersCsv(UserFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var apiRequest = new GetUserListForManageRequest
             {
                 UserId = filter.UserId,
@@ -111,7 +141,14 @@ namespace RealEstate.MVC.Controllers
             };
 
             var requestUrl = $"{_baseUrl}/Manage/users";
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await _httpClient.SendAsync(requestMessage);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -135,6 +172,15 @@ namespace RealEstate.MVC.Controllers
 
         public async Task<IActionResult> AgencyList(AgencyFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var apiRequest = new GetAgencyListForManageRequest
             {
                 AgencyId = filter.AgencyId,
@@ -157,7 +203,12 @@ namespace RealEstate.MVC.Controllers
             };
 
             var requestUrl = $"{_baseUrl}/Manage/agencies";
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(requestMessage);
             var apiResponse = await response.Content.ReadFromJsonAsync<GetAgencyListForManageResponse>();
 
             var mapper = new MapToTableRowsHelper();
@@ -186,6 +237,15 @@ namespace RealEstate.MVC.Controllers
         [HttpGet("Manage/ExportAgenciesToCsv")]
         public async Task<IActionResult> ExportAgenciesCsv(AgencyFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var apiRequest = new GetAgencyListForManageRequest
             {
                 AgencyId = filter.AgencyId,
@@ -208,7 +268,12 @@ namespace RealEstate.MVC.Controllers
             };
 
             var requestUrl = $"{_baseUrl}/Manage/agencies";
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(requestMessage);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -232,6 +297,15 @@ namespace RealEstate.MVC.Controllers
 
         public async Task<IActionResult> ApartmentList(ApartmentFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             SetApartmentStatusSelectList();
             SetCurrencySelectList();
 
@@ -258,8 +332,12 @@ namespace RealEstate.MVC.Controllers
 
             var requestUrl = $"{_baseUrl}/Manage/apartments";
 
-            var response = await _httpClient.PostAsJsonAsync(
-                requestUrl, apiRequest);
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(requestMessage);
 
             var apiResponse = await response.Content.ReadFromJsonAsync<GetApartmentListForManageResponse>();
 
@@ -285,6 +363,15 @@ namespace RealEstate.MVC.Controllers
         [HttpGet("Manage/ExportApartmentsToCsv")]
         public async Task<IActionResult> ExportApartmentsCsv(ApartmentFilterRowModel filter)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var apiRequest = new GetApartmentListForManageRequest
             {
                 AgencyId = filter.AgencyId,
@@ -307,7 +394,12 @@ namespace RealEstate.MVC.Controllers
             };
 
             var requestUrl = $"{_baseUrl}/Manage/apartments";
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, apiRequest);
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(apiRequest)
+            };
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(requestMessage);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -332,15 +424,29 @@ namespace RealEstate.MVC.Controllers
         [HttpPut]
         public async Task<IActionResult> BlockUser([FromBody] BlockUserRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var requestUrl = $"{_baseUrl}/Manage/block-user";
 
-            var response = await _httpClient.PutAsJsonAsync(
-                requestUrl,
-                new BlockUserRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Put, requestUrl)
+            {
+                Content = JsonContent.Create(new BlockUserRequestModel
                 {
                     UserId = request.UserId,
                     BlockReason = request.BlockReason
-                });
+                })
+            };
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -355,14 +461,28 @@ namespace RealEstate.MVC.Controllers
         [HttpPut]
         public async Task<IActionResult> UnblockUser([FromBody] UnblockUserRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var requestUrl = $"{_baseUrl}/Manage/unblock-user";
 
-            var response = await _httpClient.PutAsJsonAsync(
-                requestUrl,
-                new UnblockUserRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Put, requestUrl)
+            {
+                Content = JsonContent.Create(new UnblockUserRequestModel
                 {
-                    UserId = request.UserId
-                });
+                    UserId = request.UserId,
+                })
+            };
+
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -377,6 +497,15 @@ namespace RealEstate.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> TopUpBalance([FromBody] TopUpBalanceRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (request.UserId == null)
                 return Json(new { success = false, message = "მომხმარებლის ბალანსის შევსებისას მოხდა შეცდომა." });
 
@@ -385,13 +514,17 @@ namespace RealEstate.MVC.Controllers
 
             var requestUrl = $"{_baseUrl}/Manage/top-up-balance";
 
-            var response = await _httpClient.PostAsJsonAsync(
-                requestUrl,
-                new TopUpBalanceRequest
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(new TopUpBalanceRequest
                 {
                     UserId = request.UserId,
                     Balance = request.Balance
-                });
+                })
+            };
+
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -406,16 +539,28 @@ namespace RealEstate.MVC.Controllers
         [HttpPut]
         public async Task<IActionResult> BlockApartment([FromBody] BlockApartmentRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var requestUrl = $"{_baseUrl}/Manage/block-apartment";
 
-            var response = await _httpClient.PutAsJsonAsync(
-                requestUrl,
-
-                new BlockApartmentRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Put, requestUrl)
+            {
+                Content = JsonContent.Create(new BlockApartmentRequestModel
                 {
                     ApartmentId = request.ApartmentId,
                     BlockReason = request.BlockReason
-                });
+                })
+            };
+
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -430,14 +575,27 @@ namespace RealEstate.MVC.Controllers
         [HttpPut]
         public async Task<IActionResult> UnblockApartment([FromBody] UnblockApartmentRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var requestUrl = $"{_baseUrl}/Manage/unblock-apartment";
 
-            var response = await _httpClient.PutAsJsonAsync(
-                requestUrl,
-                new UnblockApartmentRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Put, requestUrl)
+            {
+                Content = JsonContent.Create(new BlockApartmentRequestModel
                 {
                     ApartmentId = request.ApartmentId
-                });
+                })
+            };
+
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -452,15 +610,27 @@ namespace RealEstate.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> ApproveAgency([FromBody] ApproveAgencyRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var requestUrl = $"{_baseUrl}/Manage/approve-agency";
 
-            var response = await _httpClient.PostAsJsonAsync(
-                requestUrl,
-                new ApproveAgencyRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(new ApproveAgencyRequestModel
                 {
                     AgencyId = request.AgencyId
-                });
+                })
+            };
 
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
             if (response.IsSuccessStatusCode)
             {
                 return Json(new { success = true, message = "სააგენტო წარმატებით დადასტურდა" });
@@ -474,15 +644,28 @@ namespace RealEstate.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteAgency([FromBody]DeleteAgencyRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var requestUrl = $"{_baseUrl}/Manage/delete-agency";
 
-            var response = await _httpClient.PostAsJsonAsync(
-                requestUrl,
-                new DeleteAgencyRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(new DeleteAgencyRequestModel
                 {
                     AgencyId = request.AgencyId,
                     DeleteReason = request.DeleteReason
-                });
+                })
+            };
+
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {
@@ -497,14 +680,26 @@ namespace RealEstate.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> RestoreAgency([FromBody] RestoreAgencyRequestModel request)
         {
+            string token;
+            try
+            {
+                token = GetToken();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var requestUrl = $"{_baseUrl}/Manage/restore-agency";
 
-            var response = await _httpClient.PostAsJsonAsync(
-                requestUrl,
-                new RestoreAgencyRequestModel
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+            {
+                Content = JsonContent.Create(new RestoreAgencyRequestModel
                 {
                     AgencyId = request.AgencyId
-                });
+                })
+            };
+            httpRequest.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.SendAsync(httpRequest);
 
             if (response.IsSuccessStatusCode)
             {

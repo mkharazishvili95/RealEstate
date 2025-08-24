@@ -1,27 +1,25 @@
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using RealEstate.Application.Feature.Manage.Agency.List;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
-using RealEstate.Application.Feature.Profile.Transfer;
 using RealEstate.Application.Services;
 using RealEstate.Core.Address;
 using RealEstate.Infrastructure.Data;
 using RealEstate.Infrastructure.Queries.Apartment;
 using RealEstate.Infrastructure.Repositories;
 using RealEstate.Middleware;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -44,6 +42,35 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSet
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddHttpClient();
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(60);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+var key = Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Secret"]);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+        ValidAudience = builder.Configuration["JwtSettings:Audience"],
+        RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+        IssuerSigningKey = new SymmetricSecurityKey(key)
+    };
+});
 
 var app = builder.Build();
 
@@ -58,6 +85,9 @@ app.UseGlobalExceptionHandler();
 
 app.UseHttpsRedirection();
 
+app.UseSession();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
