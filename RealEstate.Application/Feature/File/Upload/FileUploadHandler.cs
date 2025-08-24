@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
+using RealEstate.Application.Feature.File.Delete;
+using RealEstate.Application.Services;
 using RealEstate.Common.Enums.File;
 using RealEstate.Infrastructure.Data;
 
@@ -8,9 +10,11 @@ namespace RealEstate.Application.Feature.File.Upload
     {
         private readonly ApplicationDbContext _db;
         private readonly string _uploadsFolder;
+        private readonly IIdentityService _identityService;
 
-        public FileUploadHandler(ApplicationDbContext db, IConfiguration configuration)
+        public FileUploadHandler(ApplicationDbContext db, IConfiguration configuration, IIdentityService identityService)
         {
+            _identityService = identityService;
             _db = db;
             //ფოტოების Folder-ის მისამართი ჩემ შემთხვევაში:
             _uploadsFolder = configuration["FileStorage:UploadPath"];
@@ -23,6 +27,15 @@ namespace RealEstate.Application.Feature.File.Upload
 
         public async Task<FileUploadResponse> Handle(FileUploadRequest request, CancellationToken cancellationToken)
         {
+
+            if (string.IsNullOrWhiteSpace(request.UserId))
+                return new FileUploadResponse { Success = false, StatusCode = 400, UserMessage = "UserId should not be empty." };
+
+            var user = await _identityService.GetUserById(request.UserId);
+            if (user == null)
+                return new FileUploadResponse { Success = false, StatusCode = 404, UserMessage = "User not found." };
+
+
             if (string.IsNullOrWhiteSpace(request.FileContent) || string.IsNullOrWhiteSpace(request.FileName))
                 throw new ArgumentException("FileName and FileContent must be provided");
 
@@ -64,7 +77,8 @@ namespace RealEstate.Application.Feature.File.Upload
                 ApartmentId = request.ApartmentId,
                 FileName = request.FileName,
                 FileUrl = fileUrl,
-                FileType = request.FileType
+                FileType = request.FileType,
+                UploadDate = DateTime.UtcNow
             };
 
             _db.Files.Add(fileEntity);

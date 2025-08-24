@@ -183,7 +183,7 @@
         }
       }
     },
-    "/api/controller/upload": {
+    "/api/File/upload": {
       "post": {
         "tags": [
           "File"
@@ -224,6 +224,52 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/FileUploadResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/File": {
+      "delete": {
+        "tags": [
+          "File"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileDeleteResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileDeleteResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileDeleteResponse"
                 }
               }
             }
@@ -1352,6 +1398,27 @@
         },
         "additionalProperties": false
       },
+      "FileDeleteResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "rawResponse": {
+            "type": "string",
+            "nullable": true
+          },
+          "userMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "FileType": {
         "enum": [
           1,
@@ -1379,6 +1446,10 @@
           },
           "fileType": {
             "$ref": "#/components/schemas/FileType"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

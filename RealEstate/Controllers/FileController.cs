@@ -1,11 +1,11 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Application.Feature.File.Delete;
 using RealEstate.Application.Feature.File.Upload;
 
 namespace RealEstate.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/File")]
     [ApiController]
 
     public class FileController : ControllerBase
@@ -18,5 +18,8 @@ namespace RealEstate.Controllers
 
         [HttpPost("upload")]
         public async Task<FileUploadResponse> FileUpload(FileUploadRequest request) => await _mediator.Send(request);
+
+        [HttpDelete]
+        public async Task<FileDeleteResponse> FileDelete([FromQuery] FileDeleteRequest request) => await _mediator.Send(request);
     }
 }

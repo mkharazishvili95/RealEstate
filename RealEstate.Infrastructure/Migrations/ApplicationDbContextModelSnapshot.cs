@@ -298,6 +298,9 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<int?>("ApartmentId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("FileName")
                         .HasColumnType("nvarchar(max)");
 
@@ -305,6 +308,15 @@ namespace RealEstate.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("FileUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UploadDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

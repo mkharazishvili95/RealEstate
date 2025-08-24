@@ -8,5 +8,6 @@ namespace RealEstate.Application.Feature.File.Upload
         public string? FileName { get; set; }
         public string? FileContent { get; set; }
         public FileType? FileType { get; set; }
+        public string? UserId { get; set; }
     }
 }
