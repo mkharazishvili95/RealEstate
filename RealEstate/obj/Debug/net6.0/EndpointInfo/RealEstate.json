@@ -1414,7 +1414,7 @@
             "type": "string",
             "nullable": true
           },
-          "fileContent": {
+          "fileUrl": {
             "type": "string",
             "nullable": true
           },
