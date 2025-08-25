@@ -105,8 +105,39 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.FileController",
+    "Method": "FileDelete",
+    "RelativePath": "api/File",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.File.Delete.FileDeleteResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.FileController",
     "Method": "FileUpload",
-    "RelativePath": "api/controller/upload",
+    "RelativePath": "api/File/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

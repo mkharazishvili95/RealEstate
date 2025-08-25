@@ -282,13 +282,8 @@ D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win-arm\native\Micr
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\RealEstate.Application.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\RealEstate.Common.dll
 D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\RealEstate.Core.dll
@@ -438,3 +433,9 @@ C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate-Manage\obj\Debug\net6.0\re
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate-Manage\obj\Debug\net6.0\RealEstate-Manage.pdb
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate-Manage\obj\Debug\net6.0\RealEstate-Manage.genruntimeconfig.cache
 C:\Users\admin\OneDrive\Desktop\RealEstate\RealEstate-Manage\obj\Debug\net6.0\ref\RealEstate-Manage.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\Imagekit.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\RE\RealEstate\RealEstate-Manage\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

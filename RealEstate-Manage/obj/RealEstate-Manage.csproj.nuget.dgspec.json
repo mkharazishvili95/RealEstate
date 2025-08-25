@@ -155,6 +155,10 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
+            "Imagekit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"
@@ -508,6 +512,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
+            },
+            "Imagekit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

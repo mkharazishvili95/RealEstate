@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
-using RealEstate.Application.Feature.File.Delete;
+﻿using Imagekit.Sdk;
+using Microsoft.Extensions.Options;
+using RealEstate.Application.Configuration;
 using RealEstate.Application.Services;
 using RealEstate.Common.Enums.File;
 using RealEstate.Infrastructure.Data;
@@ -9,38 +10,48 @@ namespace RealEstate.Application.Feature.File.Upload
     public class FileUploadHandler : IRequestHandler<FileUploadRequest, FileUploadResponse>
     {
         private readonly ApplicationDbContext _db;
-        private readonly string _uploadsFolder;
         private readonly IIdentityService _identityService;
+        private readonly ImagekitClient _imageKitClient;
 
-        public FileUploadHandler(ApplicationDbContext db, IConfiguration configuration, IIdentityService identityService)
+        public FileUploadHandler(
+            ApplicationDbContext db,
+            IIdentityService identityService,
+            IOptions<ImageKitSettings> imageKitOptions)
         {
-            _identityService = identityService;
             _db = db;
-            //ფოტოების Folder-ის მისამართი ჩემ შემთხვევაში:
-            _uploadsFolder = configuration["FileStorage:UploadPath"];
-            if (string.IsNullOrWhiteSpace(_uploadsFolder))
-                throw new ArgumentException("Upload path is not configured.");
+            _identityService = identityService;
 
-            if (!Directory.Exists(_uploadsFolder))
-                Directory.CreateDirectory(_uploadsFolder);
+            var settings = imageKitOptions.Value;
+            _imageKitClient = new ImagekitClient(
+                settings.PublicKey,
+                settings.PrivateKey,
+                settings.UrlEndpoint
+            );
         }
 
         public async Task<FileUploadResponse> Handle(FileUploadRequest request, CancellationToken cancellationToken)
         {
-
             if (string.IsNullOrWhiteSpace(request.UserId))
-                return new FileUploadResponse { Success = false, StatusCode = 400, UserMessage = "UserId should not be empty." };
+                return new FileUploadResponse
+                {
+                    Success = false,
+                    StatusCode = 400,
+                    UserMessage = "UserId should not be empty."
+                };
 
             var user = await _identityService.GetUserById(request.UserId);
             if (user == null)
-                return new FileUploadResponse { Success = false, StatusCode = 404, UserMessage = "User not found." };
-
+                return new FileUploadResponse
+                {
+                    Success = false,
+                    StatusCode = 404,
+                    UserMessage = "User not found."
+                };
 
             if (string.IsNullOrWhiteSpace(request.FileContent) || string.IsNullOrWhiteSpace(request.FileName))
                 throw new ArgumentException("FileName and FileContent must be provided");
 
-            byte[] fileBytes = Convert.FromBase64String(request.FileContent);
-
+            string base64Data = request.FileContent;
             string extension = request.FileType switch
             {
                 FileType.Image => ".jpeg",
@@ -60,17 +71,50 @@ namespace RealEstate.Application.Feature.File.Upload
                         "image/jpeg" => ".jpg",
                         "image/png" => ".png",
                         "image/gif" => ".gif",
+                        "video/mp4" => ".mp4",
+                        "application/pdf" => ".pdf",
                         _ => ".bin"
                     };
-                    request.FileContent = parts[1];
+                    base64Data = parts[1];
                 }
             }
+
             string uniqueFileName = $"{Guid.NewGuid()}{extension}";
-            string filePath = Path.Combine(_uploadsFolder, uniqueFileName);
 
-            await System.IO.File.WriteAllBytesAsync(filePath, fileBytes, cancellationToken);
+            var uploadRequest = new FileCreateRequest
+            {
+                fileName = uniqueFileName,
+                folder = "/apartments",
+                useUniqueFileName = true,
+                file = base64Data,
+                checks = null,
+                tags = null,
+                customCoordinates = null,
+                responseFields = null,
+                isPrivateFile = false,
+                overwriteFile = false,
+                customMetadata = null,
+                webhookUrl = null,
+                overwriteTags = false,
+                overwriteCustomMetadata = false
+            };
 
-            string fileUrl = $"/uploads/apartments/{uniqueFileName}";
+            dynamic uploadResult;
+            try
+            {
+                uploadResult = await _imageKitClient.UploadAsync(uploadRequest);
+            }
+            catch (Exception ex)
+            {
+                return new FileUploadResponse
+                {
+                    Success = false,
+                    StatusCode = 500,
+                    UserMessage = $"File upload failed: {ex.Message}"
+                };
+            }
+
+            string fileUrl = uploadResult.url;
 
             var fileEntity = new RealEstate.Core.File.File
             {

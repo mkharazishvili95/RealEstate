@@ -3,12 +3,12 @@ using RealEstate_Manage.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDistributedMemoryCache(); 
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(60);
-    options.Cookie.HttpOnly = true;                 
-    options.Cookie.IsEssential = true;               
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 builder.Services.AddHttpClient();
@@ -49,7 +49,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseSession();         
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 

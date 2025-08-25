@@ -23,9 +23,8 @@ namespace RealEstate.Application.Feature.File.Delete
             if (user == null)
                 return new FileDeleteResponse { Success = false, StatusCode = 404, UserMessage = "User not found." };
 
-            var file = await _db.Files.FirstOrDefaultAsync(x => x.Id == request.Id 
-            && x.UserId == user.UserId 
-            || user.Type == Common.Enums.User.UserType.Admin);
+           var file = await _db.Files.FirstOrDefaultAsync(x => x.Id == request.Id 
+            && (x.UserId == user.UserId || user.Type == Common.Enums.User.UserType.Admin));
 
             if(file == null)
                 return new FileDeleteResponse { Success = false, StatusCode = 404, UserMessage = "File not found." };
