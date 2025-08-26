@@ -26,9 +26,8 @@
 
 <h2>მომხმარებლები</h2>
 
-<form asp-action="UserList"  method="get" class="container-fluid">
-    
-    <table class="table table-bordered table-striped w-100">
+<form asp-action="UserList" method="get" class="listing-container">
+    <table class="table table-bordered table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>სახელი</th>
@@ -155,7 +154,7 @@
 
 
     <div class="d-flex justify-content-center mt-4">
-        <a href="@Url.Action("Index", "Manage")" class="btn btn-primary">← უკან დაბრუნება</a>
+        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-primary">← უკან დაბრუნება</a>
     </div>
 </form>
 
@@ -177,8 +176,19 @@
     }
 
     .container {
-        max-width: 90% !important;
+        max-width: 95% !important;
+        margin: 0 auto;
         padding: 0;
+    }
+
+    thead.thead-dark tr:first-child {
+        background-color: #f1f1f1;
+    }
+
+    thead.thead-dark th {
+        color: #333;
+        font-weight: bold;
+        text-align: center;
     }
 
     .dropdown-item {
@@ -197,45 +207,6 @@
         .dropdown-item:hover {
             background-color: #f8f9fa;
             transform: scale(1.05);
-        }
-
-    .text-info.topup-user-btn {
-        background-color: white;
-        color: white;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-        .text-info.topup-user-btn:hover {
-            background-color: white;
-        }
-
-    .text-success.unblock-user-btn {
-        background-color: white;
-        color: white;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-        .text-success.unblock-user-btn:hover {
-            background-color: white;
-        }
-
-    .text-danger.block-user-btn {
-        background-color: white;
-        color: white;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-        .text-danger.block-user-btn:hover {
-            background-color: white;
         }
 
     .dropdown-toggle {
@@ -285,7 +256,6 @@
         color: green;
         font-weight: bold;
     }
-
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "RealEstate - Dashboard";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<div class="dashboard-container">
+   
+    <div class="sidebar">
+        <h4 class="sidebar-title">Dashboard</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("UserList", "Manage")">
+                    <i class="bi bi-people-fill"></i> მომხმარებლები
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("AgencyList", "Manage")">
+                    <i class="bi bi-buildings-fill"></i> სააგენტოები
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("ApartmentList", "Manage")">
+                    <i class="bi bi-house-door-fill"></i> უძრავი ქონება
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h3 class="dashboard-title">RealEstate სამართავი პანელი</h3>
+        <div class="content-box">
+            <p>სტატისტიკის ბლოკებისთვის</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #e9ecef;
+        margin: 0;
+        overflow-x: hidden;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .dashboard-container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+   
+    .sidebar {
+        width: 250px;
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px 10px; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .sidebar-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 100%;
+        padding-left: 5px;
+    }
+
+    .sidebar .nav {
+        width: 100%;
+    }
+
+    .sidebar .nav-link {
+        color: #adb5bd;
+        font-size: 1.1rem;
+        margin: 5px 0;
+        border-radius: 5px;
+        padding: 8px 12px;
+        transition: background 0.3s ease, color 0.3s ease;
+        text-align: left;
+    }
+
+    .main-content {
+        flex: 1;
+        padding: 30px;
+        background-color: #f8f9fa;
+    }
+
+    .dashboard-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #343a40;
+    }
+
+    .content-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+</style>

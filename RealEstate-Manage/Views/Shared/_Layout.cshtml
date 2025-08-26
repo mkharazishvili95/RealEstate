@@ -28,7 +28,7 @@
                         @if (User.Identity != null && User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="btn btn-outline-secondary mx-1" asp-controller="Manage" asp-action="Index">
+                                <a class="btn btn-outline-secondary mx-1" asp-controller="Dashboard" asp-action="Index">
                                     ⚙️ სამართავი პანელი
                                 </a>
                             </li>
@@ -53,15 +53,25 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<style>
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+
+    .main-content {
+        margin-left: 250px; 
+    }
+ </style>

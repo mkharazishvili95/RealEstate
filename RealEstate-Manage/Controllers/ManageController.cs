@@ -36,11 +36,11 @@ namespace RealEstate.MVC.Controllers
             _baseUrl = configuration["ApiSettings:BaseUrl"];
         }
 
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public async Task<IActionResult> UserList(UserFilterRowModel filter)
         {

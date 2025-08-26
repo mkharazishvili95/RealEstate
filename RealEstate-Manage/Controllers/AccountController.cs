@@ -110,7 +110,7 @@ public class AccountController : Controller
             authProperties);
 
         return role == "Admin"
-            ? RedirectToAction("Index", "Manage")
+            ? RedirectToAction("Index", "Dashboard")
             : RedirectToAction("Index", "Home");
     }
 
