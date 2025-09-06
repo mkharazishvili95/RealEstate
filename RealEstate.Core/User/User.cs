@@ -21,5 +21,6 @@ namespace RealEstate.Core.User
         public DateTime? RegisterDate { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiry { get; set; }
+        public ICollection<RealEstate.Core.Apartment.Apartment>? Apartments { get; set; } 
     }
 }

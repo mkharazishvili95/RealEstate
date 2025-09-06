@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.Manage.Agency.List;
+using RealEstate.Application.Feature.Manage.Agent.ChangeStatus.AgentIntoIndividual;
+using RealEstate.Application.Feature.Manage.Agent.ChangeStatus.IndividualIntoAgent;
+using RealEstate.Application.Feature.Manage.Agent.PotentialAgent.Get;
 using RealEstate.Application.Feature.Manage.Apartment.List;
 using RealEstate.Application.Feature.Manage.User.List;
 using RealEstate.Application.Models.Agency;
@@ -57,7 +60,15 @@ namespace RealEstate.Controllers
 
         [HttpPut("unblock-apartment")]
         public async Task<UnblockApartmentResponse> UnblockApartment(UnblockApartmentRequest request) => await _manageService.UnblockApartment(request);
-
         
+        [HttpPost("potential-agents")]
+        public async Task<GetPotentialAgentListResponse> GetPotentialAgents([FromBody] GetPotentialAgentListRequest request) => await _mediator.Send(request);
+
+        [HttpPut("change-agent-to-individual")]
+        public async Task<ChangeAgentToIndividualResponse> ChangeAgentToIndividual(ChangeAgentToIndividualRequest request) => await _mediator.Send(request);
+
+        [HttpPut("change-individual-to-agent")]
+        public async Task<ChangeIndividualToAgentResponse> ChangeIndividualToAgent(ChangeIndividualToAgentRequest request) => await _mediator.Send(request);
+
     }
 }

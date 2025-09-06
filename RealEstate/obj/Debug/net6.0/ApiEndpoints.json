@@ -422,6 +422,32 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "GetPotentialAgents",
+    "RelativePath": "api/Manage/potential-agents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Agent.PotentialAgent.Get.GetPotentialAgentListRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Agent.PotentialAgent.Get.GetPotentialAgentListResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "RestoreAgency",
     "RelativePath": "api/Manage/restore-agency",
     "HttpMethod": "POST",
