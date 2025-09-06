@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Application.Feature.File.Delete;
+using RealEstate.Application.Feature.File.SetAsMain;
 using RealEstate.Application.Feature.File.Upload;
 
 namespace RealEstate.Controllers
@@ -21,5 +22,9 @@ namespace RealEstate.Controllers
 
         [HttpDelete]
         public async Task<FileDeleteResponse> FileDelete([FromQuery] FileDeleteRequest request) => await _mediator.Send(request);
+
+        [HttpPost("set-as-main")]
+        public async Task<SetAsMainImageResponse> SetAsMainImage(SetAsMainImageRequest request) => await _mediator.Send(request);
+
     }
 }

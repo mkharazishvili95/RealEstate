@@ -104,6 +104,84 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RealEstate.Controllers.DashboardController",
+    "Method": "GetAgenciesStatisticCount",
+    "RelativePath": "api/dashboard/agencies-statistic-count",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.Agency.GetAgenciesStatisticCountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.Agency.GetAgenciesStatisticCountResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.DashboardController",
+    "Method": "GetApartmentsStatisticCount",
+    "RelativePath": "api/dashboard/apartments-statistic-count",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.Apartment.GetApartmentsStatisticCountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.Apartment.GetApartmentsStatisticCountResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.DashboardController",
+    "Method": "GetUsersStatisticCount",
+    "RelativePath": "api/dashboard/users-statistic-count",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.User.GetUsersStatisticCountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Dashboard.Statistic.User.GetUsersStatisticCountResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RealEstate.Controllers.FileController",
     "Method": "FileDelete",
     "RelativePath": "api/File",
@@ -125,6 +203,32 @@
     "ReturnTypes": [
       {
         "Type": "RealEstate.Application.Feature.File.Delete.FileDeleteResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.FileController",
+    "Method": "SetAsMainImage",
+    "RelativePath": "api/File/set-as-main",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.File.SetAsMain.SetAsMainImageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.File.SetAsMain.SetAsMainImageResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

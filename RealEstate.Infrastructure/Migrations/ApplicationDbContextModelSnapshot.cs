@@ -313,6 +313,9 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool?>("MainImage")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("UploadDate")
                         .HasColumnType("datetime2");
 
