@@ -806,3 +806,4 @@ D:\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 D:\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 D:\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
 D:\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json
+D:\RE\RealEstate\RealEstate\obj\Debug\net6.0\staticwebassets.build.json

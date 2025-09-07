@@ -757,5 +757,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.UserController",
+    "Method": "GetUserApartments",
+    "RelativePath": "api/User/user-apartments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.User.Apartment.Get.GetUserApartmentsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.User.Apartment.Get.GetUserApartmentsResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
