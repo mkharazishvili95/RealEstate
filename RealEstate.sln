@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate-Manage", "RealEstate-Manage\RealEstate-Manage.csproj", "{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate-Jobs", "RealEstate-Jobs\RealEstate-Jobs.csproj", "{28F549C8-7C90-4BD1-AA6B-A758E24A5DA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E50866EA-BC50-4F3E-A238-AFC8121EDDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F549C8-7C90-4BD1-AA6B-A758E24A5DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F549C8-7C90-4BD1-AA6B-A758E24A5DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F549C8-7C90-4BD1-AA6B-A758E24A5DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F549C8-7C90-4BD1-AA6B-A758E24A5DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

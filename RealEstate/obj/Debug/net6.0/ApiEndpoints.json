@@ -396,6 +396,58 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "ChangeAgentToIndividual",
+    "RelativePath": "api/Manage/change-agent-to-individual",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Agent.ChangeStatus.AgentIntoIndividual.ChangeAgentToIndividualRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Agent.ChangeStatus.AgentIntoIndividual.ChangeAgentToIndividualResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
+    "Method": "ChangeIndividualToAgent",
+    "RelativePath": "api/Manage/change-individual-to-agent",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.Manage.Agent.ChangeStatus.IndividualIntoAgent.ChangeIndividualToAgentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.Manage.Agent.ChangeStatus.IndividualIntoAgent.ChangeIndividualToAgentResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.ManageController",
     "Method": "DeleteAgency",
     "RelativePath": "api/Manage/delete-agency",
     "HttpMethod": "POST",
