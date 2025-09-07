@@ -760,6 +760,58 @@
   },
   {
     "ContainingType": "RealEstate.Controllers.UserController",
+    "Method": "MarkAsFavorite",
+    "RelativePath": "api/User/mark-as-favorite",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.User.Favorite.MarkAsFavorite.MarkAsFavoriteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.User.Favorite.MarkAsFavorite.MarkAsFavoriteResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.UserController",
+    "Method": "RemoveFromFavorites",
+    "RelativePath": "api/User/remove-from-favorites",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RealEstate.Application.Feature.User.Favorite.RemoveFromFavorites.RemoveFromFavoritesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RealEstate.Application.Feature.User.Favorite.RemoveFromFavorites.RemoveFromFavoritesResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.Controllers.UserController",
     "Method": "GetUserApartments",
     "RelativePath": "api/User/user-apartments",
     "HttpMethod": "POST",

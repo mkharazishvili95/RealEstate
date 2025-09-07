@@ -3,7 +3,6 @@
     public class UserFavoriteApartment
     {
         public int Id { get; set; }
-        public int UserFavoriteApplicationId { get; set; }
         public int ApartmentId { get; set; }
         public Core.Apartment.Apartment Apartment { get; set; }
         public string UserId { get; set; }

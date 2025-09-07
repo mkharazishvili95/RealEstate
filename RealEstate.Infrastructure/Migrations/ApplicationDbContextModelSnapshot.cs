@@ -426,9 +426,6 @@ namespace RealEstate.Infrastructure.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserFavoriteApplicationId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -497,7 +494,7 @@ namespace RealEstate.Infrastructure.Migrations
                         .HasForeignKey("CurrencyId");
 
                     b.HasOne("RealEstate.Core.User.User", "User")
-                        .WithMany()
+                        .WithMany("Apartments")
                         .HasForeignKey("UserId");
 
                     b.Navigation("Agency");
@@ -539,6 +536,11 @@ namespace RealEstate.Infrastructure.Migrations
             modelBuilder.Entity("RealEstate.Core.Address.Subdistrict", b =>
                 {
                     b.Navigation("Streets");
+                });
+
+            modelBuilder.Entity("RealEstate.Core.User.User", b =>
+                {
+                    b.Navigation("Apartments");
                 });
 #pragma warning restore 612, 618
         }
